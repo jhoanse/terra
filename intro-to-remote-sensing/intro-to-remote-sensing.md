@@ -6,75 +6,21 @@ has_children: True
 nav_order: 3
 ---
 
-# Introduction to Remote Sensing
-Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
+# Introducción a SIG & Sensores Remotos (Teledetección)
 
-## Session Agenda
-**Date**: DATE  
-**Instructor(s):** NAME(S)
+Navegue a través de las diferentes secciones de la lección utilizando la cinta del lado izquierdo o la tabla de contenido a continuación.
 
-<table>
-  <tbody>
-    <tr>
-      <th align="center">Time</th>
-      <th align="center">Topics</th>
-    </tr>
-    <tr>
-      <td>09:00 - 09:45</td>
-      <td>
-        <ul>
-            <li>Welcome and set-up check</li>
-            <li>Remote sensing overview: how data is collected and stored, spatial and temporal resolution, key satellites and sensors</li>
-         </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>09:45 - 10:00</td>
-      <td>
-        <ul>
-            <li>Data collection: Earth Explorer and Copernicus Open Access Hub</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>10:00 - 11:00</td>
-      <td>
-        <ul>
-            <li>How to visualize and interpret remote sensing data</li>
-            <li>Visualizing vegetation indices using Landsat</li>
-          </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>11:00 - 11:15</td>
-      <td>Coffee break</td>
-    </tr>
-    <tr>
-      <td>11:15 - 12:00</td>
-      <td>
-        <ul>
-            <li>How to select the right type of remote sensing data for your research</li>
-            <li>Visualizing vegetation indices with Sentinel-2</li>
-            <li>Sentinel-2 vs. Landsat</li>
-          </ul>
-      </td>
-    </tr>
-     <tr>
-      <td>12:00 - 13:00</td>
-      <td>Lunch</td>
-    </tr>
-    <tr>
-      <td>13:00 - 15:00</td>
-      <td>
-        <ul>
-            <li>Morning recap</li>
-            <li>Introduction to high-resolution imagery</li>
-            <li>How projections affect your data</li>
-            <li>Visualizing vegetation indices with Planet</li>
-          </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Agenda de la lección
 
+**Fecha***: Febrero 7, 2023
+**Instructora:** Andréa Puzzi Nicolau
 
+|    Horario    |                                                                                      Temáticas                                                                                     |
+|:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| 09:00 – 09:45 | Bienvenida y pruebas de configuración<br>Visión general de la teledetección: cómo se recolectan y almacenan los datos, resolución espacial y temporal, satélites y sensores clave. |
+| 09:45 – 10:00 |                                                     Recolección de datos: Acceso a Earth Explorer y Copernicus Open Access Hub                                                     |
+| 10:00 – 10:30 |                            Cómo visualizar e interpretar los datos de teledetección<br>Visualización de los índices de calidad del agua mediante Landsat                           |
+| 10:30 – 11:45 |                                                                                       Receso                                                                                       |
+| 11:45 – 12:00 |                       Cree una imagen en color verdadero sin nubes<br>Visualice la vegetación con imágenes infrarrojas<br>Calcular NDVI utilizando Landsat 8                       |
+| 12:00 – 13:00 |                                                                                      Almuerzo                                                                                      |
+|  13:00 –15:00 |                           Resumen de la mañana<br>Creación y personalización de un mapa utilizando datos ráster: cree un MDE (DEM) y un mapa de sombreado                          |
