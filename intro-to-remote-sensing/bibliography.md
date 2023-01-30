@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bibliografía
-parent: Introducción a la Teledetección y al GIS
+parent: Introducción a SIG & Sensores Remotos (Teledetección)
 nav_order: 7
 ---
 

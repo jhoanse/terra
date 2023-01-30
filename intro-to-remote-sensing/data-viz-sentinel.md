@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Visualización de datos Sentinel-2
-parent: Introducción a la Teledetección y al GIS
+parent: Introducción a SIG & Sensores Remotos (Teledetección)
 nav_order: 4
 ---
 

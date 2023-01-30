@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Introducción a la Teledetección y al GIS"
+title: "Introducción a SIG & Sensores Remotos (Teledetección)"
 permalink: /intro-to-remote-sensing
 has_children: True
 nav_order: 3
@@ -12,7 +12,7 @@ Navegue a través de las diferentes secciones de la lección utilizando la cinta
 
 ## Agenda de la lección
 
-**Fecha***: Febrero 7, 2023
+**Fecha**: Febrero 7, 2023
 **Instructora:** Andréa Puzzi Nicolau
 
 |    Horario    |                                                                                      Temáticas                                                                                     |
