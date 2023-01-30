@@ -47,3 +47,10 @@ Si tiene alguna duda sobre el material, envíe una pregunta a continuación. Est
 Si tiene algún comentario sobre cualquier taller, complete el siguiente formulario. ¡Nos ayuda a mejorar futuros talleres!
 
 [Dé su feedback](https://forms.gle/8Jdm1aybL9sqzNEw6){: .btn .btn-purple }
+
+
+## Grabaciones
+
+Se puede acceder a las grabaciones de cada sesión del taller haciendo clic en el botón a continuación. No elimine ningún archivo de la carpeta.
+
+[Grabaciones](https://drive.google.com/drive/folders/1sSd6GgYfNR6MsEUn_fRDgyjtOQ_pJ3EO){: .btn .btn-purple }
