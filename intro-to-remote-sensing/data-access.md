@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Data Access
-parent: Introduction to Remote Sensing
+title: Acceso a los datos
+parent: Introducción a la Teledetección y al GIS
 nav_order: 2
 ---
 

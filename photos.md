@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Photos
+title: Fotos
 nav_order: 6
 ---
 

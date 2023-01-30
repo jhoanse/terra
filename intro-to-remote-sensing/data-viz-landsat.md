@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Data Visualization with Landsat
-parent: Introduction to Remote Sensing
+title: Visualización de datos Landsat
+parent: Introducción a la Teledetección y al GIS
 nav_order: 3
 ---
 
-# Visualización de datos con Landsat
+# Visualización de datos Landsat
 
 Los datos de teledetección son útiles para obtener información sobre una región en particular al extraer los valores almacenados en bandas de imágenes y combinarlos para calcular diferentes tipos de índices. Sin embargo, quizás aún más poderosa es la capacidad de usar imágenes para visualizar esos cálculos. Esta lección utilizará los datos de Landsat para calcular diferentes indicadores de salud de la vegetación y revisará cómo visualizar correctamente esos resultados.
 

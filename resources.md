@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resources
+title: Recursos
 nav_order: 5
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Introduction
-parent: Introduction to Remote Sensing
+title: Introducción
+parent: Introducción a la Teledetección y al GIS
 nav_order: 1
 ---
 

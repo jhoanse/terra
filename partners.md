@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Partners
+title: Colaboradores
 nav_order: 4
 ---
 

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Data Visualization with Sentinel-2
-parent: Introduction to Remote Sensing
+title: Visualización de datos Sentinel-2
+parent: Introducción a la Teledetección y al GIS
 nav_order: 4
 ---
 
-# Visualización de datos con Sentinel-2
+# Visualización de datos Sentinel-2
 
 Los datos de Landsat son más útiles por su largo alcance temporal. La recopilación de datos para las misiones Landsat comenzó en 1972, aunque la mayoría de los investigadores utilizan datos de Landsat 5 y posteriores, que comenzaron en 1984. Sin embargo, la resolución temporal y espacial de los productos de datos Landsat se encuentra más en el rango moderado. Aunque el rango de recopilación de datos no es tan largo, los datos de Sentinel-2 tienen una resolución espacial y temporal más alta y también están disponibles gratuitamente. Esta lección examinará las diferencias entre los datos de Landsat y Sentinel-2 y cómo se compara el análisis de vegetación con los productos de datos de Sentinel-2 con los productos de Landsat 8.
 

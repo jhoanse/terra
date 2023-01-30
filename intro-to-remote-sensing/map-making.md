@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Map Making
-parent: Introduction to Remote Sensing
+title: Elaboración de mapas
+parent: Introducción a la Teledetección y al GIS
 nav_order: 5
 ---
 

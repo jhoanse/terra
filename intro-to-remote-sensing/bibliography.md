@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Bibliography
-parent: Introduction to Remote Sensing
+title: Bibliografía
+parent: Introducción a la Teledetección y al GIS
 nav_order: 7
 ---
 

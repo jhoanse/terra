@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Introduction to Remote Sensing"
+title: "Introducción a la Teledetección y al GIS"
 permalink: /intro-to-remote-sensing
 has_children: True
 nav_order: 3
