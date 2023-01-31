@@ -8,7 +8,7 @@ nav_order: 3
 
 # Introducción a SIG & Sensores Remotos (Teledetección)
 
-Navegue a través de las diferentes secciones de la lección utilizando la cinta del lado izquierdo o la tabla de contenido a continuación.
+Navegue a través de las diferentes secciones de la lección utilizando el menú del lado izquierdo o la tabla de contenido a continuación.
 
 ## Agenda de la lección
 
