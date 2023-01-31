@@ -39,13 +39,13 @@ Este ejercicio demostrará cómo utilizar Earth Explorer para ubicar y descargar
 
         <img align="center" src="../images/intro-rs-images/ex-1.1-location-coords.png" vspace="10" width="600">
 
-    4. **Archivo de forma**
+    4. **Archivo de Shapefile**
         1. Inicie sesión en su cuenta de Earth Explorer seleccionando "Iniciar sesión" en la esquina superior derecha.
         2. Seleccione la pestaña "Cargar KML/Shapefile". En el menú desplegable, elija la opción "Shapefile" y presione "Seleccionar archivo". Navega a la carpeta `intro-rs-data` y elige `negril-pa-shapefile.zip` y presiona "Abrir".
 
         <img align="center" src="../images/intro-rs-images/ex-1.1-location-shp.png" vspace="10" width="600">
 
-3. **Filtrar por fecha y cobertura de nubes.** Desplácese hacia abajo hasta la parte inferior de la pestaña "Criterios de búsqueda" e ingrese `01/09/2022` a `21/09/2022`. Luego, presione la pestaña "Cubierta de nubes" y mueva el control deslizante para que el rango se establezca entre "0% a 15%". Presione el botón "Conjuntos de datos >>" para pasar a la siguiente sección.
+3. **Filtrar por fecha y cobertura de nubes.** Desplácese hacia abajo hasta la parte inferior de la pestaña "Criterios de búsqueda" e ingrese `01/09/2022` a `21/09/2022`. Luego, presione la pestaña "Cobertura de nubes" y mueva el control deslizante para que el rango se establezca entre "0% a 15%". Presione el botón "Conjuntos de datos >>" para pasar a la siguiente sección.
 
 <img align="center" src="../images/intro-rs-images/ex-1.1-date-cloud.png" vspace="10" width="600">
 
@@ -70,11 +70,11 @@ Este ejercicio demostrará cómo utilizar Earth Explorer para ubicar y descargar
 
 ## Copernicus Open Access Hub
 
-**¿Qué es Open Access Hub?** Copernicus Open Access Hub es una plataforma gratuita y de código abierto para acceder a cualquiera de los productos de datos Sentinel de la Agencia Espacial Europea. Los usuarios pueden elegir entre una interfaz gráfica de usuario (GUI) o una interfaz de programación de aplicaciones para interactuar y descargar datos según las necesidades de su proyecto. La documentación para el uso de cada uno de los productos, así como una guía de usuario para el propio Hub, también está disponible en el sitio web del Hub.
+**¿Qué es Open Access Hub?** Copernicus Open Access Hub es una plataforma gratuita y de código abierto para acceder a cualquiera de los productos de datos Sentinel de la Agencia Espacial Europea. Los usuarios pueden elegir entre una interfaz gráfica de usuario (GUI) o una interfaz de programación de aplicaciones para interactuar y descargar datos, según las necesidades de su proyecto. La documentación para el uso de cada uno de los productos, así como una guía de usuario para el propio Hub, también está disponible en el sitio web del Hub.
 
 ### Ejercicio 1.2. Practique con Copernicus Open Access Hub.
 
-Este ejercicio demostrará cómo usar Copernicus Open Access Hub para ubicar y descargar escenas de Sentinel-2 para un rango de fechas y un área de interés en particular. Para esta lección, nuestra área de interés es la costa occidental de Jamaica y el rango de fechas es del 1 de septiembre de 2022 al 16 de septiembre de 2022.
+Este ejercicio demostrará cómo usar Copernicus Open Access Hub para ubicar y descargar escenas de Sentinel-2 para un rango de fechas y un área de interés en particular. Para esta lección, nuestra área de interés es la costa occidental de Jamaica, y el rango de fechas es del 1 de septiembre de 2022 al 16 de septiembre de 2022.
 
 1. Vaya a la página de inicio de Copernicus Open Access Hub: [https://scihub.copernicus.eu/](https://scihub.copernicus.eu/)
 2. Seleccione el botón "Open Hub" para usar la opción GUI para explorar los datos disponibles. También se puede acceder a través de este enlace: [https://scihub.copernicus.eu/dhus/#/home](https://scihub.copernicus.eu/dhus/#/home)
