@@ -7,20 +7,20 @@ nav_order: 1
 
 # Introducción
 
-¡Bienvenido a una Introducción a SIG y Teledetección! Este taller brindará una descripción general de la teledetección y explorará algunos métodos para acceder y analizar datos de teledetección. Para comenzar, esta sección cubrirá una serie de conceptos fundamentales de detección remota y brindará una instantánea de los satélites y sensores clave que se deben tener en cuenta a lo largo de los próximos módulos.
+¡Bienvenido a la sesión de Introducción a SIG y Teledetección! Este taller brindará una descripción general de la teledetección y explorará algunos métodos para acceder y analizar estos datos. Para comenzar, esta sección cubrirá una serie de conceptos fundamentales de detección remota y brindará información de los satélites y sensores clave que se deben tener en cuenta a lo largo de los próximos módulos.
 
 ## Configuración prévia
 
 1. [Instalar QGIS](https://www.qgis.org/en/site/forusers/download.html) si aún no está instalado.
-2. Cree una [cuenta de Earth Explorer](https://ers.cr.usgs.gov/register).
-3. Cree una [cuenta Copernicus Open Access Hub](https://scihub.copernicus.eu/dhus/#/self-registration)
+2. Crear una [cuenta de Earth Explorer](https://ers.cr.usgs.gov/register).
+3. Crear una [cuenta Copernicus Open Access Hub](https://scihub.copernicus.eu/dhus/#/self-registration)
 4. [Descargar](https://drive.google.com/drive/folders/1p-ZAwhuVXRD-VzAujLk_IQ-gGmGq9ADQ?usp=share_link) y comprimir la carpeta de datos para la lección. Guarde la carpeta comprimida en su escritorio (Desktop). Asegúrese de que la carpeta se llame `intro-rs-data`.
 
 ## Objetivos
 
 1. Comprender cómo se recopilan y almacenan los datos satelitales de detección remota.
 2. Diferenciar entre resolución espacial y temporal.
-3. Aprenda datos clave sobre los satélites y sensores más utilizados.
+3. Aprender datos clave sobre los satélites y sensores más utilizados.
 
 ## Recopilación de datos
 
@@ -43,13 +43,15 @@ La radiación que miden los sensores se presenta en dos formas principales:
 1. Radiación solar **reflejada**
 2. Radiación infrarroja y microondas **emitida**
 
-Diferentes tipos de objetos absorberán y emitirán energía en diferentes longitudes de onda. Un ejemplo común es el de la vegetación verde y saludable: las longitudes de onda rojas y azules se absorben, mientras que las longitudes de onda verdes e infrarrojas se reflejan o se emiten de vuelta. La cantidad de energía que se refleja o emite también difiere entre los objetos. La nieve, por ejemplo, refleja hasta el 90% de la radiación solar, mientras que el océano solo refleja alrededor del 6%. A cambio, el océano emite mucha más radiación infrarroja que la nieve, ya que la mayor parte de la energía que se absorbe se vuelve a emitir. Todas estas diferencias conforman la firma espectral única de un objeto que se puede medir y utilizar para un análisis posterior.
+Diferentes tipos de objetos absorberán y emitirán energía en diferentes longitudes de onda. Un ejemplo común es el de la vegetación verde y saludable: las longitudes de onda rojas y azules se absorben, mientras que las longitudes de onda verdes e infrarrojas se reflejan o se emiten de vuelta. La cantidad de energía que se refleja o emite también difiere entre los objetos. La nieve, por ejemplo, refleja hasta el 90% de la radiación solar, mientras que el océano solo refleja alrededor del 6%. En cambio, el océano emite mucha más radiación infrarroja que la nieve, ya que la mayor parte de la energía que se absorbe se vuelve a emitir. Todas estas diferencias conforman la firma espectral única de un objeto que se puede medir y utilizar para un análisis posterior.
 
 <img align="center" src="../images/intro-rs-images/vegetation-spectral-signature.jpg" hspace="15" vspace="10" width="600">
 
 Figura 3. Firma espectral de la vegetación. Fuente de la imagen: Living Textbook, ITC, Universidad de Twente.
 
-**Mediciones pasivas frente a activas.** Los sensores pueden ser pasivos o activos: los sensores pasivos utilizan la energía del sol para medir la energía reflejada, mientras que los sensores activos proporcionan su propia fuente de energía para realizar las mediciones. Los sensores pasivos tienden a operar dentro de las porciones visible, infrarroja, infrarroja térmica y de microondas (onda corta) del espectro electromagnético y miden índices como la temperatura de la superficie del mar, la calidad del agua, la vegetación y las propiedades de las nubes. Estos sensores, sin embargo, experimentan desafíos con la penetración de la cubierta de nubes. Los sensores activos operan principalmente en la porción de microondas (onda larga) del espectro electromagnético. El radar y el lidar son los ejemplos más comunes de este tipo de sensores y son útiles para medir características como la elevación. Estos sensores se pueden usar de día o de noche y pueden penetrar la capa de nubes, pero son más difíciles de procesar y pueden tener una disponibilidad limitada. El resto de la lección y los próximos talleres se centrarán en la percepción remota pasiva.
+**Mediciones pasivas frente a activas.** Los sensores pueden ser pasivos o activos: los sensores pasivos utilizan la energía del sol para medir la energía reflejada, mientras que los sensores activos proporcionan su propia fuente de energía para realizar las mediciones. Los sensores pasivos tienden a operar dentro de las longitudes de onda visible, infrarroja, infrarroja térmica y de microondas (onda corta) del espectro electromagnético y miden índices como la temperatura de la superficie del mar, la calidad del agua, la vegetación y las propiedades de las nubes. Estos sensores, sin embargo, experimentan desafíos con la penetración de la cubierta de nubes. Los sensores activos operan principalmente en la longitud de onda de microondas (onda larga) del espectro electromagnético. El radar y el lidar son los ejemplos más comunes de este tipo de sensores y son útiles para medir características como la elevación. Estos sensores se pueden usar de día o de noche y pueden penetrar la capa de nubes, pero son más difíciles de procesar y pueden tener una disponibilidad limitada. 
+
+El resto de la lección y los próximos talleres se centrarán en la percepción remota pasiva.
 
 ## Resolución
 
