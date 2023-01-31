@@ -77,7 +77,7 @@ Luego, dentro del menú ***Agregar elemento***, usamos ***Agregar mapa***:
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-add-map.png" vspace="10" width="600">
 
-Debe incluir los elementos básicos para una producción cartográfica formal: leyenda, barra de escala, flecha de norte, título. Asegúrese de proporcionar un formato y una fuente apropiados para cada elemento.
+Debe incluir los elementos básicos para una creación cartográfica formal: leyenda, barra de escala, flecha de norte, título. Asegúrese de proporcionar un formato y una fuente apropiados para cada elemento.
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-add-legend.png" vspace="10" width="300">
 
