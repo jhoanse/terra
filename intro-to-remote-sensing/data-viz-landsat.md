@@ -155,7 +155,7 @@ Uno de los índices más comunes para visualizar la vegetación en una imagen es
 
 $NDVI = {NIR - Red \over NIR + Red}$
 
-La banda NIR corresponde a la Banda 5 y la banda roja corresponde a la Banda 4 en las imágenes Landsat 8/9. Los valores de salida de NDVI oscilan entre -1 y +1, donde los valores más cercanos a -1 indican agua y los valores más cercanos a +1 indican vegetación densa y verde. Dado que la vegetación refleja las longitudes de onda del infrarrojo cercano y absorbe la luz roja, este indicador puede ser muy eficaz para resaltar la cubierta vegetal y señalar las zonas agrícolas, la extensión de los bosques y las áreas de sequía, entre otras aplicaciones.
+La banda NIR corresponde a la Banda 5 y la banda roja corresponde a la Banda 4 en las imágenes Landsat 8/9. Los valores de salida de NDVI oscilan entre -1 y +1, donde los valores más cercanos a -1 indican agua y los valores más cercanos a +1 indican vegetación densa y verde. Dado que la vegetación refleja las longitudes de onda del infrarrojo cercano y absorbe la luz roja, este indicador puede ser muy eficaz para resaltar la cobertura vegetal e identificar las zonas agrícolas, la extensión de los bosques y las áreas de sequía, entre otras aplicaciones.
 
 ### Ejercicio 2.4 Calcular NDVI utilizando Landsat 8
 
@@ -164,13 +164,13 @@ Este ejercicio proporciona un proceso paso a paso para crear y mostrar una nueva
 1. Abra QGIS.
 2. En "Proyectos recientes", seleccione "Intro-detección remota" y ábralo.
 3. Haga clic en "Capa > Agregar capa > Agregar capa ráster..." y haga clic en "..." junto al campo "Conjunto(s) de datos ráster" para buscar y seleccionar un archivo.
-4. Navegue hasta “intro-rs-data > l8-sr-negril-2022-09-16” y seleccione los archivos que terminan en “B5” y “B4”. Haga clic en el botón "Abrir" y luego haga clic en "Agregar" para agregar la capa al lienzo.
+4. Navegue hasta “intro-rs-data > l8-sr-negril-2022-09-16” y seleccione los archivos que terminan en “B5” y “B4”. Haga clic en el botón "Abrir" y luego haga clic en "Agregar" para agregar la capa a la vista del mapa.
 5. Usaremos la fórmula de la sección anterior para crear una nueva imagen de una sola banda que muestre los valores NDVI para la región. Seleccione "Procesamiento > Caja de herramientas" para abrir la caja de herramientas de QGIS.
 6. Escriba "Calculadora ráster" en el cuadro de búsqueda o navegue hasta "Análisis ráster > Calculadora ráster" y haga doble clic para abrir la herramienta.
 
 <img align="center" src="../images/intro-rs-images/ex-2.4-processing-toolbox.png"  vspace="10" width="600">
 
-7. En la calculadora, puede escribir su propia expresión o usar una expresión predefinida. NDVI está predefinido en QGIS, pero por el bien de la práctica, escribiremos nuestra propia expresión. En el campo “Expresión”, copie y pegue el siguiente texto: **(NIR - Red) / (NIR + Red)**
+7. En la calculadora, puede escribir su propia expresión o usar una expresión predefinida. NDVI está predefinido en QGIS, pero para la práctica, escribiremos nuestra propia expresión. En el campo “Expresión”, copie y pegue el siguiente texto: **(NIR - Red) / (NIR + Red)**
 8. Ahora, resalte la primera instancia donde dice "NIR" y haga doble clic en "LC08_L1TP_012047_20220916_20220922_02_T1_B5@1" para reemplazarlo con la banda de imagen real. Repita para la otra instancia de "NIR".
 9. A continuación, resalte la primera instancia donde dice "Rojo" y haga doble clic en "LC08_L1TP_012047_20220916_20220922_02_T1_B4@1" para reemplazarlo con la banda de imagen real. Repita para la otra instancia de "Rojo".
 
@@ -185,20 +185,20 @@ Este ejercicio proporciona un proceso paso a paso para crear y mostrar una nueva
 
 <img align="center" src="../images/intro-rs-images/ex-2.4-ndvi-final.png" vspace="10" width="600">
 
-¡Se ha agregado al lienzo una imagen con los valores NDVI de todo el ráster! Dado que es una imagen de una sola banda, se muestra automáticamente en escala de grises. Sin embargo, la mayoría de los parámetros son mucho más valiosos si se representan en color para que los datos puedan contar una historia impactante.
+¡Se ha agregado a la vista del mapa una imagen con los valores NDVI de todo el ráster! Dado que es una imagen de una sola banda, se muestra automáticamente en escala de grises. Sin embargo, la mayoría de los parámetros son mucho más valiosos si se representan en color para que los datos puedan contar una historia impactante.
 
-**Las reglas de oro de la visualización de datos.** La forma en que se presentan los datos puede ser tan importante como la forma en que se generaron. Si su audiencia no puede determinar ningún significado de sus datos, es poco probable que se tomen decisiones procesables a partir de ellos y se pueden dejar en los archivos para acumular polvo. Las imágenes a menudo transmiten un significado más poderoso que las palabras, lo que subraya la importancia de crear visualizaciones de datos bien pensadas. El proceso de hacer estas visualizaciones es una excelente oportunidad para la creatividad: la forma en que se deben mostrar los datos a menudo depende del contexto del proyecto y de los datos en sí, pero los siguientes consejos y trucos le darán algunas pautas generales para considerar mientras explora diferentes Técnicas y paletas de colores.
+**Las reglas de oro de la visualización de datos.** La forma en que se presentan los datos puede ser tan importante como la forma en que se generaron. Si su audiencia no puede determinar ningún significado de sus datos, es poco probable que se tomen decisiones a partir de ellos y se pueden eliminar. Las imágenes a menudo transmiten un significado más poderoso que las palabras, lo que subraya la importancia de crear visualizaciones de datos bien pensadas. El proceso de hacer estas visualizaciones es una excelente oportunidad para la creatividad: la forma en que se deben mostrar los datos a menudo depende del contexto del proyecto y de los datos en sí, pero los siguientes consejos y trucos le darán algunas pautas generales para considerar mientras explora diferentes técnicas y paletas de colores.
 
 1. **Comience con una meta**. Comenzar con un objetivo proporciona la base para reunir los ingredientes de la visualización de datos con un propósito.
 2. **Conoce tus datos**. Si bien casi cualquier cosa se puede convertir en datos y codificar visualmente, conocer el contexto detrás de los datos es tan importante como comprender los datos en sí. Este conocimiento también servirá para verificar que tiene los mejores datos para respaldar su objetivo.
-3. **Pon a tu audiencia primero**. La visualización de datos rara vez es igual para todos, y su mensaje puede perderse si no se personaliza para su audiencia. Por lo tanto, enfócate en visualizar lo que tu audiencia necesita saber.
+3. **Poner primero a tu audiencia**. La visualización de datos rara vez es igual para todos, y su mensaje puede perderse si no se personaliza para su audiencia. Por lo tanto, enfócate en visualizar lo que tu audiencia necesita saber.
 4. **Sea sensible a los medios**. Tener en cuenta cómo se verá la visualización lo ayudará a asegurarse de que su visualización llegue a su audiencia.
 5. **Elige el gráfico correcto**. Conozca los puntos fuertes de cada tipo de gráfico y qué características clave de los datos visualizan mejor.
 6. **Gráfico inteligente**. La capacidad de una visualización para llevar a su audiencia a las respuestas también puede conducir ocasionalmente a respuestas incorrectas. Las visualizaciones de datos no deben distorsionar, confundir o tergiversar.
 7. **Use las etiquetas sabiamente**. Brinda contexto a tu audiencia al incluir un título simple y atractivo. Luego, etiquete los ejes para que sean fáciles de leer y apropiados para los datos que muestran. Minimizar el uso de leyendas.
 8. **Diseño al grano**. El diseño excesivo hace que la información importante sea más difícil de encontrar, más difícil de recordar y más fácil de descartar. La clave para diseñar visualizaciones de datos es ser sencillo.
 9. **Deja que los datos hablen**. El componente más importante de la visualización de datos son los datos. Use señales visuales estratégicamente para guiar a la audiencia y llamar su atención, pero deje que los datos cuenten la historia, no el diseño.
-10. **La retroalimentación es algo bueno**. Tómese el tiempo para ajustar las visualizaciones interactuando con las partes interesadas para recopilar comentarios.
+10. **La retroalimentación es algo bueno**. Tómese el tiempo para ajustar las visualizaciones interactuando con las personas interesadas para recopilar comentarios.
 
 *Source: The Database, trends and applications (https://www.dbta.com)*
 
@@ -237,14 +237,14 @@ Este ejercicio explora cómo elegir y personalizar una paleta de colores para vi
 
 *NDVI con rampa de color RedYlGrn y mín./máx. ajustados a -1 y 1, respectivamente.*
 
-Esta imagen es mucho más fácil de interpretar en comparación con la imagen en escala de grises. Dependiendo de la paleta de colores que elija, las áreas con mucha vegetación (valores altos de NDVI) aparecen de color más verde, mientras que las áreas sin vegetación y los cuerpos de agua (bajo NDVI) aparecen de color más rojo. Compare las áreas protegidas con las áreas no protegidas. ¿Parecen tener diferentes características de vegetación?
+Esta imagen es mucho más fácil de interpretar, en comparación con la imagen en escala de grises. Dependiendo de la paleta de colores que elija, las áreas con mucha vegetación (valores altos de NDVI) aparecen de color más verde, mientras que las áreas sin vegetación y los cuerpos de agua (bajo NDVI) aparecen de color más rojo. Compare las áreas protegidas con las áreas no protegidas. ¿Parecen tener diferentes características de vegetación?
 
 ### Desafío 1: Cuantificar el NDVI derivado de Landsat 8
 
 La inspección visual es útil para contar una historia con datos, pero los números también pueden contar una historia. Use QGIS para encontrar el valor medio y mediano de NDVI dentro del Área Ambiental Protegida de Negril y en las áreas no protegidas del oeste de Jamaica. Compare los valores para ver si hay una diferencia en los niveles de vegetación entre áreas protegidas y no protegidas.
 *Sugerencia 1: deberá usar l8-sr-ndvi-negril-2022-09-16.tif, agregar negril_pa_shapefile.shp negril-pa-shapefile.zip y **non_protectedArea_savanna.shp** como dos capas en el proyecto.*
-*Sugerencia 2: Usando todo el límite de Jamaica (jam_admbnda_adm0.shp), primero recorte **negril_pa_shapefile.shp** para obtener el área protegida solo en tierra (sin la porción de mar), y guarde el nuevo archivo de forma como **negril_pa_shapefile_NoSea .shp**. Utilice este nuevo archivo de formas para comparar los valores de NDVI.*
-*Sugerencia 3: La herramienta Estadísticas zonales será útil en este ejercicio. Busque la Caja de herramientas de procesamiento → Análisis de ráster → Herramienta de estadísticas zonales. Podrá especificar las estadísticas que desee (media, máx., mín., etc.)... y luego los resultados se agregarán en la tabla de atributos de la capa del archivo de forma utilizada.*
+*Sugerencia 2: Usando todo el límite de Jamaica (jam_admbnda_adm0.shp), primero recorte **negril_pa_shapefile.shp** para obtener el área protegida solo en tierra (sin la porción de mar), y guarde el nuevo archivo de forma como **negril_pa_shapefile_NoSea .shp**. Utilice este nuevo archivo de datos para comparar los valores de NDVI.*
+*Sugerencia 3: La herramienta Estadísticas zonales será útil en este ejercicio. Busque la Caja de herramientas de procesamiento → Análisis de ráster → Herramienta de estadísticas zonales. Podrá especificar las estadísticas que desee (media, máx., mín., etc.)... y luego los resultados se agregarán en la tabla de atributos de la capa del archivo.*
 
 ### Desafío 2: Calcular un NDWI derivado de Landsat 8
 
