@@ -31,7 +31,7 @@ Figura 6. Niveles de preprocesamiento para datos de teledetección. Fuente de la
 El nivel de preprocesamiento que necesita un usuario depende del tipo de análisis que se esté realizando. El procesamiento previo afecta los valores y, por lo tanto, los resultados del análisis de los datos que se utilizan y tiene el potencial de adicionar errores en un estudio. Es importante utilizar datos de teledetección realizando un preprocesamiento para llevar a cabo el análisis lo más preciso y consistente posible.
 
 ### Ejercicio 2.1 Examine las diferencias entre los productos de datos.
-Este ejercicio subrayará las diferencias entre los productos de datos Landsat 8 de reflectancia superficial (SR) y de la parte superior de la atmósfera (TOA).
+Este ejercicio presentará las diferencias entre los productos de datos Landsat 8, de reflectancia superficial (SR) y de la parte superior de la atmósfera (TOA).
 
 1. Abra QGIS.
 2. En "Plantillas de proyecto", seleccione "Nuevo proyecto vacío".
@@ -61,9 +61,9 @@ Este ejercicio subrayará las diferencias entre los productos de datos Landsat 8
 
 <img align="center" src="../images/intro-rs-images/ex-2.1-toa-adjusted-canvas.png" vspace="10" width="600">
 
-Examine las diferencias entre las dos imágenes. Observe cómo la imagen SR aparece más brillante y algo más clara que la imagen TOA debido a los pasos correctivos adicionales que se tomaron para crear el producto de reflectancia superficial. En general, se recomienda que los investigadores utilicen imágenes TOA para análisis de una sola fecha y una sola escena e imágenes SR para análisis de varias fechas o escalas geográficas más grandes. Usaremos imágenes SR durante el resto de la lección.
+Examine las diferencias entre las dos imágenes. Observe cómo la imagen SR aparece más brillante y algo más clara que la imagen TOA debido a los pasos de corrección adicionales que se realizaron para crear el producto de reflectancia superficial. En general, se recomienda que los investigadores utilicen imágenes TOA para análisis de una sola fecha y una sola escena e imágenes SR para análisis de varias fechas o escalas geográficas más grandes. Usaremos imágenes SR durante el resto de la lección.
 
-**Cubierto de nubes**. A menudo, particularmente en las regiones costeras o tropicales, una imagen contendrá nubes que deben eliminarse antes de poder analizar los datos. Las imágenes utilizadas en el Ejercicio 2.1 contienen tal cobertura de nubes. Si bien gran parte del preprocesamiento requerido ya se completó con los productos SR, el usuario debe realizar la eliminación de la nube o el enmascaramiento de la nube.
+**Cobertura de nubes**. Particularmente en las regiones costeras o tropicales, una imagen contendrá nubes que deben eliminarse antes de poder analizar los datos. Las imágenes utilizadas en el Ejercicio 2.1 contienen tal cobertura de nubes. Si bien, gran parte del preprocesamiento requerido ya se completó con los productos SR, el usuario debe realizar la eliminación de la nube o el enmascaramiento de la nube.
 
 ### Ejercicio 2.2 Cree una imagen en color verdadero sin nubes.
 
@@ -75,7 +75,7 @@ Este ejercicio explicará cómo crear una imagen compuesta de color verdadero us
     1. Seleccione "Ráster > Varios > Combinar..."
     2. Haga clic en "..." junto al campo "Capas de entrada".
     3. Haga clic en "Agregar archivo(s)..." y navegue hasta "intro-rs-data > l8-sr-negril-2022-09-16". Mantenga presionada la tecla Shift en su teclado y seleccione los archivos que terminan en "B4", "B3" y "B2". Haga clic en "Abrir" para agregar los archivos.
-    4. En la ventana "Capas de entrada", asegúrese de que las bandas estén ordenadas correctamente. Las imágenes en color verdadero se crean combinando la banda roja (Landsat 8 Band 4), la banda verde (Landsat 8 Band 3) y la banda azul (Landsat 8 Band 2) de una imagen en una sola imagen en ese orden particular.
+    4. En la ventana "Capas de entrada", asegúrese de que las bandas estén ordenadas correctamente. Las imágenes en color verdadero se crean combinando la banda roja (Landsat 8 Band 4), la banda verde (Landsat 8 Band 3) y la banda azul (Landsat 8 Band 2) de una imagen para una sola imagen en ese orden particular.
 
     Arrastre y suelte los nombres de los archivos para que el archivo B4 aparezca primero, seguido del archivo B3 y luego el archivo B2. Pulse "OK" para volver a la ventana "Fusionar".
 
@@ -86,22 +86,22 @@ Este ejercicio explicará cómo crear una imagen compuesta de color verdadero us
 
     <img align="center" src="../images/intro-rs-images/ex-2.2-merge-options-final.png" vspace="10" width="600">
 
-    7. Presione "Ejecutar" para crear y cargar la imagen en el lienzo y haga clic en "Cerrar" para cerrar la ventana "Combinar".
+    7. Presione "Ejecutar" para crear y cargar la imagen en la vista del mapa y haga clic en "Cerrar" para cerrar la ventana "Combinar".
 
     <img align="center" src="../images/intro-rs-images/ex-2.2-sr-tc-canvas.png" vspace="10" width="600">
 
-4. **Enmascare las nubes**. Usaremos Cloud Masking, un útil complemento de QGIS que enmascara las nubes para los datos de Landsat, para llevar a cabo este proceso.
+4. **Enmascare las nubes**. Usaremos Cloud Masking, un útil complemento de QGIS que enmascara las nubes para los datos de Landsat, para llevar a cabo este proceso:
     1. Vaya a "Complementos > Enmascaramiento de nubes para productos Landsat > Enmascaramiento de nubes". Debería aparecer un panel en el lado derecho.
     2. En la pestaña "Abrir y cargar", haga clic en "Examinar" junto al campo "Archivo de metadatos de Landsat". Navegue hasta "intro-rs-data > l8-sr-negril-2022-09-16" y seleccione el archivo que termina en "MTL". Presione "Abrir" para agregarlo y luego haga clic en el botón "Cargar". El archivo de metadatos debe seleccionarse automáticamente.
 
     <img align="center" src="../images/intro-rs-images/ex-2.2-loaded-metadata.png" vspace="10" width="600">
 
-    3. En el campo "Cargar pilas", haga clic en el botón "Color natural" para configurar la disposición de la banda como una imagen de color verdadero.
+    3. En el campo "Cargar stack", haga clic en el botón "Color natural" para configurar las bandas como una imagen de color verdadero.
     4. A continuación, seleccione la pestaña "Filtros y máscara". En el campo "Filtros para aplicar", seleccione la opción "FMask". Deja todas las opciones como están.
 
     <img align="center" src="../images/intro-rs-images/ex-2.2-selected-fmask.png" vspace="10" width="400">
 
-    5. **Asegúrese de guardar su proyecto antes de realizar este paso**. Haga clic en "Generar máscara". Puede tomar un par de minutos. Cuando haya terminado, debería aparecer una nueva capa de máscara de nube en el lienzo. Si la máscara no se ve bien, puede ajustar los parámetros en el campo "FMask" y generar una nueva máscara hasta que esté satisfecho con el resultado. Guarde el proyecto de nuevo.
+    5. **Asegúrese de guardar su proyecto antes de realizar este paso**. Haga clic en "Generar máscara". Puede tomar un par de minutos. Cuando haya terminado, debería aparecer una nueva capa de máscara de nube en la vista del mapa. Si la máscara no se ve bien, puede ajustar los parámetros en el campo "FMask" y generar una nueva máscara hasta que esté satisfecho con el resultado. Guarde el proyecto de nuevo.
 
     <img align="center" src="../images/intro-rs-images/ex-2.2-loaded-cloudmask.png" vspace="10" width="600">
 
@@ -115,26 +115,26 @@ Este ejercicio explicará cómo crear una imagen compuesta de color verdadero us
 
 <img align="center" src="../images/intro-rs-images/ex-2.2-cloudmask-final.png" vspace="10" width="600">
 
-¡Ahora tenemos una imagen de reflectancia de superficie Landsat 8 sin nubes! Obviamente, hay algunas brechas significativas donde las nubes estaban presentes, por lo que generalmente es mejor enmascarar las nubes y crear una composición de imágenes de nubes durante una temporada en particular, o tratar de usar imágenes que tengan menos del 30% (o un umbral de su elección ) cobertura de nubes para minimizar la cantidad de eliminación de datos. El enmascaramiento de nubes no es una ciencia perfecta: a veces es necesario probar varios algoritmos diferentes para encontrar el que mejor se adapte a sus datos y área de estudio. Hay más información disponible sobre el enmascaramiento de nubes en la sección [Recursos](https://eos.com/blog/cloud-mask/).
+¡Ahora tenemos una imagen de reflectancia de superficie Landsat 8 sin nubes! Obviamente, hay algunas vacíos o huecos significativos en la imagen donde las nubes estaban presentes, por lo que generalmente es mejor enmascarar las nubes y crear una composición de imágenes de nubes durante una temporada en particular, o tratar de usar imágenes que tengan menos del 30% (o un umbral de su elección ) de cobertura de nubes, para minimizar la cantidad de eliminación de datos. El enmascaramiento de nubes no es una ciencia perfecta: a veces es necesario probar varios algoritmos diferentes para encontrar el que mejor se adapte a sus datos y área de estudio. Hay más información disponible sobre el enmascaramiento de nubes en la sección [Recursos](https://eos.com/blog/cloud-mask/).
 
 ## Análisis de vegetación: Parte 1
 
-Paso 4.c. en el Ejercicio 2.2 mostró cómo la combinación de bandas en un orden particular permite a un usuario visualizar una escena Landsat 8 como aparecería al ojo humano (imagen en color verdadero). Las otras bandas de una imagen también se pueden combinar para ilustrar características particulares de una región. En las próximas secciones, intentaremos responder la siguiente pregunta: **¿Cómo difiere la cobertura vegetal entre áreas protegidas y no protegidas?** Esta lección se centrará en el Área de Protección Ambiental de Negril en la costa occidental de Jamaica.
+Paso 4.c. en el Ejercicio 2.2 mostró cómo la combinación de bandas en un orden particular permite a un usuario visualizar una escena Landsat 8 como aparecería al ojo humano (imagen en color verdadero). Las otras bandas de una imagen también se pueden combinar para ilustrar características particulares de una región. En las próximas secciones, intentaremos responder la siguiente pregunta: **¿Cómo se diferencia la cobertura vegetal entre áreas protegidas y no protegidas?** Esta lección se centrará en el Área de Protección Ambiental de Negril en la costa occidental de Jamaica.
 
 <img align="center" src="../images/intro-rs-images/jamaica-pa.jpg"  vspace="10" width="700">
 
-Un método para inspeccionar la cubierta vegetal en un área de interés es crear un tipo de compuesto de color falso llamado imagen **infrarroja cercana**, también conocida como imagen **infrarroja en color**. La vegetación saludable tiende a reflejar altos niveles de energía del infrarrojo cercano (NIR). Al organizar las bandas NIR, roja y verde en una sola imagen, es fácil ver la distribución general y la salud de las plantas en un espacio determinado.
+Un método para inspeccionar la cobertura vegetal en un área de interés es creando un tipo de compuesto de falso color, llamado imagen **infrarroja cercana**, también conocida como imagen **infrarroja en color**. La vegetación saludable tiende a reflejar altos niveles de energía del infrarrojo cercano (NIR). Al organizar las bandas NIR, roja y verde en una sola imagen, es fácil ver la distribución general y la salud de la vegetación en un espacio determinado.
 
 ### Ejercicio 2.3 Visualice la vegetación con imágenes infrarrojas en color
 
-Este ejercicio ilustrará cómo crear una imagen compuesta de infrarrojos en color utilizando Landsat 8 para examinar la cubierta vegetal en el oeste de Jamaica.
+Este ejercicio ilustrará cómo crear una imagen compuesta de infrarrojos en color utilizando Landsat 8 para examinar la cobertura vegetal en el oeste de Jamaica.
 
 1. Abra QGIS.
 2. En "Proyectos recientes", seleccione "Intro-detección remota" y ábralo.
 3. Seleccione "Ráster > Varios > Combinar..."
 4. Haga clic en "..." junto al campo "Capas de entrada".
 5. Haga clic en "Agregar archivo(s)..." y navegue hasta "intro-rs-data > l8-sr-negril-2022-09-16". Seleccione los archivos que terminan en "B5", "B4" y "B3". Haga clic en "Abrir" para agregar los archivos.
-6. En la ventana "Capas de entrada", asegúrese de que las bandas estén **ordenadas correctamente**. Las imágenes infrarrojas en color se crean combinando la banda NIR (Landsat 8 Band 5), la banda roja (Landsat 8 Band 4) y la banda verde (Landsat 8 Band 3) de una imagen en una sola imagen en ese orden particular. Arrastre y suelte los nombres de los archivos para que el archivo "B5" sea el primero, seguido de "B4" y luego "B3". Pulse "OK" para volver a la ventana "Fusionar".
+6. En la ventana "Capas de entrada", asegúrese de que las bandas estén **ordenadas correctamente**. Las imágenes infrarrojas en color se crean combinando las bandas NIR (Landsat 8 Band 5), la banda roja (Landsat 8 Band 4) y la banda verde (Landsat 8 Band 3) en una sola imagen en ese orden particular. Arrastre y suelte los nombres de los archivos para que el archivo "B5" sea el primero, seguido de "B4" y luego "B3". Pulse "OK" para volver a la ventana "Fusionar".
 
 <img align="center" src="../images/intro-rs-images/ex-2.3-ordered-nir-bands.png" vspace="10" width="600">
 
@@ -143,11 +143,11 @@ Este ejercicio ilustrará cómo crear una imagen compuesta de infrarrojos en col
 
 <img align="center" src="../images/intro-rs-images/ex-2.3-merge-options-final.png" vspace="10" width="600">
 
-9. Presione "Ejecutar" para crear y cargar la imagen en el lienzo y haga clic en "Cerrar" para cerrar la ventana "Combinar".
+9. Presione "Ejecutar" para crear y cargar la imagen en la vista del mapa y haga clic en "Cerrar" para cerrar la ventana "Combinar".
 
 <img align="center" src="../images/intro-rs-images/ex-2.3-nir-canvas.png" vspace="10" width="600">
 
-Active y desactive la capa de infrarrojo cercano para comparar el compuesto de color falso con el compuesto de color verdadero. Las áreas con vegetación densa y verde deben aparecer de color rojo brillante, mientras que las áreas no productivas o sin vegetación deben aparecer entre un color marrón y azul blanquecino. El compuesto de color falso hace que sea mucho más fácil identificar rápidamente áreas con vegetación altamente productivas.
+Active y desactive la capa de infrarrojo cercano para comparar el compuesto de falso color con el compuesto de color verdadero. Las áreas con vegetación densa y verde deben aparecer de color rojo brillante, mientras que las áreas no productivas o sin vegetación deben aparecer entre un color marrón y azul blanquecino. El compuesto de color falso hace que sea mucho más fácil identificar rápidamente áreas con vegetación altamente productivas.
 
 **Matemáticas de la banda**. Las visualizaciones infrarrojas del color verdadero y del color no requirieron ningún cálculo. En su lugar, las bandas podrían disponerse en un orden particular para que la imagen se viera diferente. [Awesome Spectral Indices](https://awesome-ee-spectral-indices.readthedocs.io/en/latest/) proporciona una referencia para otras combinaciones de bandas comunes para la visualización de datos de teledetección. Un análisis más complejo requiere más que una reorganización de las bandas: a menudo, las bandas deben combinarse mediante una ecuación cuyo resultado se almacena en una nueva banda y corresponde a algún tipo de métrica de análisis.
 
