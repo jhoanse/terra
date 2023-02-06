@@ -11,12 +11,12 @@ El acceso a datos de teledetección se ha vuelto más fácil que nunca en los ú
 
 ## Objetivos
 
-1. Use Earth Explorer para encontrar escenas de Landsat 8 y 9 para una fecha y ubicación específicas.
-2. Ubique escenas de Sentinel-2 para una fecha y ubicación específicas utilizando Copernicus Open Access Hub.
+1. Usar Earth Explorer para encontrar escenas de Landsat 8 y 9 para una fecha y ubicación específicas.
+2. Buscar escenas de Sentinel-2 para una fecha y ubicación específicas utilizando Copernicus Open Access Hub.
 
 ## Earth Explorer
 
-**¿Qué es Earth Explorer?** USGS Earth Explorer es un portal de datos integral para acceder a conjuntos de datos geoespaciales de la colección de USGS. Los usuarios pueden interactuar con una interfaz de usuario para filtrar datos por ubicación a través del mapa que se muestra, ingresar coordenadas exactas o cargar un archivo de forma. Los datos se pueden filtrar aún más por rango de fechas, tipo de conjunto de datos y criterios adicionales.
+**¿Qué es Earth Explorer?** USGS Earth Explorer es un portal de datos integral para acceder a conjuntos de datos geoespaciales de la colección de USGS. Los usuarios pueden interactuar con una interfaz de usuario para filtrar datos por ubicación a través del mapa que se muestra, ingresar coordenadas exactas o cargar un archivo de shapefile. Los datos se pueden filtrar aún más por rango de fechas, tipo de conjunto de datos y criterios adicionales.
 
 ### Ejercicio 1.1. Practique el uso de Earth Explorer
 
