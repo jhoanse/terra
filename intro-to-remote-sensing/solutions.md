@@ -12,10 +12,10 @@ nav_order: 6
 La inspección visual es útil para contar una historia con datos, pero los números también pueden contar una historia. Use QGIS para encontrar el valor medio y mediano de NDVI dentro del Área Ambiental Protegida de Negril y en las áreas no protegidas del oeste de Jamaica. Compare los valores para ver si hay una diferencia en los niveles de vegetación entre áreas protegidas y no protegidas.
 
 - *Sugerencia 1: deberá usar l8-sr-ndvi-negril-2022-09-16.tif, negril_pa_shapefile.shp y non_protectedArea_savanna.shp como dos capas diferentes en el proyecto.*
-- *Sugerencia 2: Usando todo el límite de Jamaica (jam_admbnda_adm0.shp), primero recorte el negril_pa_shapefile.shp para obtener el área protegida solo en tierra (sin la porción de mar), y guarde el nuevo archivo de forma como negril_pa_shapefile_NoSea.shp. Utilice este nuevo archivo de formas para comparar los valores de NDVI.*
-- *Pista 3: La herramienta Estadísticas zonales será útil en este ejercicio. Busque la Caja de herramientas de procesamiento → Análisis de ráster → Herramienta de estadísticas zonales. Podrá especificar las estadísticas que desee (media, máx., mín., etc.)... y luego los resultados se agregarán en la tabla de atributos de la capa del archivo de forma utilizada.*
+- *Sugerencia 2: Usando todo el límite de Jamaica (jam_admbnda_adm0.shp), primero recorte el negril_pa_shapefile.shp para obtener el área protegida solo en tierra (sin la porción de mar), y guarde el nuevo archivo de shapefile como negril_pa_shapefile_NoSea.shp. Utilice este nuevo archivo de .shp para comparar los valores de NDVI.*
+- *Pista 3: La herramienta Estadísticas zonales será útil en este ejercicio. Busque la Caja de herramientas de procesamiento → Análisis de ráster → Herramienta de estadísticas zonales. Podrá especificar las estadísticas que desee (media, máx., mín., etc.)... y luego los resultados se agregarán en la tabla de atributos de la capa del archivo de .shp utilizado.*
 
-1. Recortar el archivo de formas del área protegida. Añadimos el límite de Jamaica
+1. Recortar el archivo de .shp del área protegida. Añadimos el límite de Jamaica
 
 <img align="center" src="../images/intro-rs-images/solutions1-clipping.png" vspace="10" width="600">
 
@@ -49,7 +49,7 @@ Como capa raster seleccionamos la capa general NDVI que compromete todo el terri
 
 <img align="center" src="../images/intro-rs-images/solutions1-zonal-stats-inputs-stats.png" vspace="10" width="700">
 
-Definimos los nombres de las nuevas capas como *zonal_ndvi_negrilProArea.shp* y *zonal_ndvi_negrilNonProArea.shp*. Los resultados se agregan en la tabla de atributos de la capa del archivo de forma. Las siguientes tablas muestran las estimaciones para los valores medios y medianos de NDVI de las áreas protegidas y no protegidas.
+Definimos los nombres de las nuevas capas como *zonal_ndvi_negrilProArea.shp* y *zonal_ndvi_negrilNonProArea.shp*. Los resultados se agregan en la tabla de atributos de la capa del archivo .shp. Las siguientes tablas muestran las estimaciones para los valores de las medias y medianas de NDVI de las áreas protegidas y no protegidas.
 
 <img align="center" src="../images/intro-rs-images/solutions1-zonal-stats-table.png" vspace="10" width="700">
 
@@ -73,7 +73,7 @@ Elegimos las bandas adecuadas según la fórmula
 
 <img align="center" src="../images/intro-rs-images/solutions2-raster-caculator2.png" vspace="10" width="700">
 
-Para la capa de referencia elegimos B3 o B5. Guardamos los nuevos productos como *l8-sr-NDWI-negril-2022-09-16_wgs84.tif*. La extensión y el sistema de referencia de coordenadas de salida (CRS) se establecen con los valores predeterminados (extensión del lienzo del mapa).
+Para la capa de referencia elegimos B3 o B5. Guardamos los nuevos productos como *l8-sr-NDWI-negril-2022-09-16_wgs84.tif*. La extensión y el sistema de referencia de coordenadas de salida (CRS) se establecen con los valores predeterminados (extensión de la visual del mapa).
 
 <img align="center" src="../images/intro-rs-images/solutions2-raster-caculator3.png" vspace="10" width="700">
 
@@ -85,7 +85,7 @@ Los humedales aparecerán azulados, mientras que la tierra desnuda se verá más
 
 ## Desafío 3: Cuantificar el NDVI derivado de Sentinel-2
 
-Use QGIS para encontrar los valores medios y medianos de NDVI dentro de las áreas protegidas dentro de Negril y en las áreas no protegidas de Negril. Compare los valores para ver si hay una diferencia en los niveles de vegetación entre áreas protegidas y no protegidas. ¿Estos valores difieren de los valores calculados en el Desafío 1?
+Use QGIS para encontrar los valores de las medias y medianas de NDVI dentro de las áreas protegidas y no protegidas de Negril. Compare los valores para ver si hay una diferencia en los niveles de vegetación entre áreas protegidas y no protegidas. ¿Estos valores difieren de los valores calculados en el Desafío 1?
 
 - *Pista 1: Deberás agregar negril-pa-shapefile.zip y **non_protectedArea_savanna.shp** como dos capas diferentes en el proyecto.*
 - *Sugerencia 2: la herramienta Estadísticas zonales será útil en este ejercicio.*
@@ -98,7 +98,7 @@ Guardamos el nuevo ráster con los nombres *zonal_ndvi_sentinel_negrilProArea.sh
 
 <img align="center" src="../images/intro-rs-images/solutions3-zonal-stats-table.png" vspace="10" width="600">
 
-Nuevamente, los valores de NDVI en el área protegida son más altos que en el área no protegida, como esperábamos. PA NDVI media 0,78 mientras que NPA NDVI media es 0,71
+Nuevamente, los valores de NDVI en el área protegida son más altos que en el área no protegida, como esperábamos. El área protegida tiene una media de NDVI de 0,78, mientras que el área no protegida tiene una media de 0,71.
 
 <img align="center" src="../images/intro-rs-images/solutions3-zonal-stats-table2.png" vspace="10" width="600">
 
@@ -109,7 +109,7 @@ La diferencia entre las estimaciones de áreas protegidas y no protegidas no es 
 Basado en el último DEM que acabamos de crear, cree un mapa de sombreado y luego cree un mapa con todos los elementos necesarios.
 *Sugerencia: utilice la herramienta HillShade del menú Ráster -> Análisis/Análisis del terreno*
 
-Vamos a Terreno de análisis, y usamos la herramienta Sombreado.
+Vamos a análisis de Terreno, y usamos la herramienta Sombreado.
 
 <img align="center" src="../images/intro-rs-images/solutions4-hillshade-tool.png" vspace="10" width="600">
 
