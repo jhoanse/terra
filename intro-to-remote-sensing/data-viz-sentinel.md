@@ -50,7 +50,7 @@ Este ejercicio proporciona un proceso paso a paso para crear y mostrar una nueva
 1. Abra QGIS.
 2. En "Proyectos recientes", seleccione "Intro-detección remota" y ábralo.
 3. Haga clic en "Capa > Agregar capa > Agregar capa ráster..." y haga clic en "..." junto al campo "Conjunto(s) de datos ráster" para buscar y seleccionar un archivo.
-4. Navegue para seleccionar el archivo “s2-sr-negril-cloudfree.tif”. Haga clic en el botón "Abrir" y luego haga clic en "Agregar" para agregar la capa al lienzo.
+4. Navegue para seleccionar el archivo “s2-sr-negril-cloudfree.tif”. Haga clic en el botón "Abrir" y luego haga clic en "Agregar" para agregar la capa a la vista del mapa.
 5. Usaremos la fórmula NDVI para crear una nueva imagen de una sola banda que muestre los valores NDVI para la región. Seleccione "Procesamiento > Caja de herramientas" para abrir la caja de herramientas de QGIS.
 6. Escriba "Calculadora ráster" en el cuadro de búsqueda o navegue hasta "Análisis ráster > Calculadora ráster" y haga doble clic para abrir la herramienta.
 7. En la calculadora, puede escribir su propia expresión o usar una expresión predefinida. En el campo “Expresión”, copie y pegue el siguiente texto: (NIR - Red) / (NIR + Red)
