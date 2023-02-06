@@ -12,23 +12,23 @@ Los datos de teledetección son útiles para obtener información sobre una regi
 ## Objetivos
 
 1. Comprender e implementar los pasos de preprocesamiento necesarios para los datos de Landsat.
-2. Experimente con combinaciones de bandas comunes para visualizar datos de teledetección.
-3. Calcule el NDVI con matemática de banda usando productos de datos de Landsat.
+2. Experimentar con combinaciones de bandas comunes para visualizar datos de teledetección.
+3. Calcular el NDVI con matemática de banda usando productos de datos de Landsat.
 4. Obtener estrategias para crear productos de imagen visualmente efectivos y útiles.
 
 ## Preprocesamiento de imágenes
 Antes de que las imágenes de teledetección se puedan utilizar para el análisis, deben pasar por una serie de pasos de corrección para garantizar que los datos sean lo más precisos posible para el proyecto de investigación de un usuario. La organización que proporciona los datos suele llevar a cabo varios de estos pasos antes de publicarlos:
 
-1. **Corrección geométrica.** Este proceso alinea las capas de datos con su ubicación geográfica correcta y entre sí.
-2. **Corrección solar.** Este proceso ajusta los valores de los píxeles para tener en cuenta los efectos solares. Las imágenes resultantes consisten en valores de reflectancia en la parte superior de la atmósfera.
+1. **Corrección geométrica.** Este proceso alinea las capas de datos con su ubicación geográfica correcta.
+2. **Corrección solar.** Este proceso ajusta los valores de los píxeles para tener en cuenta los efectos solares. Las imágenes resultantes consisten en valores de reflectancia en la parte superior de la atmósfera (TOA).
 3. **Corrección atmosférica.** Este proceso contrarresta los efectos de la atmósfera en las medidas de energía tomadas por el sensor. Algunos de estos efectos incluyen dispersión y absorción.
-4. **Corrección topográfica.** Este proceso tiene en cuenta las variaciones de reflectancia debidas a la pendiente, la elevación y el aspecto. Es especialmente importante para áreas con terreno accidentado o montañoso.
+4. **Corrección topográfica.** Este proceso tiene en cuenta las variaciones de reflectancia debidas a la pendiente, la elevación y el aspecto. Es muy importante para áreas con terreno montañoso.
 
 <img align="center" src="../images/intro-rs-images/landsat-preprocessing-levels.png"  vspace="10" width="600">
 
 Figura 6. Niveles de preprocesamiento para datos de teledetección. Fuente de la imagen: Young et. al., 2017
 
-El nivel de preprocesamiento que necesita un usuario depende del tipo de análisis que se esté realizando. El procesamiento previo afecta los valores y, por lo tanto, los resultados del análisis de los datos que se utilizan y tiene el potencial de introducir errores adicionales en un estudio. Es importante utilizar datos de teledetección con la cantidad adecuada de preprocesamiento para llevar a cabo el análisis más preciso y consistente posible.
+El nivel de preprocesamiento que necesita un usuario depende del tipo de análisis que se esté realizando. El procesamiento previo afecta los valores y, por lo tanto, los resultados del análisis de los datos que se utilizan y tiene el potencial de adicionar errores en un estudio. Es importante utilizar datos de teledetección realizando un preprocesamiento para llevar a cabo el análisis lo más preciso y consistente posible.
 
 ### Ejercicio 2.1 Examine las diferencias entre los productos de datos.
 Este ejercicio subrayará las diferencias entre los productos de datos Landsat 8 de reflectancia superficial (SR) y de la parte superior de la atmósfera (TOA).
