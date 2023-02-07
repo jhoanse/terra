@@ -117,7 +117,7 @@ Un método para inspeccionar la cobertura vegetal en un área de interés es cre
 Este ejercicio ilustrará cómo crear una imagen compuesta de infrarrojos en color utilizando Landsat 8 para examinar la cobertura vegetal en el oeste de Jamaica.
 
 1. Abra QGIS.
-2. En "Proyectos recientes", seleccione "intro-to-" y ábralo.
+2. En "Proyectos recientes", seleccione "intro-teledeteccion" y ábralo.
 3. Seleccione "Ráster > Varios > Combinar..."
 4. Haga clic en "..." junto al campo "Capas de entrada".
 5. Haga clic en "Agregar archivo(s)..." y navegue hasta "intro-rs-data > l8-sr-negril-2022-09-16". Seleccione los archivos que terminan en "B5", "B4" y "B3". Haga clic en "Abrir" para agregar los archivos.
@@ -137,7 +137,7 @@ Active y desactive la capa de infrarrojo cercano para comparar el compuesto de f
 
 Uno de los índices más comunes para visualizar la vegetación en una imagen es el Índice de Vegetación de Diferencia Normalizada (NDVI). El NDVI se calcula utilizando la siguiente ecuación:
 
-$NDVI = {NIR - Red \over NIR + Red}$
+$$ NDVI = {NIR - Red \over NIR + Red} $$
 
 La banda NIR corresponde a la Banda 5 y la banda roja corresponde a la Banda 4 en las imágenes Landsat 8/9. Los valores de salida de NDVI oscilan entre -1 y +1, donde los valores más cercanos a -1 indican agua y los valores más cercanos a +1 indican vegetación densa y verde. Dado que la vegetación refleja las longitudes de onda del infrarrojo cercano y absorbe la luz roja, este indicador puede ser muy eficaz para resaltar la cobertura vegetal e identificar las zonas agrícolas, la extensión de los bosques y las áreas de sequía, entre otras aplicaciones.
 
@@ -187,7 +187,7 @@ Este ejercicio proporciona un proceso paso a paso para crear y mostrar una nueva
 Este ejercicio explora cómo elegir y personalizar una paleta de colores para visualizar más fácilmente la imagen NDVI creada en el Ejercicio 2.4.
 
 1. Abra QGIS.
-2. En "Proyectos recientes", seleccione "Intro-detección remota" y ábralo.
+2. En "Proyectos recientes", seleccione "intro-teledeteccion" y ábralo.
 3. Haga clic derecho en “l8-sr-ndvi-negril-2022-09-16” y seleccione “Propiedades…”.
 4. Seleccione la pestaña "Simbología" en el lado izquierdo de la ventana emergente.
 5. Junto al campo "Tipo de procesamiento", seleccione "Pseudocolor de banda única" en el menú desplegable.
