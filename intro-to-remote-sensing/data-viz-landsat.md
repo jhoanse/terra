@@ -125,7 +125,7 @@ Este ejercicio ilustrará cómo crear una imagen compuesta de infrarrojos en col
 <img align="center" src="../images/intro-rs-images/ex-2.3-ordered-nir-bands.png" vspace="10" width="600">
 
 7. En el campo "Capas de entrada...", marque la opción "Colocar cada archivo de entrada en una banda separada" para crear una imagen compuesta.
-8. Finalmente, junto al campo "Fusionado", seleccione "... > Guardar en archivo..." para especificar dónde desea guardar la imagen. Guarde la imagen en [NOMBRE DE CARPETA DE DATOS] e ingrese “l8-sr-nir-negril-2022-09-16” como nombre de archivo. Presiona "Guardar".
+8. Finalmente, junto al campo "Fusionado", seleccione "... > Guardar en archivo..." para especificar dónde desea guardar la imagen. Guarde la imagen en `intro-rs-data` > `outputs` e ingrese “l8-sr-nir-negril-2022-09-16” como nombre de archivo. Presiona "Guardar".
 <img align="center" src="../images/intro-rs-images/ex-2.3-merge-options-final.png" vspace="10" width="600">
 
 9. Presione "Ejecutar" para crear y cargar la imagen en la vista del mapa y haga clic en "Cerrar" para cerrar la ventana "Combinar".
@@ -137,7 +137,10 @@ Active y desactive la capa de infrarrojo cercano para comparar el compuesto de f
 
 Uno de los índices más comunes para visualizar la vegetación en una imagen es el Índice de Vegetación de Diferencia Normalizada (NDVI). El NDVI se calcula utilizando la siguiente ecuación:
 
-$$ NDVI = {NIR - Red \over NIR + Red} $$
+```math
+NDVI = {NIR - Red \over NIR + Red}
+```
+$$  $$
 
 La banda NIR corresponde a la Banda 5 y la banda roja corresponde a la Banda 4 en las imágenes Landsat 8/9. Los valores de salida de NDVI oscilan entre -1 y +1, donde los valores más cercanos a -1 indican agua y los valores más cercanos a +1 indican vegetación densa y verde. Dado que la vegetación refleja las longitudes de onda del infrarrojo cercano y absorbe la luz roja, este indicador puede ser muy eficaz para resaltar la cobertura vegetal e identificar las zonas agrícolas, la extensión de los bosques y las áreas de sequía, entre otras aplicaciones.
 
