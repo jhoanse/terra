@@ -137,10 +137,7 @@ Active y desactive la capa de infrarrojo cercano para comparar el compuesto de f
 
 Uno de los índices más comunes para visualizar la vegetación en una imagen es el Índice de Vegetación de Diferencia Normalizada (NDVI). El NDVI se calcula utilizando la siguiente ecuación:
 
-```math
-NDVI=\frac{NIR-Red}{NIR + Red}
-```
-
+<img align="center" src="../images/intro-rs-images/ndvi-formula.png" vspace="10" width="150">
 
 La banda NIR corresponde a la Banda 5 y la banda roja corresponde a la Banda 4 en las imágenes Landsat 8/9. Los valores de salida de NDVI oscilan entre -1 y +1, donde los valores más cercanos a -1 indican agua y los valores más cercanos a +1 indican vegetación densa y verde. Dado que la vegetación refleja las longitudes de onda del infrarrojo cercano y absorbe la luz roja, este indicador puede ser muy eficaz para resaltar la cobertura vegetal e identificar las zonas agrícolas, la extensión de los bosques y las áreas de sequía, entre otras aplicaciones.
 
