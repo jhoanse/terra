@@ -14,7 +14,8 @@ nav_order: 1
 1. [Instalar QGIS](https://www.qgis.org/en/site/forusers/download.html) si aún no está instalado.
 2. Crear una [cuenta de Earth Explorer](https://ers.cr.usgs.gov/register).
 3. Crear una [cuenta Copernicus Open Access Hub](https://scihub.copernicus.eu/dhus/#/self-registration)
-4. [Descargar](https://drive.google.com/drive/folders/1p-ZAwhuVXRD-VzAujLk_IQ-gGmGq9ADQ?usp=share_link) y comprimir la carpeta de datos para la lección. Guarde la carpeta comprimida en su escritorio (Desktop). Asegúrese de que la carpeta se llame `intro-rs-data`.
+4. [Descargar Google Earth Pro](https://www.google.com/earth/versions/#earth-pro) para su computadora.
+5. [Descargar](https://drive.google.com/drive/folders/1p-ZAwhuVXRD-VzAujLk_IQ-gGmGq9ADQ?usp=share_link) y comprimir la carpeta de datos para la lección. Guarde la carpeta comprimida en su escritorio (Desktop). Asegúrese de que la carpeta se llame `intro-rs-data`.
 
 ## Objetivos
 

@@ -48,25 +48,22 @@ Las principales diferencias entre los dos satélites radican en la resolución e
 Este ejercicio proporciona un proceso paso a paso para crear y mostrar una nueva imagen de una sola banda de valores NDVI para Negril usando productos de datos Sentinel-2.
 
 1. Abra QGIS.
-2. En "Proyectos recientes", seleccione "Intro-detección remota" y ábralo.
+2. En "Proyectos recientes", seleccione "intro-teledeteccion" y ábralo.
 3. Haga clic en "Capa > Agregar capa > Agregar capa ráster..." y haga clic en "..." junto al campo "Conjunto(s) de datos ráster" para buscar y seleccionar un archivo.
-4. Navegue para seleccionar el archivo “s2-sr-negril-cloudfree.tif”. Haga clic en el botón "Abrir" y luego haga clic en "Agregar" para agregar la capa a la vista del mapa.
+4. Navegue para seleccionar el archivo “s2-negril-cloudfree.tif” (es posible que su archivo tenga un sufijo "-001"). Haga clic en el botón "Abrir" y luego haga clic en "Agregar" para agregar la capa a la vista del mapa.
 5. Usaremos la fórmula NDVI para crear una nueva imagen de una sola banda que muestre los valores NDVI para la región. Seleccione "Procesamiento > Caja de herramientas" para abrir la caja de herramientas de QGIS.
 6. Escriba "Calculadora ráster" en el cuadro de búsqueda o navegue hasta "Análisis ráster > Calculadora ráster" y haga doble clic para abrir la herramienta.
 7. En la calculadora, puede escribir su propia expresión o usar una expresión predefinida. En el campo “Expresión”, copie y pegue el siguiente texto: (NIR - Red) / (NIR + Red)
 8. Ahora, resalte la primera instancia donde dice "NIR" y haga doble clic en "s2-sr-negril-cloudfree@8" para reemplazarlo con la banda de imagen real. Repita para la otra instancia de "NIR".
 9. A continuación, resalte la primera instancia donde dice "Rojo" y haga doble clic en "s2-sr-negril-cloudfree@4" para reemplazarlo con la banda de la imagen real. Repita para la otra instancia de "Rojo".
-
 <img align="center" src="../images/intro-rs-images/ex-3.1-ndvi-expression.png" vspace="10" width="600">
 
-10. Desplácese hacia abajo hasta el campo "Capa(s) de referencia". Haga clic en "..." y marque "s2-sr-negril-cloudfree-ndvi". Haga clic en Aceptar."
+10. Desplácese hacia abajo hasta el campo "Capa(s) de referencia". Haga clic en "..." y marque "s2-sr-negril-cloudfree". Haga clic en Aceptar."
 11. Haga clic en "... > Guardar en archivo..." junto al campo "Salida". Nombra el archivo "s2-sr-ndvi-negril". y haga clic en "Guardar".
 12. Haga clic en "Ejecutar". Una vez que el proceso haya terminado de ejecutarse, haga clic en "Cerrar" para cerrar la ventana. Guarde el proyecto.
-
 <img align="center" src="../images/intro-rs-images/ex-3.1-ndvi-canvas.png" vspace="10" width="600">
 
 13. Personaliza la capa usando la misma rampa de color que elegiste en el Ejercicio 2.5. Guarde el proyecto.
-
 <img align="center" src="../images/intro-rs-images/ex-3.1-ndvi-colored-canvas.png" vspace="10" width="600">
 
 Active y desactive las capas Sentinel-2 y Landsat 8 NDVI. ¿Cómo se diferencia estos resultados? ¿Qué conjunto de datos sería mejor usar para responder la pregunta de investigación (si es que hace alguna diferencia)? No existe una manera perfecta de determinar el mejor conjunto de datos para usar en un proyecto determinado; a veces se necesita un poco de experimentación para encontrar el mejor ajuste.
@@ -75,5 +72,5 @@ Active y desactive las capas Sentinel-2 y Landsat 8 NDVI. ¿Cómo se diferencia 
 
 Use QGIS para encontrar los valores medios y medianos de NDVI dentro de las áreas protegidas y no protegidas de Negril. Compare los valores para ver si hay una diferencia en los niveles de vegetación entre áreas protegidas y no protegidas. ¿Estos valores se diferencian de los valores calculados en el Desafío 1?
 
-* *Sugerencia 1: deberá agregar negril-pa-shapefile.zip y **non_protectedArea_savanna.shp** como dos capas diferentes en el proyecto.*
+* *Sugerencia 1: deberá agregar `negril-pa-shapefile.zip` y `non_protectedArea_savanna.shp` como dos capas diferentes en el proyecto.*
 * *Sugerencia 2: La herramienta Estadísticas zonales será útil en este ejercicio.*

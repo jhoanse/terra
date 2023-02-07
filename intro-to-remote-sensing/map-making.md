@@ -9,7 +9,7 @@ nav_order: 5
 
 Hacer y personalizar un mapa es un componente crucial del análisis GIS. Usaremos un conjunto de puntos de altura generados desde Google Earth para el área de estudio con el fin de crear un modelo de elevación digital (DEM).
 
-Primero, generamos un conjunto de puntos (ruta) en Google Earth. Agregamos nuestro shapefile de área protegida de tierra única.
+Primero, generamos un conjunto de puntos (ruta) en Google Earth. Agregamos el shapefile `negril-pa-noSea.shp`.
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-ge-set-points.png" vspace="10" width="600">
 
@@ -19,7 +19,7 @@ Agreguemos un camino sobre nuestra capa y rastreémoslo a través de toda el ár
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-ge-new-path.png" vspace="10" width="600">
 
-Llamemos a la ruta **points_jamaica_pa** y usemos la opción 'Guardar lugar como' con la extensión *.kml*.
+Llamemos a la ruta `points_jamaica_pa` y usemos la opción 'Guardar lugar como' con la extensión *.kml*.
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-ge-save-place.png" vspace="10" width="600">
 
@@ -35,7 +35,7 @@ E importamos el archivo GPX.
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-gpx-segmenter-importer.png" vspace="10" width="600">
 
-Posteriormente, extraemos los vértices. Establecemos un nombre de archivo de salida como **points_jamaica_pa.shp**.
+Posteriormente, extraemos los vértices. Establecemos un nombre de archivo de salida como `points_jamaica_pa.shp`.
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-extract-vertices.png" vspace="10" width="600">
 
@@ -53,7 +53,7 @@ Seleccionamos nuestro shapefile de puntos o vértices y el atributo para la inte
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-idw-tool.png" vspace="10" width="600">
 
-Hacemos clic en el botón más y se agrega la capa correspondiente. Establecemos la extensión desde nuestro archivo de forma **negril_pa_shapefile_NoSea**, definimos un nombre **dem_negril_pa.tif** y ejecutamos el proceso.
+Hacemos clic en el botón más y se agrega la capa correspondiente. Establecemos la extensión desde nuestro archivo de forma `negril_pa_shapefile_NoSea`, definimos un nombre `dem_negril_pa.tif` y ejecutamos el proceso.
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-idw-tool-inputs.png" vspace="10" width="600">
 
