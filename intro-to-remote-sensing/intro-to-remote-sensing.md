@@ -13,7 +13,8 @@ Navegue a través de las diferentes secciones de la lección utilizando el menú
 ## Agenda de la lección
 
 **Fecha**: Febrero 7, 2023
-**Instructora:** Andréa Puzzi Nicolau
+
+**Instructora:** Andréa Puzzi Nicolau ([apnicolau@sig-gis.com](apnicolau@sig-gis.com))
 
 |    Horario    |                                                                                      Temáticas                                                                                     |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
