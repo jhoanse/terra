@@ -10,4 +10,10 @@ nav_order: 6
 
 ## Fotos Recientes
 
+<img align="left" src="images/fotos-sesion1/participantes.jpeg"  vspace="10" width="350">
 
+<img align="left" src="images/fotos-sesion1/1.png"  vspace="10" width="350">
+
+<img align="left" src="images/fotos-sesion1/3.png"  vspace="10" width="350">
+
+<img align="left" src="images/fotos-sesion1/20230207_091227.jpg"  vspace="10" width="350">

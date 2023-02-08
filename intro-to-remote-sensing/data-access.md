@@ -39,7 +39,7 @@ Este ejercicio demostrará cómo utilizar Earth Explorer para ubicar y descargar
         1. Inicie sesión en su cuenta de Earth Explorer seleccionando "Iniciar sesión" en la esquina superior derecha.
         2. Seleccione la pestaña "Cargar KML/Shapefile". En el menú desplegable, elija la opción "Shapefile" y presione "Seleccionar archivo". Navega a la carpeta `intro-rs-data` y elige `negril-pa-shapefile.zip` y presiona "Abrir".
         <img align="center" src="../images/intro-rs-images/ex-1.1-location-shp.png" vspace="10" width="600">
-3. **Filtrar por fecha y cobertura de nubes.** Desplácese hacia abajo hasta la parte inferior de la pestaña "Criterios de búsqueda" e ingrese `01/09/2022` a `21/09/2022`. Luego, presione la pestaña "Cobertura de nubes" y mueva el control deslizante para que el rango se establezca entre "0% a 15%". Presione el botón "Conjuntos de datos >>" para pasar a la siguiente sección.
+3. **Filtrar por fecha y cobertura de nubes.** Desplácese hacia abajo hasta la parte inferior de la pestaña "Criterios de búsqueda" e ingrese `09/01/2022` a `09/21/2022`. Luego, presione la pestaña "Cobertura de nubes" y mueva el control deslizante para que el rango se establezca entre "0% a 15%". Presione el botón "Conjuntos de datos >>" para pasar a la siguiente sección.
 <img align="center" src="../images/intro-rs-images/ex-1.1-date-cloud.png" vspace="10" width="600">
 
 4. **Filtrar por conjunto de datos.** En la pestaña "Conjuntos de datos", expanda la sección denominada "Landsat". Queremos utilizar la recopilación más reciente de datos de Landsat, así que elija la opción "Landsat Collection 2 Level-1". Marque la opción de casilla “Landsat 8-9 OLI/TIRS C2 L1”. Seleccione el botón "Criterios adicionales >>" para pasar a la siguiente sección.
