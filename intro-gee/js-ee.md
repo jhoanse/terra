@@ -76,6 +76,8 @@ print(saludo('Participantes'));
 
 <img align="center" src="../images/intro-gee/fig22.png" vspace="10" width="200">
 
+### Comentarios
+
 Mientras escribe el código, es útil agregar un poco de texto para explicar el código o dejar una nota para usted. Es una buena práctica de programación agregar siempre comentarios en el código explicando cada paso. En JavaScript, puede prefijar cualquier línea con dos barras diagonales // para convertirlo en un comentario. El intérprete ignorará el texto del comentario y no se ejecutará.
 
 ```javascript
@@ -211,7 +213,7 @@ Dividir ese número por 2. Imprimir el resultado en el `Console`.
 var miLista = ee.List([1, 2, 5, 4]);
 ```
 
-## Desafío 5
+### Desafío 5
 
 Multiplicar el segundo valor de `miLista` por 5 y guardarlo en una variable (ejemplo: `resultado`). Imprímelo en el `Console`.
 

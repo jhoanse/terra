@@ -16,7 +16,7 @@ Las imágenes satelitales están en el corazón del poder de Google Earth Engine
 Primero vamos visualizar una imagen de Landsat 9 de 26 de Julio de 2022 de la parte oeste de la República Dominicana. Puede explorar la imagen de varias maneras. Para comenzar, puede recuperar metadatos (datos descriptivos sobre la imagen) imprimiendo la imagen.
 
 ```javascript
-var primeraImagen = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_006047_20220813');
+var primeraImagen = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_008047_20220726');
 print(primeraImagen);
 ```
 
@@ -95,7 +95,7 @@ Map.addLayer(
     {
         bands: ['SR_B6', 'SR_B3', 'SR_B2'],
         min: 6000,
-        max: 18000
+        max: 20000
     },
     'Color falso infrarrojo corto');
 ```
@@ -159,20 +159,20 @@ Script "`5 Datos vectoriales`" del repositorio o link directo:
 
 Dependiendo de cuánto tiempo haya estado en funcionamiento una plataforma de teledetección, puede haber miles o millones de imágenes recopiladas de la Tierra (e.g. Landsat). En Earth Engine, estos se organizan en `ee.ImageCollection`, un tipo de datos especializado que tiene operaciones específicas disponibles en la API de Earth Engine. Al igual que las imágenes individuales, se pueden ver con `Map.addLayer`, filtrar utilizando la función `filter`, y mapear funciones com `map`.
 
-Vamos filtrar la colección Landsat 8 Collection 2, Tier 1, Level 2, a los limites de la República Dominicana, utilizando la función `filterBounds` e por fechas para obtener imágenes de Enero de 2018 hasta Deciembre de 2021, utilizando la función `filterDate`.
+Vamos filtrar la colección Landsat 8 Collection 2, Tier 1, Level 2, a los limites de la República Dominicana, utilizando la función `filterBounds` e por fechas para obtener imágenes de Enero de 2020 hasta Deciembre de 2021, utilizando la función `filterDate`.
 
 ```javascript
 var paises = ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level0');
 var republicaDominicana = paises.filter(ee.Filter.eq('ADM0_NAME', 'Dominican Republic'));
 Map.centerObject(republicaDominicana, 7);
 
-var landsat9 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2');
+var landsat8 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2');
 
 var coleccion = landsat8
     .filterDate('2020-01-01', '2022-01-01')
     .filterBounds(republicaDominicana);
 
-Map.addLayer(coleccion, {bands: ['SR_B4', 'SR_B3', 'SR_B2'], min: 7000, max: 12000}, 'Coleccion Landsat 9');
+Map.addLayer(coleccion, {bands: ['SR_B4', 'SR_B3', 'SR_B2'], min: 7000, max: 12000}, 'Coleccion Landsat 8');
 
 print(coleccion);
 ```
