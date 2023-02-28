@@ -268,6 +268,10 @@ Map.addLayer(primeraPreProcesada,
              'Primera Imagen Preprocesada');
 ```
 
+<img align="center" src="../images/intro-gee/fig42.png" vspace="10" width="500">
+
+<img align="center" src="../images/intro-gee/fig41.png" vspace="10" width="500">
+
 Ahora, podemos crear una composición mediana:
 
 ```javascript
@@ -275,6 +279,10 @@ var composicion = preProcesado.median().clip(republicaDominicana);
 
 Map.addLayer(composicion, paramVisPreProcesada, 'Composición Preprocesada');
 ```
+
+Tenga en cuenta que la función `median` es una forma corta de aplicar `reduce(ee.Reducer.median())`.
+
+<img align="center" src="../images/intro-gee/fig43.png" vspace="10" width="500">
 
 Y por final, exportar esta imagen al Google Drive o como un GEE Asset:
 
