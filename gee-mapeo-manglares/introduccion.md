@@ -12,8 +12,9 @@ nav_order: 1
 ## Configuración prévia
 
 1. Crear una [cuenta de Google Earth Engine](https://code.earthengine.google.com/register). Necesitas una [cuenta Google](https://accounts.google.com/signup). Crear una cuenta GEE para fines no comerciales.
-2. Haga clic en este enlace para aceptar el repositorio de GEE de la Republica Dominicana: https://code.earthengine.google.com/?accept_repo=users/an-sig/republica-dominicana
+2. Haga clic en este enlace para aceptar el repositorio de GEE de la Republica Dominicana: [https://code.earthengine.google.com/?accept_repo=users/an-sig/republica-dominicana](https://code.earthengine.google.com/?accept_repo=users/an-sig/republica-dominicana). Una vez en esta página, verás este repositório bajo `Writer` en la pestaña `Scripts` de GEE.
 3. Cree un nuevo script en su propio repositorio; asígnele el nombre que desee. Esta será su copia del script 'Clasificación de manglares' del repositorio de scripts arriba.
+4. Opcional: Agregar imágenes Planet NICFI al GEE. Seguir los pasos de: [https://developers.planet.com/docs/integrations/gee/nicfi/](https://developers.planet.com/docs/integrations/gee/nicfi/)
 
 ## Objetivos
 
