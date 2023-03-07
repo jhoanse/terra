@@ -12,8 +12,15 @@ Navegue a través de las diferentes secciones de la lección utilizando el menú
 
 ## Agenda de la lección
 
-**Fecha**: Marzo 16, 2023
+**Fecha**: Marzo 23, 2023
 
 **Instructora:** Andréa Puzzi Nicolau ([apnicolau@sig-gis.com](apnicolau@sig-gis.com))
 
-Próximamente...
+|    Horario    |                                            Temáticas                                            |
+|:-------------:|:-----------------------------------------------------------------------------------------------:|
+| 09:00 – 09:30 | Bienvenida y pruebas  la configuración<br>Resumen de la sesión anterior, preguntas y respuestas |
+|  9:30 – 11:00 |                        Mapeo de manglares utilizando imágenes satelitales                       |
+| 11:00 – 11:15 |                                              Receso                                             |
+| 11:15 – 12:00 |                         Desafíos: hacer su propio modelo, hacer mejoras                         |
+| 12:00 – 13:00 | Almuerzo                                                                                        |
+|  13:00 –15:00 |            Desafíos<br>Muestre su producto de clasificación<br>Formulário de feedback           |
