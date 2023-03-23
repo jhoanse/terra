@@ -29,7 +29,7 @@ nav_order: 1
         3. Para "Can you describe the application of data from NICFI program in a brief?" puedes escribir "Use during a SERVIR capacity building workshop about Google Earth Engine and Earth Observations".
         4. Para "Please provide a link to your organization/lab/university that you might be working with:" ponga el sitio web de su instituición.
         5. Seleccione el tipo de su instituición en "Organization Type" (e.g. Education and Research).
-        6. Seleccionar el box the "By submitting this form with my contact information, I agree the information may be used to receive occasional communications from Planet about its products and services. I may unsubscribe at anytime."
+        6. Seleccionar el box "By submitting this form with my contact information, I agree the information may be used to receive occasional communications from Planet about its products and services. I may unsubscribe at anytime."
         7. Hacer un click en "Submit" al final.
         <img align="center" src="../images/mapeo-manglares/4.png" vspace="10" width="600">
     4. Una vez creada su cuenta, haga su login en [https://www.planet.com/](https://www.planet.com/).
@@ -47,3 +47,7 @@ nav_order: 1
 4. Experimente con diferentes formas de mejorar la precisión de su clasificación
 
 Contenido próximamente...
+
+Provisional: 
+- [Presentación](https://docs.google.com/presentation/d/1_ny_TEpeBeFHeldV6Ln6sFZ0peOPSkJ5dGJxxAO-wkw/edit?usp=sharing)
+- [Repositorio](https://code.earthengine.google.com/?accept_repo=users/an-sig/republica-dominicana)
