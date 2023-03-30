@@ -186,6 +186,8 @@ El paso-a-paso de la clasificación será:
 
 ### Identificar área de interés
 
+Empeze un nuevo script.
+
 1. Seleccione el icono de dibujar una línea en la parte superior izquierda
 2. Dibuja tu área de interés
 3. En `Geometry Imports` en la parte superior izquierda, seleccione geometría y cámbiele el nombre a `area`

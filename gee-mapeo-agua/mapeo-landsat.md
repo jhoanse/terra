@@ -244,12 +244,16 @@ Map.addLayer(frecuencia.selfMask(),
 ### Código completo
 
 Script "`1 Mapeo Cuerpos de Agua - Landsat`" del repositorio y carpeta `T4` o link directo:
-[https://code.earthengine.google.com/891c2ab37c795090cd6f655fd1e144c0](https://code.earthengine.google.com/891c2ab37c795090cd6f655fd1e144c0).
+[https://code.earthengine.google.com/3ba51797735456f775b2d81505e88e1b](https://code.earthengine.google.com/3ba51797735456f775b2d81505e88e1b).
 
 ### Desafío 1
 
 Modificar los parámetros de inicio y fin para cartografiar el agua superficial detectada en una estación del año a lo largo de varios años.
 
+*Sugerencia*: Utilice el filtro `ee.Filter.calendarRange`.
+
 ### Desafío 2
 
 El satélite Sentinel-2 tiene una resolución espacial superior a la de los satélites Landsat. Calcule el NDWI para una imagen Sentinel-2.
+
+Un ejemplo: [https://code.earthengine.google.com/ac0eb7ae646c5db397d6e3ec5fee7cf7](https://code.earthengine.google.com/ac0eb7ae646c5db397d6e3ec5fee7cf7)
