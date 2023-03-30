@@ -15,7 +15,7 @@ Esta sesión de capacitación fue adaptada de [SERVIR Mekong Case Study 2 - Surf
 
 Las mediciones de alta resolución de la distribución y dinámica del agua superficial son esenciales para muchas aplicaciones medioambientales, como la previsión y alerta de inundaciones, la gestión del agua agrícola y urbana y la simulación del transporte de contaminantes en masas de agua. El agua puede detectarse mediante imágenes de satélite multiespectrales, ya que el agua absorbe significativamente la mayor parte de la radiación en longitudes de onda del infrarrojo cercano (NIR) y superiores. El índice de diferencia normalizada del agua (NDWI) es un índice espectral simple que utiliza la fuerte absorción del agua en el NIR para identificar masas de agua. 
 
-# Paso-a-paso
+# Paso-a-paso: Mapeo de Cuerpos de Agua
 
 ## Importar datos Landsat
 

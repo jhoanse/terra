@@ -328,16 +328,24 @@ var carreteras = ee.FeatureCollection('TIGER/2016/Roads');
 var carreteras = carreteras.style({color: '#4285F4', width: 1});
 Map.addLayer(carreteras, {}, 'TIGER/2016/Roads');
 ```
+
 ¿Las inundaciones se produjeron en zonas de alta densidad de población? ¿Ha afectado el suceso a las infraestructuras?
+
+### Código completo
+
+Script "`2 Clasificación Inundación - Sentinel-1`" del repositorio y carpeta `T4` o link directo:
+[https://code.earthengine.google.com/e83ec21c016ce54e3e88f8136d06f487](https://code.earthengine.google.com/e83ec21c016ce54e3e88f8136d06f487).
 
 ## Desafío (Ejercício práctico)
 
 Adaptar el script para la República Dominicana.
 
-**Reto 1**: Refinar la estratificación del mapa: ¿se le ocurren otras clases de mapas que serían útiles en lugar de la que se proporciona? Las clases pueden no ser las mismas en la República Dominicana.
+**Desafío 1**: Refinar la estratificación del mapa: ¿se le ocurren otras clases de mapas que serían útiles en lugar de la que se proporciona? Las clases pueden no ser las mismas en la República Dominicana.
 
-**Reto 2**: Dedicar un poco más de tiempo a recopilar más polígonos de referencia.
+**Desafío 2**: Dedicar un poco más de tiempo a recopilar más polígonos de referencia.
 
-**Reto 3**: Utilizando su clasificador entrenado, clasifique varias observaciones SAR en sucesión durante un corto período de tiempo en un área con la que esté familiarizado. Vea si puede visualizar un patrón en aguas abiertas o vegetación inundada.
+**Desafío 3**: Dividir datos de referencia para entrenamiento y prueba. Calcular las precisiones del modelo.
+
+**Desafío 4**: Utilizando su clasificador entrenado, clasifique varias observaciones SAR en sucesión durante un corto período de tiempo en un área con la que esté familiarizado. Vea si puede visualizar un patrón en aguas abiertas o vegetación inundada.
 
 *Consejo*: ¿Recuerdas `.map()`? Este sería un gran uso para él. El último bloque de código podría convertirse fácilmente en una función con la que mapear sobre otra colección SAR S1.
