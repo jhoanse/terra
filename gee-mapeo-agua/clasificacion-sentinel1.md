@@ -359,3 +359,6 @@ Adaptar el script para la República Dominicana.
 **Desafío 4**: Utilizando su clasificador entrenado, clasifique varias observaciones SAR en sucesión durante un corto período de tiempo en un área con la que esté familiarizado. Vea si puede visualizar un patrón en aguas abiertas o vegetación inundada.
 
 *Consejo*: ¿Recuerdas `.map()`? Este sería un gran uso para él. El último bloque de código podría convertirse fácilmente en una función con la que mapear sobre otra colección SAR S1.
+
+**Ejemplo República Dominicana hecho durante el taller**: Script "`2 Clasificación Inundación - Sentinel-1 - RD`" del repositorio y carpeta `T4` o link directo:
+[https://code.earthengine.google.com/cd38db354ce41eb369359c91e41328bc](https://code.earthengine.google.com/cd38db354ce41eb369359c91e41328bc).
