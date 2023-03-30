@@ -109,6 +109,14 @@ Hay un montón de características diferentes que distinguen a unos sensores de 
 
 Cuanto mayor sea el ángulo de incidencia, mayor será la sensibilidad a la rugosidad de la superficie. Estos haces podrán penetrar menos profundamente que los haces que tienen ángulos de incidencia más pequeños, y también darán lugar a niveles más bajos de retrodispersión.
 
+**Efectos topográficos**
+
+Ejemplo abajo de como la geometría de radar puede afectar la imagen. Es necesario un procesamiento para corrigir estos efectos.
+
+<img align="center" src="../images/mapeo-agua/23.png" hspace="15" vspace="10" width="600">
+
+<font size=2> Fuente: ARSET. </font>
+
 ### Efectos de la superficie
 
 Todos los factores que hemos comentado anteriormente son propiedades del radar que afectarán a la retrodispersión recibida por el radar. También hay propiedades de la superficie que afectan a la retrodispersión. La combinación de estos efectos repercute en los datos que recoge el sensor y, por lo tanto, los datos proporcionan información sobre los dos parámetros siguientes de la superficie.
