@@ -173,4 +173,4 @@ Una vez que se guarde el script, aparecerá en el panel del administrador de scr
 
 # Repositorio
 
-Todos los códigos creados en este taller están disponibles en este repositorio: [https://code.earthengine.google.com/?accept_repo=users/an-sig/republica-dominicana](https://code.earthengine.google.com/?accept_repo=users/an-sig/republica-dominicana).
+Todos los códigos creados en este taller están disponibles en este repositorio: [https://code.earthengine.google.com/?accept_repo=users/an-sig/republica-dominicana](https://code.earthengine.google.com/?accept_repo=users/an-sig/republica-dominicana), carpeta `T2`.

@@ -107,7 +107,7 @@ Map.addLayer(
 
 ### Código completo
 
-Script "`4 Visualización de Imagen`" del repositorio o link directo:
+Script "`4 Visualización de Imagen`" del repositorio y la carpeta `T2` o link directo:
 [https://code.earthengine.google.com/bdf85f5ec78e23bb6ab20c1987214710](https://code.earthengine.google.com/bdf85f5ec78e23bb6ab20c1987214710).
 
 ## Datos vectoriales
@@ -152,7 +152,7 @@ Ahora vamos utilizar datos vectoriales en conjunto con imágenes.
 
 ### Código completo
 
-Script "`5 Datos vectoriales`" del repositorio o link directo:
+Script "`5 Datos vectoriales`" del repositorio y la carpeta `T2` o link directo:
 [https://code.earthengine.google.com/9e7e01899e6531bf5bb5b1ef6243dbff](https://code.earthengine.google.com/9e7e01899e6531bf5bb5b1ef6243dbff).
 
 ## Colección de imágenes satelitales y compuestos

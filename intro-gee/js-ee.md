@@ -90,7 +90,7 @@ El Editor de código también proporciona un acceso directo (Ctrl + / en Windows
 
 ### Código completo
 
-Script "`2 Introducción al JS`" del repositorio o link directo:
+Script "`2 Introducción al JS`" del repositorio y la carpeta `T2` o link directo:
 [https://code.earthengine.google.com/7727b208111aa9c62d8f5c8392d8d29c](https://code.earthengine.google.com/7727b208111aa9c62d8f5c8392d8d29c)
 
 ## Conceptos básicos de la API de Earth Engine
@@ -237,5 +237,5 @@ Calcula la suma de todos los Números en `nuevaLista`. Guardar y imprimir ese va
 
 ### Código completo
 
-Script "`3 API Earth Engine`" del repositorio o link directo:
+Script "`3 API Earth Engine`" del repositorio y la carpeta `T2` o link directo:
 [https://code.earthengine.google.com/f68358987ee1233c62f459e6ca9d0244](https://code.earthengine.google.com/f68358987ee1233c62f459e6ca9d0244).

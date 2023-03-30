@@ -41,3 +41,9 @@ nav_order: 15
 - [Introducción a Análisis de Cambios de Bosques](https://developers.google.com/earth-engine/tutorials/tutorial_forest_01)
 - [Awesome Earth Engine](https://github.com/giswqs/Awesome-GEE)
 - [Spatial Thoughts](https://courses.spatialthoughts.com/end-to-end-gee.html)
+
+## SAR
+
+- [El Handbook de SAR](https://servirglobal.net/Global/Articles/Article/2674/sar-handbook-comprehensive-methodologies-for-forest-monitoring-and-biomass-estimation)
+- Séries de Webinar de ARSET: [Introducción al Radar de Apertura Sintética](https://appliedsciences.nasa.gov/join-mission/training/english/arset-introduction-synthetic-aperture-radar) y muchos otros talleres de SAR
+- Alaska Satellite Facility (ASF): [Fundamentos de SAR](https://asf.alaska.edu/information/sar-information/fundamentals-of-synthetic-aperture-radar/)
