@@ -176,7 +176,7 @@ Nota que una fuente de confusión en la imagen es la ciudad de Manaus que tambi�
 
 ## Estudio de caso
 
-Vamos analizar un script the clasificación de inundaciones causado por evento climatico extremo: el Huracán Matthew en la Carolina del Sur (Estados Unidos).
+Vamos analizar un script de clasificación de inundaciones causado por evento climatico extremo: el Huracán Matthew en la Carolina del Sur (Estados Unidos).
 
 El huracán ocurrió los **días 7 y 8 de octubre de 2016** y fue la tormenta más poderosa de la
 temporada de huracanes en el Atlántico. Tocó tierra por cuarta y última vez cerca de McClellanville, Carolina del Sur, como un huracán de categoría 1 en la mañana del 8 de octubre.

@@ -16,11 +16,11 @@ Navegue a través de las diferentes secciones de la lección utilizando el menú
 
 **Instructora:** Andréa Puzzi Nicolau ([apnicolau@sig-gis.com](apnicolau@sig-gis.com))
 
-|    Horario    |                                            Temáticas                                            |
-|:-------------:|:-----------------------------------------------------------------------------------------------:|
-| 09:00 – 09:30 | Bienvenida y pruebas  la configuración<br>Resumen de la sesión anterior, preguntas y respuestas |
-|  9:30 – 11:00 |                        Mapeo de manglares utilizando imágenes satelitales                       |
-| 11:00 – 11:15 |                                              Receso                                             |
-| 11:15 – 12:00 |                         Desafíos: hacer su propio modelo, hacer mejoras                         |
-| 12:00 – 13:00 | Almuerzo                                                                                        |
-|  13:00 –15:00 |            Desafíos<br>Muestre su producto de clasificación<br>Formulário de feedback           |
+|    Horario    |                                                            Temáticas                                                            |
+|:-------------:|:-------------------------------------------------------------------------------------------------------------------------------:|
+| 09:00 – 09:30 |                 Bienvenida y pruebas  la configuración<br>Resumen de la sesión anterior, preguntas y respuestas                 |
+|  9:30 – 11:00 |                Introducción a la clasificación de imágenes<br>Mapeo de manglares utilizando imágenes satelitales                |
+| 11:00 – 11:15 |                                                              Receso                                                             |
+| 11:15 – 12:00 |                                        Mapeo de manglares utilizando imágenes satelitales                                       |
+| 12:00 – 13:00 | Almuerzo                                                                                                                        |
+|  13:00 –15:00 | Mapeo de manglares utilizando imágenes satelitales<br>Desafíos: hacer su propio modelo, hacer mejoras<br>Formulário de feedback |
