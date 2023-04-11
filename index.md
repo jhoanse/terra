@@ -40,7 +40,7 @@ Si tiene alguna duda sobre el material, envíe una pregunta a continuación. Est
 |           10           |                                                                                                  ArcGIS Pro - Construcción de Modelo                                                                                                   | Agosto 10  |       Presencial      |
 |           11           |                                                                                               ArcGIS Pro - Introducción a Python y ArcPy                                                                                               | Agosto 11  |       Presencial      |
 |           12           |                                                                                                        Sesión de Capstone / MEL                                                                                                        | TBD        | Impartido a distancia |
-|           Q&A          |                                                                 Reunión en línea. Oportunidades de investigación / Priorización de necesidades. PREGUNTAS Y RESPUESTAS                                                                 | Agosto 17  |        Virtual        |
+
 
 ## Retroalimentación / Feedback
 
