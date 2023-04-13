@@ -129,7 +129,7 @@ Ahora puede hacer clic en la imagen RGB para ver el aspecto de los píxeles en l
 
 ## Sección 3. Ajustando los valores del algoritmo
 
-CLandTrendr es capaz de aceptar cualquier índice, y los usuarios avanzados son bienvenidos a utilizar índices de su propio diseño. Una consideración importante es saber qué dirección indica "recuperación" y "perturbación" para el tema que le interesa. Los algoritmos favorecen la detección de perturbaciones y pueden controlarse para limitar la rapidez con la que se supone que se produce la recuperación (véanse los parámetros más abajo).  
+LandTrendr es capaz de aceptar cualquier índice, y los usuarios avanzados son bienvenidos a utilizar índices de su propio diseño. Una consideración importante es saber qué dirección indica "recuperación" y "perturbación" para el tema que le interesa. Los algoritmos favorecen la detección de perturbaciones y pueden controlarse para limitar la rapidez con la que se supone que se produce la recuperación (véanse los parámetros más abajo).  
 
 Para que LandTrendr tenga alguna esperanza de encontrar el cambio de interés, ese cambio debe manifestarse en la línea gris que muestra los valores espectrales originales. Si sabe que se está produciendo algún proceso y no es evidente en la línea gris, ¿qué puede hacer?
 
@@ -183,7 +183,7 @@ A partir de la tabla mostrada, podemos inferir varias cosas clave sobre este pí
 - La principal perturbación tuvo una duración de sólo un año. Esta brusquedad, combinada con su gran magnitud, sugiere una perturbación vegetativa importante, como una tala o un incendio.
 - Tras la perturbación, la vegetación se recuperó, pero no al nivel anterior a la perturbación. Nota: los ecólogos reconocerán la señal de crecimiento como una señal de sucesión, o revegetación activa por la intervención humana.
 
-Siguiendo los tres pasos de post-procesamiento indicados en la introducción de esta sección, para cartografiar el año de la perturbación para este píxel identificaríamos primero los segmentos de perturbación potencial como aquellos con NBR negativo. A continuación, nos centraríamos en la perturbación de interés filtrando los segmentos de perturbación potencial que no sean abruptos y/o de pequeña magnitud. De este modo, sólo quedaría el segmento de gran magnitud y corta duración. Para ese segmento, el primer año en el que tenemos pruebas de perturbación es el primer año tras el inicio del segmento. El segmento comienza en 2006, lo que significa que 2007 es el primer año en el que tenemos pruebas de ello. Por tanto, asignaríamos 2007 a este píxel. 
+Para cartografiar el año de la perturbación para este píxel identificaríamos primero los segmentos de perturbación potencial como aquellos con NBR negativo. A continuación, nos centraríamos en la perturbación de interés filtrando los segmentos de perturbación potencial que no sean abruptos y/o de pequeña magnitud. De este modo, sólo quedaría el segmento de gran magnitud y corta duración. Para ese segmento, el primer año en el que tenemos pruebas de perturbación es el primer año tras el inicio del segmento. El segmento comienza en 2006, lo que significa que 2007 es el primer año en el que tenemos pruebas de ello. Por tanto, asignaríamos 2007 a este píxel. 
 
 Si quisiéramos mapear la magnitud de la perturbación, seguiríamos los mismos dos primeros pasos, pero luego informaríamos para el valor del píxel de la diferencia de magnitud entre el segmento inicial y el final. 
 
