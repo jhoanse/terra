@@ -47,3 +47,11 @@ nav_order: 15
 - [El Handbook de SAR](https://servirglobal.net/Global/Articles/Article/2674/sar-handbook-comprehensive-methodologies-for-forest-monitoring-and-biomass-estimation)
 - Séries de Webinar de ARSET: [Introducción al Radar de Apertura Sintética](https://appliedsciences.nasa.gov/join-mission/training/english/arset-introduction-synthetic-aperture-radar) y muchos otros talleres de SAR
 - Alaska Satellite Facility (ASF): [Fundamentos de SAR](https://asf.alaska.edu/information/sar-information/fundamentals-of-synthetic-aperture-radar/)
+
+## Detección de cambios
+
+- [LandTrendr](https://emapr.github.io/LT-GEE/)
+- [CCDC](https://www.sciencedirect.com/science/article/abs/pii/S0034425714000248)
+- [CODED](https://doi.org/10.1016/j.rse.2018.11.011)
+- [MTDD](https://iopscience.iop.org/article/10.1088/2515-7620/ac2210)
+- [CCDC-SMA](https://doi.org/10.1016/j.rse.2021.112648)
