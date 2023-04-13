@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Avanzado en Google Earth Engine - Detección de cambio"
+title: "Avanzado en Google Earth Engine - Detección de cambios"
 permalink: /gee-avanzado
 has_children: True
 nav_order: 7
