@@ -9,6 +9,8 @@ nav_order: 2
 
 Para la práctica, seleccionará escenas de imágenes anteriores y posteriores al evento, crearás composiciones e investigará las condiciones de estas composiciones en una visualización de color verdadero. A continuación, calculará el índice NDWI para cada composición y creará una imagen de diferencia utilizando los dos mapas NDWI. Por último, aplicará un umbral a la imagen de diferencia para establecer categorías de zonas modificadas frente a zonas estables. Para esta demostración capturaremos la diferencia en los niveles de agua superficial entre 2014-2015 y 2020-2021.
 
+Esta sesión de capacitación fue adaptada de [Cloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications](https://www.eefabook.org/) (libro EEFA) y [OpenMRV](https://www.openmrv.org/).
+
 # Paso-a-paso
 
 ## Sección 1. Preparación de las imágenes
