@@ -40,7 +40,7 @@ Para más informaciones, acceda: [https://emapr.github.io/LT-GEE/](https://emapr
 
 # Paso-a-paso - LandTrendr
 
-## Opciones de series temporales de píxeles
+## Sección 1. Opciones de series temporales de píxeles
 
 En nuestro repositorio, abra y ejecute el script que genera la GUI de LandTrendr para desplegar fácilmente los algoritmos de LandTrendr: "`2 LandTrendr GUI`" del repositorio y carpeta `T5` o link directo:
 [https://code.earthengine.google.com/370839ee7e8dafef311c4a4d5fbb24d5](https://code.earthengine.google.com/370839ee7e8dafef311c4a4d5fbb24d5). Ejecute el script y debería ver una interfaz parecida a la siguiente:
@@ -77,7 +77,7 @@ El objetivo con estos gráficos es determinar si:
 - La trayectoria de los valores de la fuente capta los procesos que usted cree que están ocurriendo en la superficie.
 - Los valores ajustados captan adecuadamente la "forma" general de la trayectoria de los valores de origen.
 
-## Exploración de la dinámica con imágenes compuestas de tres colores
+## Sección 2. Exploración de la dinámica con imágenes compuestas de tres colores
 
 Aunque el modo puntual es la única forma de comprender y evaluar plenamente los valores de origen y de ajuste, es una forma ineficaz de explorar los patrones espaciales. Podemos encontrarnos con píxeles en los que los valores de origen indiquen un problema con las imágenes, o en los que los parámetros de ajuste probablemente no se hayan elegido adecuadamente, pero estos hallazgos se producen por casualidad. Sería útil disponer de una herramienta visual rápida para escanear el paisaje y evaluar tendencias y problemas potenciales.
 
@@ -127,7 +127,7 @@ Ahora puede hacer clic en la imagen RGB para ver el aspecto de los píxeles en l
 
 <img align="center" src="../images/gee-avanzado/25.png" hspace="15" vspace="10" width="600">
 
-## Ajustando los valores del algoritmo
+## Sección 3. Ajustando los valores del algoritmo
 
 CLandTrendr es capaz de aceptar cualquier índice, y los usuarios avanzados son bienvenidos a utilizar índices de su propio diseño. Una consideración importante es saber qué dirección indica "recuperación" y "perturbación" para el tema que le interesa. Los algoritmos favorecen la detección de perturbaciones y pueden controlarse para limitar la rapidez con la que se supone que se produce la recuperación (véanse los parámetros más abajo).  
 
@@ -215,7 +215,7 @@ Encuentre sus propios procesos de cambio de interés en la República Dominicana
 
 ## Desafío 2
 
-Encuentre un píxel en su área de interés que muestre un proceso de perturbación distintivo, tal y como usted lo defina para su tema de interés. Ajuste los intervalos de fechas, parámetros, etc. siguiendo los pasos descritos en la Sección "Opciones de series temporales de píxeles" anterior, y luego responda a estas preguntas:
+Encuentre un píxel en su área de interés que muestre un proceso de perturbación distintivo, tal y como usted lo defina para su tema de interés. Ajuste los intervalos de fechas, parámetros, etc. siguiendo los pasos descritos en la **Sección 1. Opciones de series temporales de píxeles** anterior, y luego responda a estas preguntas:
 
 - Pregunta 1. ¿Qué índice y qué intervalo de fechas ha utilizado?
 - Pregunta 2. ¿Ha tenido que cambiar los parámetros de ajuste para que el algoritmo encuentre la perturbación? En caso afirmativo, ¿cuáles y por qué?
@@ -223,7 +223,7 @@ Encuentre un píxel en su área de interés que muestre un proceso de perturbaci
 
 ## Desafío 3
 
-Cambie el panel de control de la interfaz gráfica de usuario a **Change Filter Options**, y utilice la guía de la **Traducir píxeles en mapas** anterior para ajustar los parámetros y hacer mapas de perturbación.  
+Cambie el panel de control de la interfaz gráfica de usuario a **Change Filter Options**, y utilice la guía de la **Sección 3. Traducir píxeles en mapas** anterior para ajustar los parámetros y hacer mapas de perturbación.  
 
 - Pregunta 4. ¿Coinciden el año y la magnitud de la perturbación que aparecen en la imagen con lo que cabría esperar de la propia trayectoria? 
 - Pregunta 5. ¿Puede cambiar algunos de los filtros para crear un mapa en el que no aparezca su proceso de perturbación? En caso afirmativo, ¿qué has cambiado?  
