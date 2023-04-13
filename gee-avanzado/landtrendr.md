@@ -165,7 +165,7 @@ Nota: debido a la autocorrelación temporal, estos valores no pueden interpretar
  
 De los modelos que superan el umbral del valor p, se elige uno como ajuste final. Puede ser el que tenga el valor p más bajo. Sin embargo, se hace un ajuste para permitir que se elijan modelos más complicados (los que tienen más segmentos) aunque su valor p esté dentro de una proporción definida del modelo con mejor puntuación. Esta proporción se establece mediante el parámetro de **best model proportion (proporción del mejor modelo)**. Por ejemplo, un valor de proporción del mejor modelo de 0,75 permitiría elegir un modelo más complicado si su puntuación fuera superior en un 75% a la del mejor modelo.
 
-## Traducir píxeles en mapas
+## Sección 4. Traducir píxeles en mapas
 
 Aunque la serie temporal completa es la mejor descripción de la "historia vital" de cada píxel, normalmente nos interesa el comportamiento de todos los píxeles de nuestra zona de estudio. Sería a la vez ineficaz visualizarlos todos manualmente e ineficaz intentar resumir zonas y ubicaciones. Así pues, lo que buscamos es hacer mapas.
 
@@ -223,8 +223,8 @@ Encuentre un píxel en su área de interés que muestre un proceso de perturbaci
 
 ## Desafío 3
 
-Cambie el panel de control de la interfaz gráfica de usuario a **Change Filter Options**, y utilice la guía de la **Sección 3. Traducir píxeles en mapas** anterior para ajustar los parámetros y hacer mapas de perturbación.  
+Cambie el panel de control de la interfaz gráfica de usuario a **Change Filter Options**, y utilice la guía de la **Sección 4. Traducir píxeles en mapas** y la **Sección 3. Ajustando los valores del algoritmo** anteriores para ajustar los parámetros y hacer mapas de perturbación.  
 
-- Pregunta 4. ¿Coinciden el año y la magnitud de la perturbación que aparecen en la imagen con lo que cabría esperar de la propia trayectoria? 
+- Pregunta 4. ¿Coinciden el año y la magnitud de la perturbación que aparecen en la imagen con lo que cabría esperar de la propia trayectoria?
 - Pregunta 5. ¿Puede cambiar algunos de los filtros para crear un mapa en el que no aparezca su proceso de perturbación? En caso afirmativo, ¿qué has cambiado?  
 - Pregunta 6. ¿Puede cambiar los filtros para crear un mapa que incluya un proceso de perturbación diferente, quizás más sutil, de mayor duración, etc.? Busque un píxel y utilice el trazador "Series temporales de píxeles" para ver las series temporales de esos procesos.
