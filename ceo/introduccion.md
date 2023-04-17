@@ -7,13 +7,13 @@ nav_order: 1
 
 # Introducción
 
-¡Bienvenido a Collect Earth Online - Evaluación de mapas! Este taller ofrecerá una visión general del CEO y de cómo utilizarlo para la recogida de datos para validación de mapas.
+¡Bienvenido a Collect Earth Online - Evaluación de mapas! Este taller ofrecerá una visión general del CEO y de cómo utilizarlo para la recogida de datos para validación de mapas. También aprenderá a realizar una muestra aleatoria estratificada y a calcular los parámetros de precisión.
 
 ## Configuración prévia
 
 **Creación de una cuenta CEO**
 
-1. En la ventana de su navegador, vaya a https://collect.earth/. CEO es compatible con Google Chrome, Mozilla Firefox y Microsoft Edge.
+1. En la ventana de su navegador, vaya a [https://collect.earth/](https://collect.earth/). CEO es compatible con Google Chrome, Mozilla Firefox y Microsoft Edge.
 2. Haz clic en `Register` en la parte superior derecha.
 3. Rellene los datos, acepte las condiciones y haga clic en `Register`.
 4. Recibirá un correo electrónico de bienvenida si el registro se ha realizado correctamente.
@@ -35,7 +35,7 @@ nav_order: 1
 
     <img align="center" src="../images/ceo/3.png" hspace="15" vspace="10" width="600">
 
-6. Haga clic en el botón Solicitar afiliación si aún no se ha afiliado a la institución.
+6. Haga clic en el botón `Request Membership` si aún no se ha afiliado a la institución.
 
     <img align="center" src="../images/ceo/4.png" hspace="15" vspace="10" width="600">
 
