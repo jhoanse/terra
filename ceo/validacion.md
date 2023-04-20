@@ -48,3 +48,7 @@ Rellenemos esta matriz de confusión con valores de ejemplo si se recogieran 100
 
 * Precisión global = (Verdadero positivo + Verdadero negativo) / Tamaño de la muestra
 * La precisión global nos indica esencialmente qué proporción de los datos de referencia se clasificó correctamente.
+
+**Ejemplo**
+
+Un ejemplo para el mapa que utilizamos se encuentra [aquí](https://drive.google.com/file/d/1T7sFOwG8eur9g2b0Tm6zeZCciDRXMdOeV/view?usp=sharing). Toma en cuenta que necesitamos verificar clasificación vs. referencia y crear la matriz de confusión. Después, calcular las métricas. En AREA2 es posible hacer los calculos automaticamente, una vez que proporcionemos la tabla en su formato correcto. Para más informaciones, acceder a la [documentación de AREA2](https://area2.readthedocs.io/en/latest/) y [script de estimación estratificada](https://code.earthengine.google.com/2c42b4b050967405da4d3d4187b731c4). En este taller mencionamos solamente la contaje de píxeles para verificar la exactitud, pero es recomendado hacer como vemos en el ejemplo acima, tomando en cuenta la area de cada clase. Para más detalles, consulte [Olofsson et al. (2014)](https://www.sciencedirect.com/science/article/abs/pii/S0034425714000704).
