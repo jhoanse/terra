@@ -59,9 +59,11 @@ A continuación se ofrecen recomendaciones más detalladas para un procedimiento
         - Dentro del gráfico NDFI, si hace clic en un punto de medición, la imagen Landsat correspondiente aparecerá en el panel del mapa de arriba. Esta es una buena manera de ver los posibles cambios en la cobertura del suelo frente a los valores atípicos debidos a las nubes, los datos que faltan, o eventos temporales como las inundaciones.  
             <img align="center" src="../images/ceo/8F_degradationwidget.png" vspace="10" width="300">   
     - Vaya al GEE Script, si es necesario, y utilice el deslizador en las series temporales de Landsat 5 y Landsat 7 para examinar los cambios en los mosaicos anuales 2000-2010. También puede examinar imágenes Landsat individuales haciendo clic en una fecha determinada en los gráficos de la derecha. Los mapas se actualizarán automáticamente a la fecha seleccionada para todos los Landsats disponibles en ese momento. Anote las fechas en las que sospecha que se ha producido un cambio para poder cruzarlas con las imágenes.
-        - Deslizadores de tiempo en mosaicos anuales  
-            <img align="center" src="../images/intro-CEO-images/8G_annualGEEslider.png" vspace="10" width="500">   
+        - Deslizadores de tiempo en mosaicos anuales 
+
+            <img align="center" src="../images/ceo/8G_annualGEEslider.png" vspace="10" width="500">   
         - Imagen individual seleccionada pulsando fecha en el tiempo en un gráfico, 11 de diciembre de 2004
+        
             <img align="center" src="../images/ceo/8H_GEEgraphs.png" vspace="10" width="500">
     - Vuelve a examinar las imágenes históricas en Google Earth Pro y/o en las Opciones de imágenes, cruzando las fechas que has anotado en los gráficos de series temporales para ver si se aprecia algún cambio en las imágenes.
     - Si las imágenes no son claras o no están disponibles en el momento exacto del suceso en el que estás interesado, utiliza pistas contextuales para tomar tu decisión.

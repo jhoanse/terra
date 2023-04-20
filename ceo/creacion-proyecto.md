@@ -11,7 +11,7 @@ nav_order: 5
 
 Antes de empezar a crear un proyecto, eche un vistazo a las imágenes establecidas para su institución CEO. Determine si desea añadir más opciones de imágenes a su institución para poder utilizarlas en su proyecto. Algunas imágenes ya están integradas en CEO y otras (BingMaps, Planet Monthly, Planet Daily, Planet NICFI, SecureWatch y los productos MapBox) requieren una clave API. Se le pedirá que proporcione esta clave en el panel de configuración de imágenes de CEO. puede acceder si la tiene. Puede añadir sus propias imágenes a CEO a través de Web Map Service (WMS) / Web Map Tile Service (WMTS), o conectándose a sus imágenes compartidas públicamente alojadas en Google Earth Engine (GEE).
 
-*Nota: hemos creado una amplia guía de procedimientos y resolución de problemas para añadir activos de imágenes GEE y activos de colecciones de imágenes a CEO. Está disponible en el blog de CEO [aquí](https://blog.collect.earth/index.php/2022/04/21/connecting-gee-raster-data/). A continuación se proporcionan instrucciones generales sobre cómo añadir sus propias imágenes utilizando GEE, que puede probar después de este taller.*
+*Nota: hemos creado una amplia guía de procedimientos y resolución de problemas para añadir activos de imágenes GEE y activos de colecciones de imágenes a CEO. Está disponible en el blog de CEO [aquí](https://blog.collect.earth/index.php/2022/04/21/connecting-gee-raster-data/). También creamos un blog para como agregar capas por WMS/WMST que está disponibel [aquí](https://www.collect.earth/utilice-sus-propios-datos-en-ceo-conexion-con-wms-wmts-espanol/). A continuación se proporcionan instrucciones generales sobre cómo añadir sus propias imágenes utilizando GEE, que puede probar después de este taller.*
 
 >*Material de bonificación para después del taller* - Añadir un activo de imagen GEE
 
@@ -22,7 +22,7 @@ Antes de empezar a crear un proyecto, eche un vistazo a las imágenes establecid
 >* Si desea añadir esta fuente de imágenes a todos los proyectos de su institución, marque la casilla `Add Imagery to All Projects When Saving`.
 >* Una vez rellenados todos los campos, haga clic en `Add New Imagery`.
 
-><img align="center" src="../images/ceo/5A.png" vspace="10" width="500"> 
+><img align="center" src="../images/ceo/5A.png" vspace="10" width="600"> 
 
 
 Si no está familiarizado con GEE, a continuación encontrará instrucciones para cargar sus propias imágenes en GEE. Debe tener una cuenta GEE para completar este proceso.
@@ -72,8 +72,8 @@ Si no está familiarizado con GEE, a continuación encontrará instrucciones par
 
     - La tercera opción es **Collect Plot Confidence on Collection Page (Recoger Confianza de Parcela en la Página de Recogida)**. Si quiere que los usuarios le digan lo seguros que están de sus respuestas a las preguntas de la encuesta, el control deslizante de confianza les permitirá asignar un valor de 1 a 100, donde 100 significa que están completamente seguros de sus respuestas; este valor se aplica a todo el gráfico. Esta información se incluirá en las descargas del gráfico y del CSV de muestra. También se puede utilizar durante QA / QC, ya que puede utilizar esto para filtrar las parcelas en CEO y sólo revisar aquellos con confianza por debajo de un cierto valor.
 
-    <img src="..//images/ceo/5H_PlotConfidence.png" vspace="10" width="450"> 
-    <img src="../images/ceo/4C_plotconfidence.png" vspace="10" width="300"> 
+    <img src="..//images/ceo/5H_PlotConfidence.png" vspace="10" width="500"> 
+    <img src="../images/ceo/4C_plotconfidence.png" vspace="10" width="400"> 
 
     - La cuarta opción es **Auto-launch Geo-Dash**. Esto abrirá automáticamente la interfaz Geo-Dash en una nueva ventana o nueva pestaña cuando el recolector de datos navegue a un nuevo gráfico. Desmarcar esta opción significa que los recolectores de datos tendrán que hacer clic en el ícono Geo-Dash bajo `External Tools` (Herramientas externas) en la interfaz "Data Collection" (Recolección de datos).
 5. Haga clic en `Next` cuando haya terminado.
@@ -90,7 +90,7 @@ Si no está familiarizado con GEE, a continuación encontrará instrucciones par
 
     <img src="../images/ceo/5K_PlotDesignPage_grid.png" vspace="10" width="400"> 
     <img src="../images/ceo/5J_PlotDesignPage.png" vspace="10" width="400"> 
-    </p>
+
 2. Si utiliza las opciones de distribución de parcelas incorporadas en CEO, `Random` o `Gridded`, las ubicaciones de sus parcelas se generarán automáticamente a partir de un área de interés (AOI).
     - La forma más sencilla de seleccionar el AOI de su proyecto es dibujando un recuadro en la ventana del mapa en el panel derecho ("Collection Map Preview": Vista previa del mapa de la colección).
         - Localice su área de interés acercándose o alejándose con la rueda de desplazamiento del ratón, o con las casillas + y - de la ventana del mapa. Puede desplazar el mapa haciendo clic sobre él y arrastrando la ventana del mapa.
@@ -104,7 +104,7 @@ Si no está familiarizado con GEE, a continuación encontrará instrucciones par
 3. Dadas sus selecciones para los detalles de la distribución autogenerada, como número de parcela, espaciado de parcela y ancho de parcela, CEO proporcionará una estimación de cuántas parcelas se generarán para su proyecto basándose en su diseño de muestreo.
     - Utilizando el muestreo de CEO, el número máximo de parcelas para un proyecto es de 5.000. Para el muestreo en cuadrícula, es posible que tenga que aumentar el espacio entre parcelas para evitar superar las 5.000 parcelas.
 4. Si desea cargar ubicaciones conocidas para sus parcelas, deberá seleccionar las opciones Archivo CSV o SHP para Distribución espacial. Su archivo debe estar en el sistema de coordenadas WGS84 EPSG:4326.
-    - Puede descargar archivos CSV y SHP de ejemplo. Cuando se utilicen para crear un proyecto, deben indicar "OK" en el mapa*.
+    - *Puede descargar archivos CSV y SHP de ejemplo. Cuando se utilicen para crear un proyecto, deben indicar "OK" en el mapa*.
         - Si utiliza un archivo CSV, en la siguiente sección podrá generar automáticamente puntos de muestra aleatorios o cuadriculados dentro de cada gráfico. Si utiliza un archivo SHP, no dispondrá de estas funciones integradas de generación de muestras. Con cualquiera de las dos opciones, podrá tener un punto por parcela o proporcionar otro archivo CSV o archivo SHP en la siguiente sección sobre Generación de Muestras.
         - Si descarga el archivo SHP de ejemplo, observará que en realidad es un archivo zip que contiene (que contiene archivos SHP, SHX, DBF y PRJ). Este formato zip es necesario.
     - Las ubicaciones de las parcelas de los archivos CSV o SHP pueden generarse en un programa independiente como GEE, ArcGIS o QGIS.
@@ -130,7 +130,7 @@ Si no está familiarizado con GEE, a continuación encontrará instrucciones par
 1. Aquí determinamos cuántos puntos de muestreo hay dentro de cada parcela y si se muestrean mediante muestreo aleatorio, muestreo en cuadrícula, sólo un punto central o con ubicaciones predefinidas con un archivo CSV o un archivo SHP. Utilizando el muestreo incorporado de CEO, el número máximo de puntos de muestra por parcela es 200 y el número máximo de puntos de muestra para todo el proyecto es 50.000, pero puede tener más si está cargando ubicaciones de muestra a través de un archivo CSV o un archivo SHP.
 2. Para esta demostración podemos elegir simplemente `Center` del desplegable `Spatial Distribution`.
 
-### Preguntas de la encuesta 
+### Preguntas de la encuesta
 
 1. En esta sección usted diseña las preguntas que sus recolectores de datos/fototografías contestarán para cada una de sus parcelas de encuesta. Cada pregunta crea una columna de datos poblada con las respuestas de los intérpretes.
 2. Recomendaciones generales a la hora de diseñar las preguntas de la encuesta
@@ -147,13 +147,16 @@ Si no está familiarizado con GEE, a continuación encontrará instrucciones par
         - *Las preguntas secundarias sólo se formulan si se ha dado una respuesta específica a una pregunta anterior*.
     - Pase a la siguiente pregunta de nivel superior (nueva tarjeta de encuesta) y repita el proceso
 5. Existen varios tipos diferentes de preguntas de encuesta. Estos tipos de componentes incluyen combinaciones de cuatro tipos de preguntas y tres tipos de datos. La opción `button-text` (botón-texto) es una de las más utilizadas.
-    *Los cuatro tipos de pregunta son:* 
+    
+    *Los cuatro tipos de pregunta son:*
+
     > - **Botón**: Crea botones en los que se puede hacer clic y que permiten a los usuarios seleccionar una de las muchas respuestas para cada punto de muestra.
     > - **Input**: Permite a los usuarios introducir las respuestas en la casilla correspondiente. 
     > - **Radiobutton**: Crea botones de radio que permiten a los usuarios seleccionar una de las muchas respuestas para cada punto de muestra. 
     > - **Dropdown**: Permite a los usuarios seleccionar entre una lista de respuestas.
 
-    *Los tres tipos de datos permitidos son
+    *Los tres tipos de datos permitidos son:*
+    
     > - **Boolean**: Utilícelo cuando tenga dos opciones para una pregunta (sí/no).
     > - **Texto**: Utilícelo cuando tenga varias opciones que sean cadenas de texto. Pueden incluir letras, números o símbolos.
     > - **Número**: Utilícelo cuando tenga múltiples opciones que sean números, que no contengan letras o símbolos.

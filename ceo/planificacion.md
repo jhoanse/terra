@@ -31,7 +31,6 @@ Este proceso puede presentarse como si fuera estrictamente lineal, comenzando en
 En cada fase, las decisiones se toman y evalúan en función de los objetivos, las necesidades y las limitaciones. En algunos casos, puede ser necesario revisar los objetivos. Por eso es muy útil diseñar un pequeño proyecto piloto para el proyecto de mayor envergadura. Ejecutar todo el proceso de creación del proyecto y recopilar datos le ayudará a revelar cualquier posible problema, obstáculo imprevisto y otras consideraciones que le ayudarán a revisar su enfoque para producir los mejores resultados posibles.
 
 <img align="center" src="../images/ceo/4A_ProjectDesign.png" vspace="10" width="600"> 
-<p align = "izquierda">
 
 <font size=2> Proceso iterativo de planificación de proyectos Collect Earth Online. (fuente: Manual teórico de CEO). </font>
 
@@ -49,8 +48,9 @@ Además, la propia elaboración de la clave fomenta el debate y el pensamiento c
 
 > No dedicaremos mucho tiempo al tema de la elaboración de una clave de interpretación durante este taller, pero este paso es **MUY IMPORTANTE** y debe dedicarse tiempo a hacerlo bien. Desarrolle en colaboración este recurso para que sea útil a su equipo y pueda ser **referenciado y mejorado** repetidamente a lo largo de su recolección de datos.
 
-## Planificación de la GC/CC en CEo 
-Recuerde estas herramientas integradas en el CEo para el control de calidad. ¿Utilizará una o una combinación de estas herramientas? 
+## Planificación de la GC/CC en CEO
+
+Recuerde estas herramientas integradas en el CEo para el control de calidad. ¿Utilizará una o una combinación de estas herramientas?
 
 <img src="../images/ceo/1C_AssignPlots.png" vspace="10" width="400" />
 

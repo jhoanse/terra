@@ -92,14 +92,14 @@ Collect Earth Online (CEO) está disponible en https://collect.earth/.
 2. **Colaborar**: Trabaje con colegas de su organización o con científicos de la comunidad de todo el mundo: la nube facilita la colaboración. También puede utilizar CEo para organizar la carga de trabajo de su equipo, asignando proporciones de las muestras a los miembros del equipo y especificando cuántas muestras deben ser revisadas por más de una persona.
 
     <p align="middle">
-    <img src="../images/ceo/1C_AssignPlots.png" vspace="10" width="300"> 
-    <img src="../images/ceo/1D_QAQCsetup.png" vspace="10" width="400"> 
+    <img src="../images/ceo/1C_AssignPlots.png" vspace="10" width="500"> 
+    <img src="../images/ceo/1D_QAQCsetup.png" vspace="10" width="500"> 
     </p>
 
 3. **Recoger datos**: La interfaz intuitiva facilita la recopilación de información estandarizada sobre los paisajes que te interesan.
 
     <p align="middle">
-    <img src="../images/ceo/1E_GoToFirstPlot.png" vspace="10" width="400"> 
-    <img src="../images/ceo/1F_ForestOrNonforestPlot.png" vspace="10" width="400"> 
-    <img align="middle" src="../images/ceo/1G_NDFIforestloss.png" vspace="10" width="600">
+    <img src="../images/ceo/1E_GoToFirstPlot.png" vspace="10" width="600"> 
+    <img src="../images/ceo/1F_ForestOrNonforestPlot.png" vspace="10" width="600"> 
+    <img align="middle" src="../images/ceo/1G_NDFIforestloss.png" vspace="10" width="800">
     </p>
