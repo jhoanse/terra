@@ -1,1 +1,1 @@
-Add instructions for copying this template to create country website here.
+A repository for the 2022-23 Dominican Republic geospatial capacity building training series website.

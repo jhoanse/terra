@@ -19,7 +19,7 @@ Navegue a través de las diferentes secciones de la lección utilizando el menú
 |    Horario    |                                             Temáticas                                            |
 |:-------------:|:------------------------------------------------------------------------------------------------:|
 | 09:00 – 09:10 |                    Bienvenidas<br>Preguntas y respuestas de la sesión anterior                   |
-|  9:10 – 11:00 | Introducción a la detección de cambios<br>Detección de cambios simples en dos fechas<br>Desafíos |
+|  9:10 – 10:30 | Introducción a la detección de cambios<br>Detección de cambios simples en dos fechas<br>Desafíos |
 | 10:30 – 10:45 |                                              Receso                                              |
 | 10:45 – 12:00 |  Introducción a LandTrendr<br>LandTrendr: Evaluación de séries temporales y detección de cambios |
 | 12:00 – 13:00 | Almuerzo                                                                                         |
