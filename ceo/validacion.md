@@ -11,7 +11,7 @@ La validación del mapa puede realizarse comparando las clases cartográficas de
 
 Podemos cuantificar la precisión del mapa utilizando una matriz de confusión (matriz de error). Los datos de referencia dictan el valor real (la verdad) mientras que la izquierda muestra la predicción (o clasificación del mapa)
 
-- Verdadero positivo y verdadero negativo significan que la clasificación clasificó correctamente las etiquetas (por ejemplo, un píxel inundado se clasificó correctamente como inundado). 
+- Verdadero positivo y verdadero negativo significan que la clasificación clasificó correctamente las etiquetas (por ejemplo, un píxel inundado se clasificó correctamente como inundado).
 - Los falsos positivos y falsos negativos significan que la clasificación no coincide con la verdad (por ejemplo, un píxel inundado se clasificó como no inundado).
 
 <img align="center" src="../images/ceo/7A_confusionmatrix.png" vspace="10" width="400"> 
@@ -51,4 +51,4 @@ Rellenemos esta matriz de confusión con valores de ejemplo si se recogieran 100
 
 **Ejemplo**
 
-Un ejemplo para el mapa que utilizamos se encuentra [aquí](https://drive.google.com/file/d/1T7sFOwG8eur9g2b0Tm6zeZCciDRXMdOeV/view?usp=sharing). Toma en cuenta que necesitamos verificar clasificación vs. referencia y crear la matriz de confusión. Después, calcular las métricas. En AREA2 es posible hacer los calculos automaticamente, una vez que proporcionemos la tabla en su formato correcto. Para más informaciones, acceder a la [documentación de AREA2](https://area2.readthedocs.io/en/latest/) y [script de estimación estratificada](https://code.earthengine.google.com/2c42b4b050967405da4d3d4187b731c4). En este taller mencionamos solamente la contaje de píxeles para verificar la exactitud, pero es recomendado hacer como vemos en el ejemplo acima, tomando en cuenta la area de cada clase. Para más detalles, consulte [Olofsson et al. (2014)](https://www.sciencedirect.com/science/article/abs/pii/S0034425714000704).
+Un ejemplo para el mapa que utilizamos se encuentra [aquí](https://docs.google.com/spreadsheets/d/1G_ailWx4FRtbNY__Ck38tD1qZlCRdxMg/edit?usp=sharing&ouid=117588040825190888554&rtpof=true&sd=true). Toma en cuenta que necesitamos verificar clasificación vs. referencia y crear la matriz de confusión. Después, calcular las métricas. En AREA2 es posible hacer los calculos automaticamente, una vez que proporcionemos la tabla en su formato correcto. Para más informaciones, acceder a la [documentación de AREA2](https://area2.readthedocs.io/en/latest/) y [script de estimación estratificada](https://code.earthengine.google.com/2c42b4b050967405da4d3d4187b731c4). En este taller mencionamos solamente la contaje de píxeles para verificar la exactitud, pero es recomendado hacer como vemos en el ejemplo acima, tomando en cuenta la area de cada clase. Para más detalles, consulte [Olofsson et al. (2014)](https://www.sciencedirect.com/science/article/abs/pii/S0034425714000704).

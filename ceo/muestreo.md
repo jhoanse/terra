@@ -40,7 +40,7 @@ Hemos calculado previamente los recuentos aproximados de píxeles de las clases 
 | 1          | Ganancia  | 17196112.61 | 0.08         |
 | 2          | Perdida   | 2133022.105 | 0.01         |
 
-Si hubiéramos utilizado un muestreo sistemático o aleatorio, sólo obtendríamos un punto de ganáncia o pérdida de agua en menos de 1 de cada 100 puntos recogidos. Eso es súper ineficiente para analizar las clases de interés. Con el muestreo aleatorio estratificado puedo poner un valor mínimo al número de puntos de cada clase cartográfica, o estrato. Hemos preparado previamente un conjunto de puntos con 30 en los dos estratos más pequeños y los 40 restantes en la zona cartografiada como sin cambios por inundación, para un total de 100 puntos de muestreo.
+Si hubiéramos utilizado un muestreo sistemático o aleatorio, sólo obtendríamos un punto de ganáncia o pérdida de agua en menos de 1 de cada 100 puntos recogidos. Eso es súper ineficiente para analizar las clases de interés. Con el muestreo aleatorio estratificado puedo poner un valor mínimo al número de puntos de cada clase cartográfica, o estrato.
 
 El muestreo aleatorio estratificado se realizó en GEE utilizando este [script](https://code.earthengine.google.com/bdf75ed7bfde4024268dee12e3842225), que exporta un CSV de las ubicaciones de las muestras listo para ser importado en CEO.
 
