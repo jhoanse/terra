@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Visión Geral
+title: Visión General
 nav_order: 1
 ---
 
