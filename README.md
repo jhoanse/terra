@@ -1,1 +1,2 @@
-A repository for the 2022-23 Dominican Republic geospatial capacity building training series website.
+Repository for the Colombia training sessions -- in progress.
+** Cloned from https://github.com/SERVIR-Amazonia/republica-dominicana-taller.git
