@@ -3,7 +3,7 @@ layout: page
 title: "Introducción a Google Earth Engine"
 permalink: /intro-gee
 has_children: True
-nav_order: 4
+nav_order: 1
 ---
 
 # Introducción a Google Earth Engine
