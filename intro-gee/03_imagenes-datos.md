@@ -16,7 +16,7 @@ Las imágenes satelitales están en el corazón del poder de Google Earth Engine
 Primero vamos visualizar una imagen de Landsat 9 de 26 de Julio de 2022 de la parte oeste de la República Dominicana. Puede explorar la imagen de varias maneras. Para comenzar, puede recuperar metadatos (datos descriptivos sobre la imagen) imprimiendo la imagen.
 
 ```javascript
-var primeraImagen = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_008047_20220726');
+var primeraImagen = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_009058_20230226');
 print(primeraImagen);
 ```
 
@@ -77,6 +77,32 @@ Map.addLayer(
 El resultado se parece al mundo que vemos y se denomina compuesto de color natural, porque empareja naturalmente los rangos espectrales de las bandas de la imagen para mostrar los colores. Esta imagen, también denominada composición de color verdadero, muestra la banda espectral roja con tonos de rojo, la banda verde con tonos de verde y la banda azul con tonos de azul. Especificamos el emparejamiento simplemente a través del orden de las bandas en la lista: B4, B3, B2. Debido a que las bandas 4, 3 y 2 de Landsat 9 corresponden a los colores del mundo real de rojo, verde y azul, la imagen se asemeja al mundo que veríamos fuera de la ventana de un avión o con un dron volando bajo.
 
 <img align="center" src="../images/intro-gee/fig31.png" vspace="10" width="400"> 
+
+Para usar las unidades correctas podemos buscar las propiedades de esta colección, y saber si se requiere aplicar una escala específica. Para la colección de Landsat-9 L2 se debe aplicar la siguiente escala a las bandas multiespectrales y las bandas térmicas:
+
+```javascript
+// Función para aplicar factores de escala a images de Landsat-9
+function applyScaleFactors(image) {
+  var opticalBands = image.select('SR_B.').multiply(0.0000275).add(-0.2);
+  var thermalBands = image.select('ST_B.*').multiply(0.00341802).add(149.0);
+  return image.addBands(opticalBands, null, true)
+              .addBands(thermalBands, null, true);
+}
+
+// Aplicar función a imagen
+primeraImagen = applyScaleFactors(primeraImagen);
+
+// Visualizar
+// El rango para visualizar imagenes RGB que han sido escaladas es usualmente entre 0.0 y 0.2-0.3.
+Map.addLayer(
+    primeraImagen,
+    {
+        bands: ['SR_B4', 'SR_B3', 'SR_B2'],
+        min: 0.0,
+        max: 0.2
+    },
+    'Color Natural');
+```
 
 Ahora, podemos agregar más dos capas, pero con colores falsos, utilizando las bandas `SR_5`, `SR_4`, `SR_3` y `SR_6`, `SR_5`, `SR_4`.
 
