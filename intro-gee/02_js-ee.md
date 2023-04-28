@@ -44,20 +44,6 @@ var ciudades = ['Cali', 'Palmira', 'Tulua', 'Jamundi'];
 print(ciudades);
 ```
 
-### Diccionarios
-
-Se diferencian de las listas por encerrar 'llaves' y 'valores' entre otro tipo de corchetes {}.
-
-```javascript
-var poblaciones = {
-    Cali: 2200000, 
-    Palmira: 312519,
-    Tulua: 221684,
-    Jamundi: 129877
-};
-print(poblaciones);
-```
-
 Si observa la salida en la Consola, verá "`List`" con una flecha de expansión (▹) al lado. Al hacer clic en la flecha, se expandirá la lista y se le mostrará su contenido. Notará que junto con los cuatro elementos de la lista, hay un número al lado de cada valor. Este es el índice de cada artículo. Le permite hacer referencia a cada elemento de la lista mediante un valor numérico que indica su posición en la lista.
 
 ### Objetos JavaScript
@@ -68,14 +54,14 @@ Tenga en cuenta algunas cosas importantes sobre la sintaxis de JavaScript aquí.
 
 ```javascript
 var datosCiudad = {
-    'ciudad': 'Santo Domingo',
-    'coordinadas': [-69.9312, 18.4861],
-    'poblacion': 1159297
+    'ciudad': 'Cali',
+    'coordinadas': [-76.522, 3.421],
+    'poblacion': 2200000
 };
 print(datosCiudad);
 ```
 
-El objeto se imprimirá en el `Console`. Puede ver que en lugar de un índice numérico, cada elemento tiene una etiqueta. Esto se conoce como la clave y se puede utilizar para recuperar el valor de un objeto.
+El objeto se imprimirá en el `Console`. Puede ver que en lugar de un índice numérico, cada elemento tiene una etiqueta. Esto se conoce como la clave ('key') y se puede utilizar para recuperar el valor de un objeto.
 
 <img align="center" src="../images/intro-gee/fig21.png" vspace="10" width="300">
 
