@@ -47,7 +47,7 @@ El código aquí usa el método `addLayer` del mapa (`Map`). Hay cuatro componen
 
 Cuando ejecuta el código, es posible que no note la imagen que se muestra a menos que se desplace y la busque. Para hacer esto, haga clic y arrastre el mapa hacia la República Dominicana (También puede saltar allí escribiendo "Dominican Republic" en el panel de búsqueda en la parte superior del Editor de código, donde el indicador dice "Search places and datasets"...) Utilice la herramienta de zoom para aumentar el nivel de zoom y hacer que el cuadrado parezca más grande.
 
-<img align="center" src="../images/intro-gee/fig30.png" vspace="10" width="400"> 
+<img align="center" src="../images/intro-gee/03_fig2.png" vspace="10" width="400"> 
 
 ¿Puedes reconocer alguna característica en la imagen?
 
