@@ -13,22 +13,24 @@ Para poder construir un script para su análisis, necesitará usar JavaScript. E
 
 ### Variables
 
-En un lenguaje de programación, las variables se utilizan para almacenar valores de datos. En JavaScript, una variable se define usando la palabra clave `var` seguida del nombre de la variable. El siguiente código asigna el texto "Santo Domingo" a la variable denominada `ciudad`. Tenga en cuenta que la cadena de texto en el código debe estar entre comillas. Puede usar ' (comillas simples) o " (comillas dobles), y deben coincidir al principio y al final de cada cadena. En sus programas, es recomendable ser coherente: use comillas simples o comillas dobles en todo una secuencia de comandos determinada. Cada declaración de su secuencia de comandos debe terminar normalmente con un punto y coma, aunque el editor de código de Earth Engine no lo requiere.
+En un lenguaje de programación, las variables se utilizan para almacenar valores de datos. En JavaScript, una variable se define usando la palabra clave `var` seguida del nombre de la variable. El siguiente código asigna el texto "Valle del Cauca" a la variable denominada `departamento`. Tenga en cuenta que la cadena de texto en el código debe estar entre comillas. Puede usar ' (comillas simples) o " (comillas dobles), y deben coincidir al principio y al final de cada cadena. En sus programas, es recomendable ser coherente: use comillas simples o comillas dobles en todo una secuencia de comandos determinada. Cada declaración de su secuencia de comandos debe terminar normalmente con un punto y coma, aunque el editor de código de Earth Engine no lo requiere.
 
 ```javascript
-var ciudad = 'Santo Domingo';
+// Variable tipo texto o 'string'
+var departamento = 'Valle del Cauca';
 ```
 
-Si imprime la variable `ciudad`, obtendrá el valor almacenado en la variable (Santo Domingo) impreso en el Console.
+Si imprime la variable `departamento`, obtendrá el valor almacenado en la variable (Valle del Cauca) impreso en el Console.
 
 ```javascript
-print(ciudad);
+print(departamento);
 ```
 
 Cuando asigna un valor de texto, a la variable se le asigna automáticamente el tipo *string*. También puede asignar números a variables y crear variables de tipo *número*. El siguiente código crea una nueva variable llamada `poblacion` y le asigna un número como su valor.
 
 ```javascript
-var poblacion = 1159297;
+// Variable tipo numero
+var poblacion = 4500000;
 print(poblacion);
 ```
 
@@ -37,8 +39,23 @@ print(poblacion);
 Es útil poder almacenar múltiples valores en una sola variable. JavaScript proporciona una estructura de datos llamada "lista" que puede contener múltiples valores. Podemos crear una nueva lista usando los corchetes [] y agregando múltiples valores separados por una coma.
 
 ```javascript
-var ciudades = ['Santo Domingo', 'Santiago de los Caballeros', 'Los Alcarrizos', 'La Vega'];
+// Variable tipo lista.
+var ciudades = ['Cali', 'Palmira', 'Tulua', 'Jamundi'];
 print(ciudades);
+```
+
+### Diccionarios
+
+Se diferencian de las listas por encerrar 'llaves' y 'valores' entre otro tipo de corchetes {}.
+
+```javascript
+var poblaciones = {
+    Cali: 2200000, 
+    Palmira: 312519,
+    Tulua: 221684,
+    Jamundi: 129877
+};
+print(poblaciones);
 ```
 
 Si observa la salida en la Consola, verá "`List`" con una flecha de expansión (▹) al lado. Al hacer clic en la flecha, se expandirá la lista y se le mostrará su contenido. Notará que junto con los cuatro elementos de la lista, hay un número al lado de cada valor. Este es el índice de cada artículo. Le permite hacer referencia a cada elemento de la lista mediante un valor numérico que indica su posición en la lista.
