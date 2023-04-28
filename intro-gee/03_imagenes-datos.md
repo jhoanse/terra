@@ -2,7 +2,7 @@
 layout: page
 title: Imágenes y datos en Google Earth Engine
 parent: Introducción a Google Earth Engine
-nav_order: 3
+nav_order: 4
 ---
 
 # Imágenes y datos en Google Earth Engine
