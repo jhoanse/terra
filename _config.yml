@@ -1,6 +1,6 @@
-title: Talleres de Capacitación Geoespacial de República Dominicana
-description: La página de contenido de los talleres de capacitación geoespacial de República Dominicana
-baseurl: "/republica-dominicana-taller" # the subpath of your site, e.g. /blog
+title: Colombia: Capacity Building Work Plan for the Amazonia
+description: La página de contenido de los talleres de capacitación
+baseurl: "/colombia-training" # the subpath of your site, e.g. /blog
 url: "https://servir-amazonia.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/images/transparent-logos.png"
 
