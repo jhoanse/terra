@@ -4,17 +4,26 @@ title: Visión General
 nav_order: 1
 ---
 
-# Talleres de Capacitación Geoespacial de República Dominicana
+# Capacity Building Work Plan for the Amazonia: Colombia
+# Marzo 2023 - Agosto 2023
 
-El objetivo de estas sesiones de formación es crear e impartir una formación que aumente la capacidad de las partes interesadas en la República Dominicana para desarrollar servicios y compartir datos centrados en programas relacionados con los manglares y los eventos hidrológicos. Para obtener una descripción detallada, lea la [nota conceptual del plan de desarrollo](https://docs.google.com/document/d/1ZFGhzkOucx8MMpE9djodM0cQGrURKFrO/edit). A lo largo de las doce sesiones de formación, los participantes obtendrán:
+SERVIR-Amazonia implementará programas de entrenamietno ("Capcity-building") en Brasil, Colombia, Ecuador, y Perú durante la primera mitad de 2023. El objetivo principal de este programa es proveer entrenamiento en Sistemas de Información Geográfica (SIG) a actores regionales claves ennfocado en capacidades y necesidades en tecnología geoespacial. Este programa: 
 
-1. Una comprensión conceptual de los sistemas de información geográfica y el uso de QGIS/ArcGIS Pro;
-2. Conocimiento del uso e interpretación de imágenes de satélite de moderada y alta resolución y datos de radar de apertura sintética
-3. Una visión general de la plataforma Google Earth Engine;
-4. Enfoques metodológicos para el análisis espacial de manglares e inundaciones tanto en QGIS/ArcGIS Pro como en GEE, y detección de cambios en GEE;
-5. Habilidades de programación en JavaScript para GEE, ArcPy y Python para ArcGIS.
+a) Proveerá entrenamiento específico para servicios clave y tecnologías geoespaciales relacionadas a las áreas temáticas a lo largo de la región de la Amazonía. Este paquete de entrenamiento se enfocará en los servicios que han sido actualmente incluídos en el portafolio de SAMZ. 
 
-El contenido de la lección para cada taller se puede encontrar en la cinta de opciones lateral izquierda. Además, puede encontrar información sobre todos los socios del taller en la pestaña **Socios**, material de aprendizaje complementario en la pestaña **Recursos** y fotos de los talleres (y un lugar para cargar sus propias fotos) en la pestaña **Fotos**.
+b) Ofrecerá entrenamiento en herramientas geoespaciales en demanda, principalemente en SIG. Los socios del grupo SAMZ son responsables del diseño e implementacón the actividades de entrenamiento nacionales, las cuales incuyen a la academia y actores regionales.
+
+c) Incorporará actividades de entrenamiento especial para mujeres y personas indígenas basado en sus intereses y necesidades locales.
+
+
+## Objetivo
+Este programa busca desarrollar un entrenamiento más orgánico bajo el Programa incrementando el impacto de la estrategía de SERVIR-Amazonia a través de talleres, entrenamientos, y otras actividades para el desarrollo de capacidad en la Amazonía. Este entrenamiento esta diseñado en base a intereses específicos y relacionados a las cuatro áreas temáticas del programa SERVIR-Amazonia: Cobertura terrrestre, cambio en uso del suelo y ecosistemas, riesgos de incendio y sequías, agua y desastres relacionados con el agua, y tiempo y clima.  
+
+Durante las sesiones de entrenamiento los participantes aprenderán:
+1. Conceptos de SIG y el uso de QGIS.
+2. El uso y la interpretación de imágenes satelitáles de mediana y alta resolución, incluyendo datos de radar.
+3. El uso de la plataforma de Google Earth Engine.
+4. Metodologías para mapear y detectar cambios en coberturas terrestres y eventos de inundación.
 
 
 ## Dudas
