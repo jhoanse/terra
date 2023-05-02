@@ -7,7 +7,7 @@ nav_order: 1
 # Capacity Building Work Plan for the Amazonia: Colombia
 # Marzo 2023 - Agosto 2023
 
-SERVIR-Amazonia implementará programas de entrenamietno ("Capcity-building") en Brasil, Colombia, Ecuador, y Perú durante la primera mitad de 2023. El objetivo principal de este programa es proveer entrenamiento en Sistemas de Información Geográfica (SIG) a actores regionales claves ennfocado en capacidades y necesidades en tecnología geoespacial. Este programa: 
+SERVIR-Amazonia implementará programas de entrenamietno ("Capcity-building") en Brasil, Colombia, Ecuador, y Perú durante la primera mitad de 2023. El objetivo principal de este programa es proveer entrenamiento en Sistemas de Información Geográfica (SIG) a actores regionales claves enfocado en capacidades y necesidades en tecnología geoespacial. Este programa: 
 
 a) Proveerá entrenamiento específico para servicios clave y tecnologías geoespaciales relacionadas a las áreas temáticas a lo largo de la región de la Amazonía. Este paquete de entrenamiento se enfocará en los servicios que han sido actualmente incluídos en el portafolio de SAMZ. 
 
@@ -25,41 +25,32 @@ Durante las sesiones de entrenamiento los participantes aprenderán:
 3. El uso de la plataforma de Google Earth Engine.
 4. Metodologías para mapear y detectar cambios en coberturas terrestres y eventos de inundación.
 
+## Pre-requisitos
+Los participantes deberán tener:
+* Conocimientos básicos en SIG y sensores remotos.
+* Conocimientos básicos en programación (Javascript, Python)
+* Un computador con acceso a internet.
+* Una cuenta de [Google Earth Engine](https://earthengine.google.com/).
+* Una cuenta en [Planet NICFI](https://www.planet.com/nicfi/#sign-up). Por favor registrarse con el mismo correo que usaron para Google Earth Engine.
 
-## Dudas
+## Material para revisión
+* R: [Hands-on programming with R](https://rstudio-education.github.io/hopr/index.html)
+* R: [R for dummies](https://archive.org/details/r-for-dummies_202104/page/n5/mode/2up)
+* SIG: [A gentle introduction to GIS](https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/index.html)
+* Sensores remotos: [What is remote sensing?](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing)
+* GEE: [Earth Engine Beginner's Cookbook](https://developers.google.com/earth-engine/tutorials/community/beginners-cookbook)
+* JavaScript: [Introduction to JavaScript for Earth Engine](https://developers.google.com/earth-engine/tutorials/tutorial_js_01)
 
-Si tiene alguna duda sobre el material, envíe una pregunta a continuación. Estamos aquí para ayudar.
-
-[Haga una pregunta](https://forms.gle/a7MW4PtgtmPiPoZJ9){: .btn .btn-purple }
 
 ## Agenda
 
-| Día de la Capacitación |                                                                                                                Temática                                                                                                                | Cronología |        Formato        |
-|:----------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|:---------------------:|
-|            1           |                                                                                         Introducción a SIG & Sensores Remotos (Teledetección).                                                                                         | Febrero 7  | Impartido a distancia |
-|            2           |                                                                       Introducción a Google Earth Engine (programación y procesamiento de imágenes/visualización)                                                                      | Febrero 28 | Impartido a distancia |
-|            3           | Intermedio Google Earth Engine - aplicado a casos de uso (por ejemplo, Mapeo de manglares usando varias fuentes de imágenes satelitales, como sensores ópticos, Imágenes de Alta Resolución (VHR siglas en inglés), imágenes de drone. | Marzo 23   | Impartido a distancia |
-|            4           |                                                               Intermedio Google Earth Engine - aplicado a casos de uso (por ejemplo, Mapeo de inundación, estrés hídrico)                                                              | Marzo 30   | Impartido a distancia |
-|            5           |                                                                                          Avanzado en Google Earth Engine (Detección de cambio)                                                                                         | Abril 13   | Impartido a distancia |
-|            6           |                                                             Uso de Collect Earth Online para la evaluación de la precisión y la estimación de área no sesgada de los mapas.                                                            | Abril 20   | Impartido a distancia |
-|           Q&A          |                                                                                                            Reunión en línea                                                                                                            | Mayo 4     |        Virtual        |
-|            7           |                                                                ArcGIS Pro - Creación de mapa, análisis espacial básico (por ejemplo, crear área de influencia (buffer))                                                                | Agosto 7   |       Presencial      |
-|            8           |                                                                  ArcGIS Pro - Análisis espacial relacionado con los manglares (por ejemplo, clasificación de imágenes)                                                                 | Agosto 8   |       Presencial      |
-|            9           |                                                                 ArcGIS Pro - Análisis espacial hidrológico (por ejemplo, creación de cuencas hidrográficas, DEM, etc.)                                                                 | Agosto 9   |       Presencial      |
-|           10           |                                                                                                  ArcGIS Pro - Construcción de Modelo                                                                                                   | Agosto 10  |       Presencial      |
-|           11           |                                                                                               ArcGIS Pro - Introducción a Python y ArcPy                                                                                               | Agosto 11  |       Presencial      |
-|           12           |                                                                                                        Sesión de Capstone / MEL                                                                                                        | TBD        | Impartido a distancia |
+| Día de la Capacitación |                        Temática                                  |   Fecha      |        Formato        |
+|:----------------------:|:----------------------------------------------------------------:|:------------:|:---------------------:|
+|           1-2          |  Programación básica con R                                       | Abril 10-11  |   Presencial          |
+|            3           |  Introducción a Radar con QGIS (radar para detección de inundación) | Abril 25     |   Virtual             |
+|           4-5          |  Introducción a Google Earth Engine                              | Marzo 23     |   Virtual             |
+|           6-7          |  Google Earth Engine Intermedio - Aplicado a casos (por ejemplo, Mapeo de inundación, estrés hídrico)   | Junio 5-6    |   Virtual             |
+|           8-9          |  Uso de Collect Earth Online para la evaluación de la precisión y la estimación de área no sesgada de los mapas.   | Junio 26-27  |   Virtual             |
+|          10-11         |  Procesamiento de imágenes de Drones                             | Julio 24-25  |   Presencial          |
+|           12           |  Sesión de Capstone y apoyo                                      | Julio 31     |   Virtual             |
 
-
-## Retroalimentación / Feedback
-
-Si tiene algún comentario sobre cualquier taller, complete el siguiente formulario. ¡Nos ayuda a mejorar futuros talleres!
-
-[Dé su feedback](https://forms.gle/8Jdm1aybL9sqzNEw6){: .btn .btn-purple }
-
-
-## Grabaciones
-
-Se puede acceder a las grabaciones de cada sesión del taller haciendo clic en el botón a continuación. No elimine ningún archivo de la carpeta.
-
-[Grabaciones](https://drive.google.com/drive/folders/1sSd6GgYfNR6MsEUn_fRDgyjtOQ_pJ3EO){: .btn .btn-purple }
