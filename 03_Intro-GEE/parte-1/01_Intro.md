@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Introducción
-parent: Introducción a Google Earth Engine
+title: "Introducción a Google Earth Engine - Parte 1"
+permalink: /03_intro-GEE/parte-1
 nav_order: 2
 ---
 
