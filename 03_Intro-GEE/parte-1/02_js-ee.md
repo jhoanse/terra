@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Intro JavaScript y Conceptos"
-permalink: "Introducción a Google Earth Engine - Parte 1"
-nav_order: 3
+parent: "Introducción a Google Earth Engine - Parte 1"
+nav_order: 2
 ---
 
 # Introducción al JavaScript y Conceptos de Earth Engine
