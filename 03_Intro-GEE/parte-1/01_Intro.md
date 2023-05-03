@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Introducción"
-permalink: "Introducción a Google Earth Engine - Parte 1"
-nav_order: 2
+parent: "Introducción a Google Earth Engine - Parte 1"
+nav_order: 1
 ---
 
 # Introducción
