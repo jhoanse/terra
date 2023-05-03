@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Datos Vectoriales y Ráster"
-permalink: "Introducción a Google Earth Engine - Parte 1"
-nav_order: 4
+parent: "Introducción a Google Earth Engine - Parte 1"
+nav_order: 3
 ---
 
 # Imágenes y datos en Google Earth Engine
