@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "Introduction to Synthetic Aperture Radar (SAR)"
-permalink: /intro-sar
+title: "Introducción a Radar de Apertura Sintética (SAR)"
+permalink: /02_Intro-Radar-QGIS
 has_children: True
-nav_order: 5
+nav_order: 2
 ---
 
 # Introduction to Synthetic Aperture Radar (SAR)
