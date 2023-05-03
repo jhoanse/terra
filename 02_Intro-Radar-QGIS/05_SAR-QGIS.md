@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SAR in QGIS
-parent: Introduction to Synthetic Aperture Radar (SAR)
+title: SAR en QGIS
+parent: Introducción a Radar de Apertura Sintética (SAR)
 nav_order: 5
 ---
 
