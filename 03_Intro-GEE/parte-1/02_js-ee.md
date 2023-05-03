@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Introducción a Google Earth Engine - Parte 1"
-permalink: /03_intro-GEE/parte-1
+title: "Intro JavaScript y Conceptos"
+permalink: "Introducción a Google Earth Engine - Parte 1"
 nav_order: 3
 ---
 
