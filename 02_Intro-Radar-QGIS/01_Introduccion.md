@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Introduction
-parent: Introduction to Synthetic Aperture Radar (SAR)
+title: Introducción
+parent: Introducción a Radar de Apertura Sintética (SAR)
 nav_order: 1
 ---
 
