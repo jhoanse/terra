@@ -3,7 +3,7 @@ layout: page
 title: "Introducción a Google Earth Engine - Parte 2"
 permalink: /03_intro-GEE/parte-2
 has_children: True
-nav_order: 1
+nav_order: 4
 ---
 
 # Introducción a Google Earth Engine - Parte 2
