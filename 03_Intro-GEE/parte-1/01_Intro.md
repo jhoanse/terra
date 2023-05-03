@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Introducción"
-parent: "Introducción a Google Earth Engine - Parte 1"
+title: Introducción
+parent: Introducción a Google Earth Engine - Parte 1
 nav_order: 1
 ---
 
