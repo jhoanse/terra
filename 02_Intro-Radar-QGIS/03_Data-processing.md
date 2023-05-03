@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Data Processing
-parent: Introduction to Synthetic Aperture Radar (SAR)
+title: Procesamiento de Datos
+parent: Introducción a Radar de Apertura Sintética (SAR)
 nav_order: 3
 ---
 
