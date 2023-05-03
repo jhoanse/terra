@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Data Access
-parent: Introduction to Synthetic Aperture Radar (SAR)
+title: Acceso a Datos
+parent: Introducción a Radar de Apertura Sintética (SAR)
 nav_order: 2
 ---
 
