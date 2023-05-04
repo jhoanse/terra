@@ -1,3 +1,9 @@
+---
+layout: page
+title: Creación de cuenta
+parent: Introducción a Google Earth Engine - Parte 1
+nav_order: 1
+---
 
 ## Configuración prévia
 
