@@ -165,8 +165,4 @@ Una vez que se guarde el script, aparecerá en el panel del administrador de scr
 
 <img align="center" src="../../images/intro-gee/fig20.png" vspace="10" width="400">
 
-¡Felicitaciones! Tu has creado su primeiro script.
-
-# Repositorio
-
-Todos los códigos creados en este taller están disponibles en este repositorio: [https://code.earthengine.google.com/?accept_repo=users/an-sig/republica-dominicana](https://code.earthengine.google.com/?accept_repo=users/an-sig/republica-dominicana), carpeta `T2`.
+¡Felicitaciones! Has creado tu primer script.
