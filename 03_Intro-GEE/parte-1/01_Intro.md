@@ -2,7 +2,7 @@
 layout: page
 title: Introducción
 parent: Introducción a Google Earth Engine - Parte 1
-nav_order: 1
+nav_order: 2
 ---
 
 # Introducción
