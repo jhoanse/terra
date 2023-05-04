@@ -10,44 +10,40 @@ nav_order: 2
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 
 ## Session Agenda
-**Date**: Wednesday, March 8th, 2023
-**Instructor(s):** Jose (Pepe) Ochoa
+**Date**: April 25th, 2023
+**Instructor(s):** Erith & Jose Sanchez
 
 ### Time / Topics
-09:00 – 10:15
+09:00 – 10:30
 	
     Welcome and set up check
 
     Radar overview: what is radar, what is SAR, how data is collected, key radar systems
 
-10:15 - 10h30
+10:30 - 10:45
 	
     Coffee break
 
-10:30 – 11:00
+10:45 – 11:30
 	
     Accessing SAR data
 
     Earthdata, Alaska Satellite Facility Data Search platforms
 
-11:00 – 12:00
+11:30 – 12:00
 	
-    SAR data processing: Sentinel-1
+    SAR data processing: Challenge
 
-        SAR data processing: Challenges
-
-        Opening and displaying Sentinel-1 SAR data
-
-12:00 – 13:00
+12:00 – 13:30
 	
 Lunch
 
-13:00 – 14:15
+13:30 – 14:30
 	
-    Data Analysis and Interpretation
+    SAR data processing: Sentinel-1
+    
+    Opening and displaying Sentinel-1 SAR data
 
-        SAR data in QGIS
-
-14:15 –15:00
+14:30 –15:30
 	
-    Overview of InSAR data
+    SAR in QGIS: identifying water bodies
