@@ -36,7 +36,7 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 12:00 – 13:30
 	
-Lunch
+    Lunch
 
 13:30 – 14:30
 	
