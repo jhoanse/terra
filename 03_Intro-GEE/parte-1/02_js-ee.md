@@ -11,6 +11,18 @@ Para poder construir un script para su análisis, necesitará usar JavaScript. E
 
 ## JavaScript
 
+### Comentarios
+
+Mientras escribe el código, es útil agregar un poco de texto para explicar el código o dejar una nota para usted. Es una buena práctica de programación agregar siempre comentarios en el código explicando cada paso. En JavaScript, puede prefijar cualquier línea con dos barras diagonales // para convertirlo en un comentario. El intérprete ignorará el texto del comentario y no se ejecutará.
+
+```javascript
+// ¡Esto es un comentario!
+```
+
+El Editor de código también proporciona un acceso directo (Ctrl + / en Windows, Cmd + / en Mac) para comentar o descomentar varias líneas a la vez. Puede seleccionar varias líneas y presionar la combinación de teclas para hacer que todos sean comentarios. Pulse de nuevo para invertir la operación. Esto es útil cuando se depura el código para detener la ejecución de ciertas partes del script.
+
+<img align="center" src="../../images/intro-gee/fig23.png" vspace="10" width="600">
+
 ### Variables
 
 En un lenguaje de programación, las variables se utilizan para almacenar valores de datos. En JavaScript, una variable se define usando la palabra clave `var` seguida del nombre de la variable. El siguiente código asigna el texto "Valle del Cauca" a la variable denominada `departamento`. Tenga en cuenta que la cadena de texto en el código debe estar entre comillas. Puede usar ' (comillas simples) o " (comillas dobles), y deben coincidir al principio y al final de cada cadena. En sus programas, es recomendable ser coherente: use comillas simples o comillas dobles en todo una secuencia de comandos determinada. Cada declaración de su secuencia de comandos debe terminar normalmente con un punto y coma, aunque el editor de código de Earth Engine no lo requiere.
@@ -63,7 +75,7 @@ print(datosCiudad);
 
 El objeto se imprimirá en el `Console`. Puede ver que en lugar de un índice numérico, cada elemento tiene una etiqueta. Esto se conoce como la clave ('key') y se puede utilizar para recuperar el valor de un objeto.
 
-<img align="center" src="../images/intro-gee/fig21.png" vspace="10" width="300">
+<img align="center" src="../../images/intro-gee/fig21.png" vspace="10" width="300">
 
 ### Funciones
 
@@ -77,19 +89,8 @@ print(saludo('Mundo'));
 print(saludo('Participantes'));
 ```
 
-<img align="center" src="../images/intro-gee/fig22.png" vspace="10" width="200">
+<img align="center" src="../../images/intro-gee/fig22.png" vspace="10" width="200">
 
-### Comentarios
-
-Mientras escribe el código, es útil agregar un poco de texto para explicar el código o dejar una nota para usted. Es una buena práctica de programación agregar siempre comentarios en el código explicando cada paso. En JavaScript, puede prefijar cualquier línea con dos barras diagonales // para convertirlo en un comentario. El intérprete ignorará el texto del comentario y no se ejecutará.
-
-```javascript
-// ¡Esto es un comentario!
-```
-
-El Editor de código también proporciona un acceso directo (Ctrl + / en Windows, Cmd + / en Mac) para comentar o descomentar varias líneas a la vez. Puede seleccionar varias líneas y presionar la combinación de teclas para hacer que todos sean comentarios. Pulse de nuevo para invertir la operación. Esto es útil cuando se depura el código para detener la ejecución de ciertas partes del script.
-
-<img align="center" src="../images/intro-gee/fig23.png" vspace="10" width="600">
 
 ### Código completo
 
@@ -100,35 +101,35 @@ Script "`2 Introducción al JS`" del repositorio y la carpeta `T2` o link direct
 
 La API de Earth Engine es amplia y proporciona objetos y métodos para hacer de todo, desde operaciones matemáticas sencillas hasta algoritmos avanzados para el procesamiento de imágenes. En el Editor de código, puede cambiar a la pestaña `Docs` para ver las funciones de la API agrupadas por tipos de objetos (o en la [documentación de Earth Engine](https://developers.google.com/earth-engine/apidocs)). Las funciones de la API tienen el prefijo `ee` (por Earth Engine).
 
-<img align="center" src="../images/intro-gee/fig15.png" vspace="10" width="300"> 
+<img align="center" src="../../images/intro-gee/fig15.png" vspace="10" width="300"> 
 
 Los conceptos fundamentales de Earth Engine con respecto a la teledetección incluyen:
 
 - Imagen (`ee.Image`): El tipo de dato raster fundamental en Earth Engine. Imagen con una pila de bandas georreferenciadas. Cada banda tiene la suya Máscara, Proyección, Resolución, y una lista de propiedades que inclyen fecha, cuadro delimitador, etc.
 
-    <img align="center" src="../images/intro-gee/fig8.png" vspace="10" width="150">
+    <img align="center" src="../../images/intro-gee/fig8.png" vspace="10" width="150">
 
 - Colección de Imágenes (`ee.ImageCollection`): Una colección de imágenes
 
-    <img align="center" src="../images/intro-gee/fig9.png" vspace="10" width="150">
+    <img align="center" src="../../images/intro-gee/fig9.png" vspace="10" width="150">
 
 - Geometría (`ee.Geometry`): El tipo de dato vectorial fundamental en Earth Engine. Línea / Punto / Polígono / etc.
 
-    <img align="center" src="../images/intro-gee/fig10.png" vspace="10" width="150">
+    <img align="center" src="../../images/intro-gee/fig10.png" vspace="10" width="150">
 
 - Feature (`ee.Feture`): Una geometria con propriedades. Línea / Punto / Polígono / etc,
 Lista de Propiedades
 
-    <img align="center" src="../images/intro-gee/fig11.png" vspace="10" width="150">
+    <img align="center" src="../../images/intro-gee/fig11.png" vspace="10" width="150">
 
 - Colección de Features (`ee.FeatureCollection`): Una colección de Features (geometrias con propriedades)
 
-    <img align="center" src="../images/intro-gee/fig12.png" vspace="10" width="150">
+    <img align="center" src="../../images/intro-gee/fig12.png" vspace="10" width="150">
 
 - Redutores (`ee.Reducer`): Objeto utilizado para agregaciones y cálculos numéricos (para bandas, séries temporales, features...)
 
-    <img align="center" src="../images/intro-gee/fig13.png" vspace="10" width="150">
-    <img align="center" src="../images/intro-gee/fig14.png" vspace="10" width="150">
+    <img align="center" src="../../images/intro-gee/fig13.png" vspace="10" width="150">
+    <img align="center" src="../../images/intro-gee/fig14.png" vspace="10" width="150">
 
 Para más informaciones acceder al [sitio EE de objetos y métodos](https://developers.google.com/earth-engine/guides/objects_methods_overview).
 
@@ -143,7 +144,7 @@ Anteriormente, aprendiste cómo almacenar números en variables, pero no cómo h
 
 Mirando la pestaña `Docs`, encontrará un grupo de métodos que se pueden llamar en un `ee.Number`. Expanda para ver las diversas funciones disponibles para trabajar con números. Verá la función `ee.Number` que crea un objeto de número de Earth Engine a partir de un valor. En la lista de funciones, hay una función de suma (`add`) para sumar dos números. Eso es lo que usas para sumar `a` y `b`.
 
-<img align="center" src="../images/intro-gee/fig24.png" vspace="10" width="300"> 
+<img align="center" src="../../images/intro-gee/fig24.png" vspace="10" width="300"> 
 
 Para sumar `a` y `b`, primero creamos un objeto `ee.Number` a partir de la variable a con `ee.Number(a)`. Y luego podemos usar la llamada `add(b)` para agregarle el valor de `b`. El siguiente código muestra la sintaxis e imprime el resultado que, por supuesto, es el valor 3.
 
@@ -156,7 +157,7 @@ Es posible que ya te hayas dado cuenta de que cuando aprendes a programar en Ear
 
 Aquí hay otro ejemplo para llevar este punto a casa. Supongamos que está trabajando en una tarea que requiere que cree una lista de años desde 1980 hasta 2020 con un intervalo de cinco años. Si se enfrenta a esta tarea, el primer paso es cambiar a la pestaña `Docs` y abrir el módulo `ee.List`. Navegue a través de las funciones y vea si hay alguna función que pueda ayudar. Notará una función `ee.List.sequence`. Al hacer clic en él, aparecerá la documentación de la función.
 
-<img align="center" src="../images/intro-gee/fig25.png" vspace="10" width="500"> 
+<img align="center" src="../../images/intro-gee/fig25.png" vspace="10" width="500"> 
 
 La función `ee.List.sequence` puede generar una secuencia de números desde un valor inicial dado hasta el valor final. También tiene un paso de parámetro opcional para indicar el incremento entre cada número. Podemos crear una `ee.List` de números que representen los años desde 1980 hasta 2020, contando de 5 en 5, llamando a esta función predefinida con los siguientes valores: `start` = 1980, `end` = 2020 y `step` = 5.
 
@@ -167,7 +168,7 @@ print(listaAnos);
 
 El resultado impreso en el `Console` mostrará que la variable yearList contiene la lista de años con el intervalo correcto.
 
-<img align="center" src="../images/intro-gee/fig26.png" vspace="10" width="500"> 
+<img align="center" src="../../images/intro-gee/fig26.png" vspace="10" width="500"> 
 
 Ahora vamos mirar un ejemplo de redución (`ee.Reducer`). Como vimos, `ee.Reducer` es el objeto utilizado para agregaciones y cálculos. Creamos una lista con números de 1 a 5 y queremos calcular la média destos números. Para eso, utilizamos la función `reduce()` para listas y elegimos el `ee.Reducer` (mire en el `Docs` el redutor `ee.Reducer.mean()`). Tenga en cuenta que podemos utilizar la misma función `ee.List.sequence` para crear la lista pero sin la necesidad de definir el `step` ya que `step` tiene el valor 1 como padrón.
 
@@ -191,7 +192,7 @@ var satelite = ee.String('2A');
 
 *Sugerencia*: use la función `cat` del módulo `ee.String` para "concatenar" (unir) los dos `strings`. Encontrará más información sobre todas las funciones disponibles en la pestaña `Docs` del Editor de códigos.
 
-<img align="center" src="../images/intro-gee/fig27.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/fig27.png" vspace="10" width="400"> 
 
 ### Desafío 2
 
