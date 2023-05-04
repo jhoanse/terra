@@ -7,7 +7,7 @@ nav_order: 1
 # Capacity Building Work Plan for the Amazonia: Colombia
 # Marzo 2023 - Agosto 2023
 
-SERVIR-Amazonia implementará programas de entrenamietno ("Capcity-building") en Brasil, Colombia, Ecuador, y Perú durante la primera mitad de 2023. El objetivo principal de este programa es proveer entrenamiento en Sistemas de Información Geográfica (SIG) a actores regionales claves enfocado en capacidades y necesidades en tecnología geoespacial. Este programa: 
+SERVIR-Amazonia implementará programas de entrenamietno ("Capacity-building") en Brasil, Colombia, Ecuador, y Perú durante la primera mitad de 2023. El objetivo principal de este programa es proveer entrenamiento en Sistemas de Información Geográfica (SIG) a actores regionales claves enfocado en capacidades y necesidades en tecnología geoespacial. Este programa: 
 
 a) Proveerá entrenamiento específico para servicios clave y tecnologías geoespaciales relacionadas a las áreas temáticas a lo largo de la región de la Amazonía. Este paquete de entrenamiento se enfocará en los servicios que han sido actualmente incluídos en el portafolio de SAMZ. 
 
