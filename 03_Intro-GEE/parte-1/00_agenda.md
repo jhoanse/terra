@@ -16,8 +16,8 @@ nav_order: 3
 
 |    Horario    |                                                                    Temáticas                                                                    |
 |:-------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------:|
-| 11:00 – 12:10 | Verificación de cuentas - Introducción a Google Earth Engine                        |
-| 12:10 – 13:00 | Conceptos básicos - Navegación en la plataforma - Lenguaje JavaScript en GEE        |
+| 11:00 – 12:20 | Verificación de cuentas - Introducción a Google Earth Engine                        |
+| 12:20 – 13:00 | Conceptos básicos - Navegación en la plataforma - Lenguaje JavaScript en GEE        |
 | 13:00 – 14:00 | Almuerzo                                                                            |
 | 14:00 – 15:00 | Elementos GEE - Datos vectoriales y ráster - Exploración de colecciones en GEE      |
 | 15:00 – 15:15 | Receso                                                                              |
