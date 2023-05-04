@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Visión General
+title: Agenda General
 nav_order: 1
 ---
 
