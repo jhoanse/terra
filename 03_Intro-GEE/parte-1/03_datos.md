@@ -2,7 +2,7 @@
 layout: page
 title: Datos Vectoriales y Ráster
 parent: Introducción a Google Earth Engine - Parte 1
-nav_order: 3
+nav_order: 4
 ---
 
 # Imágenes y datos en Google Earth Engine
@@ -22,7 +22,7 @@ print(primeraImagen);
 
 En el `Console`, debe hacer clic en las flechas de expansión para mostrar la información. Vemos que esta imagen consta de 19 bandas diferentes. Para cada banda, los metadatos enumeran cuatro propiedades, pero por ahora simplemente notemos que la primera propiedad es un nombre o etiqueta para la banda entre comillas. Por ejemplo, el nombre de la primera banda es “SR_B1”.
 
-<img align="center" src="../images/intro-gee/03_fig1.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/03_fig1.png" vspace="10" width="400"> 
 
 Ahora agreguemos una de las bandas al mapa como una capa para que podamos verla.
 
@@ -47,13 +47,13 @@ El código aquí usa el método `addLayer` del mapa (`Map`). Hay cuatro componen
 
 Cuando ejecuta el código, es posible que no note la imagen que se muestra a menos que se desplace y la busque. Para hacer esto, haga clic y arrastre el mapa hacia la República Dominicana (También puede saltar allí escribiendo "Dominican Republic" en el panel de búsqueda en la parte superior del Editor de código, donde el indicador dice "Search places and datasets"...) Utilice la herramienta de zoom para aumentar el nivel de zoom y hacer que el cuadrado parezca más grande.
 
-<img align="center" src="../images/intro-gee/03_fig2.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/03_fig2.png" vspace="10" width="400"> 
 
 ¿Puedes reconocer alguna característica en la imagen?
 
 Exploremos esta imagen con la herramienta `Inspector`. Cuando hace clic en la pestaña `Inspector` en el lado derecho del Editor de código, su cursor ahora debería verse como una cruz. Cuando hace clic en una ubicación en la imagen, el panel `Inspector` informará los datos de esa ubicación en tres categorías de la siguiente manera:
 
-<img align="center" src="../images/intro-gee/fig29.png" vspace="10" width="300"> 
+<img align="center" src="../../images/intro-gee/fig29.png" vspace="10" width="300"> 
 
 - Punto: datos sobre la ubicación en el mapa. Esto incluye la ubicación geográfica (longitud y latitud) y algunos datos sobre la visualización del mapa (nivel de zoom y escala).
 - Píxeles: datos sobre el píxel en la capa. Si expande esto, verá el nombre de la capa del mapa, una descripción de la fuente de datos y un gráfico de barras. En nuestro ejemplo, vemos que la `"Capa 1"` se extrae de un conjunto de datos de imagen que contiene 19 bandas. Debajo del nombre de la capa, el gráfico muestra el valor de píxel en la ubicación en la que hizo clic para cada banda en el conjunto de datos. Cuando pasa el cursor sobre una barra, aparecerá un panel para mostrar el nombre de la banda y el "valor de la banda" (valor de píxel). Para encontrar el valor de píxel para "SR_B1", desplace el cursor sobre la primera barra de la izquierda. Alternativamente, al hacer clic en el pequeño ícono azul a la derecha de la `"Capa 1"` (B. en la imagen arriba), cambiará la visualización de un gráfico de barras a un diccionario que informa el valor de píxel para cada banda.
@@ -76,7 +76,7 @@ Map.addLayer(
 
 El resultado se parece al mundo que vemos y se denomina compuesto de color natural, porque empareja naturalmente los rangos espectrales de las bandas de la imagen para mostrar los colores. Esta imagen, también denominada composición de color verdadero, muestra la banda espectral roja con tonos de rojo, la banda verde con tonos de verde y la banda azul con tonos de azul. Especificamos el emparejamiento simplemente a través del orden de las bandas en la lista: B4, B3, B2. Debido a que las bandas 4, 3 y 2 de Landsat 9 corresponden a los colores del mundo real de rojo, verde y azul, la imagen se asemeja al mundo que veríamos fuera de la ventana de un avión o con un dron volando bajo.
 
-<img align="center" src="../images/intro-gee/fig31.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/fig31.png" vspace="10" width="400"> 
 
 Para usar las unidades correctas podemos buscar las propiedades de esta colección, y saber si se requiere aplicar una escala específica. Para la colección de Landsat-9 L2 se debe aplicar la siguiente escala a las bandas multiespectrales y las bandas térmicas:
 
@@ -128,8 +128,8 @@ Map.addLayer(
 
 ¿Qué coberturas se sobresalen en estas combinaciones de bandas?
 
-<img align="center" src="../images/intro-gee/fig32.png" vspace="10" width="400"> 
-<img align="center" src="../images/intro-gee/fig33.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/fig32.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/fig33.png" vspace="10" width="400"> 
 
 ### Código completo
 
@@ -146,7 +146,7 @@ var paises = ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level0');
 Map.addLayer(paises, {}, 'paises');
 ```
 
-<img align="center" src="../images/intro-gee/fig34.png" vspace="10" width="500"> 
+<img align="center" src="../../images/intro-gee/fig34.png" vspace="10" width="500"> 
 
 Una de las propiedades deste conjunto de datos se llama `ADM0_NAME` que corresponde al nombre del país. Vamos filtrar este conjunto de datos para obtener la geometría de la República Dominicana. Para eso, utilizaremos la función `filter` y eligiremos el filtro `ee.Filter.eq` ya que queremos buscar el `ee.Feature` que tenga el nombre igual a "República Dominicana" (`eq` de egualdad). Mire en los `Docs` más informaciones sobre la función `filter` abajo `ee.FeatureCollection` y sobre el objeto `ee.Filter`.
 
@@ -166,11 +166,11 @@ Map.centerObject(republicaDominicana, 8);
 Map.addLayer(republicaDominicana, {}, 'República Dominicana');
 ```
 
-<img align="center" src="../images/intro-gee/fig35.png" vspace="10" width="500"> 
+<img align="center" src="../../images/intro-gee/fig35.png" vspace="10" width="500"> 
 
 Note que la capa paises está en el Administrador de capas pero apagada.
 
-<img align="center" src="../images/intro-gee/fig36.png" vspace="10" width="200"> 
+<img align="center" src="../../images/intro-gee/fig36.png" vspace="10" width="200"> 
 
 Puedes cambiar la color del feature agregando el parámetro `color` y elegindo un color (ejemplo para rojo): `Map.addLayer(republicaDominicana, {color: 'red'}, 'República Dominicana')`;
 
@@ -205,9 +205,9 @@ print(coleccion);
 
 El resultado es imágenes superpuestas unas a las otras y un total de 432 imágenes. Tenga en cuenta que las imágenes que aparecen al topo están de acuerdo con la orden de las imágenes adentro de la colección. En el `Console` puedes mirar el orden de las imágenes.
 
-<img align="center" src="../images/intro-gee/fig37.png" vspace="10" width="500">
+<img align="center" src="../../images/intro-gee/fig37.png" vspace="10" width="500">
 
-<img align="center" src="../images/intro-gee/fig39.png" vspace="10" width="400">
+<img align="center" src="../../images/intro-gee/fig39.png" vspace="10" width="400">
 
 Podemos filtrar la colección por cobertura de nubes también. Para eso, agregamos más uno filtro en la variable `landsat8` y utilizamos la propiedad `CLOUD_COVER` que contiene información de percentaje de cobertura de nube por imagen. Cambie la variable `coleccion`:
 
@@ -220,9 +220,9 @@ var coleccion = landsat8
 
 Utilizamos el `ee.Filter.lt` para obtener imágenes que tengam cobertura de nubes "menor que" 10%. Note que ahora tenemos 99 imágenes.
 
-<img align="center" src="../images/intro-gee/fig38.png" vspace="10" width="500">
+<img align="center" src="../../images/intro-gee/fig38.png" vspace="10" width="500">
 
-<img align="center" src="../images/intro-gee/fig40.png" vspace="10" width="400">
+<img align="center" src="../../images/intro-gee/fig40.png" vspace="10" width="400">
 
 Ahora, vamos aplicar una función para enmascaramiento de nubes. Las nubes y las sombras de las nubes reducen la vista de los sensores ópticos y bloquean u oscurecen por completo la respuesta espectral de la superficie de la Tierra. Trabajar con píxeles que están contaminados por nubes puede influir significativamente en la precisión y el contenido de la información de los productos derivados de una variedad de actividades de detección remota, incluida la clasificación de la cobertura terrestre, el modelado de la vegetación y, especialmente, la detección de cambios, donde las nubes no detectadas pueden mapearse como cambios falsos. Por lo tanto, la información proporcionada por los algoritmos de detección de nubes es fundamental para excluir las nubes y las sombras de las nubes de los pasos de procesamiento posteriores.
 
@@ -294,9 +294,9 @@ Map.addLayer(primeraPreProcesada,
              'Primera Imagen Preprocesada');
 ```
 
-<img align="center" src="../images/intro-gee/fig42.png" vspace="10" width="500">
+<img align="center" src="../../images/intro-gee/fig42.png" vspace="10" width="500">
 
-<img align="center" src="../images/intro-gee/fig41.png" vspace="10" width="500">
+<img align="center" src="../../images/intro-gee/fig41.png" vspace="10" width="500">
 
 Ahora, podemos crear una composición mediana:
 
@@ -308,7 +308,7 @@ Map.addLayer(composicion, paramVisPreProcesada, 'Composición Preprocesada');
 
 Tenga en cuenta que la función `median` es una forma corta de aplicar `reduce(ee.Reducer.median())`.
 
-<img align="center" src="../images/intro-gee/fig43.png" vspace="10" width="500">
+<img align="center" src="../../images/intro-gee/fig43.png" vspace="10" width="500">
 
 Y por final, exportar esta imagen al Google Drive o como un GEE Asset:
 
