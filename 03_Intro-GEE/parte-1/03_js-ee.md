@@ -9,6 +9,9 @@ nav_order: 3
 
 Para poder construir un script para su análisis, necesitará usar JavaScript. Esta sección cubre la sintaxis de JavaScript y las estructuras de datos básicas en Earth Engine.
 
+## Script
+El script completo que se usará en esta sección esta disponible [aquí](https://code.earthengine.google.com/2efb29a872e0cebe2c67de29e81bd615).
+
 ## JavaScript
 
 ### Comentarios
