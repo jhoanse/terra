@@ -5,7 +5,7 @@ parent: Introducción a Google Earth Engine - Parte 1
 nav_order: 1
 ---
 
-## Configuración prévia
+## Configuración previa
 
 <p align="center">
 1. Crear una [cuenta de Google Earth Engine](https://code.earthengine.google.com/register). Necesitas una [cuenta Google](https://accounts.google.com/signup). Crear una cuenta GEE para fines no comerciales.
