@@ -7,7 +7,7 @@ nav_order: 2
 
 # Introducción
 
-¡Bienvenido a una Introducción a Google Earth Engine (GEE)! Este taller brindará una descripción general de la plataforma geoespacial basada en la nube Google Earth Engine, sus beneficios sobre el software geoespacial de escritorio, el acceso a un gran catálogo de conjuntos de datos de teledetección, apllicativos en GEE, los fundamentos de la programación del lenguaje y principais conceptos. Mucho del contenido está basado en el libro [EEFA](https://eefabook.org).
+¡Bienvenido a una Introducción a Google Earth Engine (GEE)! Este taller brindará una descripción general de la plataforma geoespacial basada en la nube Google Earth Engine, sus beneficios por encima del software geoespacial de escritorio, el acceso a un gran catálogo de conjuntos de datos de teledetección, aplicativos en GEE, los fundamentos de programación del lenguaje y principales conceptos. Mucho del contenido está basado en el libro [EEFA](https://eefabook.org).
 
 ## Objetivos
 
@@ -21,8 +21,7 @@ nav_order: 2
 
 Google Earth Engine combina un catálogo de varios petabytes de imágenes satelitales y conjuntos de datos geoespaciales con capacidades de análisis a escala planetaria. Los científicos, investigadores y desarrolladores usan Earth Engine para detectar cambios, mapear tendencias y cuantificar diferencias en la superficie de la Tierra. Earth Engine ahora está disponible para uso comercial y sigue siendo gratuito para uso académico y de investigación.
 
-La infraestructura de procesamiento paraleliza automáticamente el análisis en muchos procesadores en muchas computadoras en los centros de datos de Google. Eso resulta en
-reducción de los tiempos de procesamiento en órdenes de magnitud mediante el uso de potencia informática distribuida y basada en la nube. Además los datos están todos centralizados en la nube.
+La infraestructura de procesamiento paraleliza automáticamente el análisis en muchos procesadores de muchas computadoras en los centros de datos de Google. Eso resulta en reducción de los tiempos de procesamiento en órdenes de magnitud mediante el uso de potencia informática distribuida y basada en la nube. Además los datos están todos centralizados en la nube.
 
 <img align="center" src="../../images/intro-gee/fig1.png" vspace="10" width="600">
 
@@ -34,17 +33,16 @@ Objetivos:
 
 
 - Facilitar
-- Escalonamento, compartimento de scripts
+- Escalonamiento, compartimento de scripts
 - Acceso a todos
 
-Focado en problemas actuales:
+Enfocado en problemas actuales:
 
-- Talla
 - Desastres
 - Cambio climático
 - Sequía
-- Enfermidades
-- Sostenabilidad
+- Enfermedades
+- Sostenibilidad
 
 ## Conjunto de datos
 
@@ -98,7 +96,7 @@ Algunas de las aplicaciones de GEE incluyen:
 - Mapeo de pérdida de bosques
 - Detección de cambios en usos y coberturas de la tierra
 - Mapeo de cultivos agrícolas
-- Mapeo de fuegos
+- Mapeo de incendios
 - Monitoreo de la calidad del aire
 - Mapeo de cuerpos de agua
 
@@ -129,11 +127,11 @@ El Editor de código (Code Editor) es un entorno de desarrollo integrado para la
 
 <img align="center" src="../../images/intro-gee/fig5.png" vspace="10" width="600">
 
-El menú de la izquierda consta de tres pestañas: `Scripts`, `Docs`, `Assets`: En la sección Scripts tienes todo tu código almacenado y organizado en repositorios, carpetas, subcarpetas y archivos. Puede organizar sus scripts por proyecto y también puede compartir permisos de acceso o edición con otros usuarios de GEE. Docs es la [Documentación del API](https://developers.google.com/earth-engine/) con funciones y sus explicaciones. En Assets puedes almacenar y organizar archivos que carga desde su computadora o que descarga de GEE. En el centro, encontrará el editor de código basado en la web donde puede insertar su código JavaScript sin ninguna instalación previa de software. Con el botón `Apps`, puede desarrollar pequeñas aplicaciones automatizadas para procesar y visualizar datos de una manera e interfaz más fáciles de usar, mientras que el botón Run ejecuta el código. A la izquierda, tenemos tres paneles principales: `Inspector`, `Console` y `Tasks`. En la zona Consola podemos ver errores de código o valores impresos, esto nos permite depurar nuestro script. Veremos la funcionalidad de estos a medida que realicemos los próximos ejercicios.
+El menú de la izquierda consta de tres pestañas: `Scripts`, `Docs`, `Assets`: En la sección Scripts tienes todo tu código almacenado y organizado en repositorios, carpetas, subcarpetas y archivos. Puede organizar sus scripts por proyecto y también puede compartir permisos de acceso o edición con otros usuarios de GEE. Docs es la [Documentación del API](https://developers.google.com/earth-engine/) con funciones y sus explicaciones. En Assets puedes almacenar y organizar archivos que carga desde su computadora o que descarga de GEE. En el centro, encontrará el editor de código basado en la web donde puede insertar su código JavaScript sin ninguna instalación previa de software. Con el botón `Apps`, puede desarrollar pequeñas aplicaciones automatizadas para procesar y visualizar datos de una manera e interfaz más fáciles de usar, mientras que el botón Run ejecuta el código. A la derecha, tenemos tres paneles principales: `Inspector`, `Console` y `Tasks`. En la zona Consola podemos ver errores de código o valores impresos, esto nos permite depurar nuestro script. Veremos la funcionalidad de estos a medida que realicemos los próximos ejercicios.
 
 <img align="center" src="../../images/intro-gee/fig7.png" vspace="10" width="700">
 
-## Ejercicio: mi primero script
+## Ejercicio: mi primer script
 
 El Editor de código le permite escribir código JavaScript y ejecutarlo. Cuando está aprendiendo un nuevo idioma por primera vez y acostumbrándose a un nuevo entorno de programación, es costumbre hacer un programa para mostrar las palabras "Hello World". Esta es una forma divertida de comenzar a codificar que le muestra cómo dar entrada al programa y cómo ejecutarlo. También podemos ver dónde el programa muestra la salida. Hacer esto en JavaScript es bastante simple. Copie el siguiente código en el panel central.
 
