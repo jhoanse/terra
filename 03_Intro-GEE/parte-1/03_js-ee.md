@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Intro JavaScript y Conceptos
+title: Conceptos JavaScript y Earth Engine
 parent: Introducción a Google Earth Engine - Parte 1
 nav_order: 3
 ---
