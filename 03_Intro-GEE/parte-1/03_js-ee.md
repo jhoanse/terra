@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Conceptos JavaScript y Earth Engine
+title: Conceptos JavaScript
 parent: Introducción a Google Earth Engine - Parte 1
 nav_order: 3
 ---
 
-# Introducción al JavaScript y Conceptos de Earth Engine
+# Introducción al JavaScript en Earth Engine
 
 Para poder construir un script para su análisis, necesitará usar JavaScript. Esta sección cubre la sintaxis de JavaScript y las estructuras de datos básicas en Earth Engine.
 
