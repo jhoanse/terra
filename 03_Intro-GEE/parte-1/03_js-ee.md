@@ -24,7 +24,7 @@ Mientras escribe el código, es útil agregar un poco de texto para explicar el 
 
 El Editor de código también proporciona un acceso directo (Ctrl + / en Windows, Cmd + / en Mac) para comentar o descomentar varias líneas a la vez. Puede seleccionar varias líneas y presionar la combinación de teclas para hacer que todos sean comentarios. Pulse de nuevo para invertir la operación. Esto es útil cuando se depura el código para detener la ejecución de ciertas partes del script.
 
-<img align="center" src="../../images/intro-gee/fig23.png" vspace="10" width="600">
+<img align="center" src="../../images/intro-gee/03_fig1.png" vspace="10" width="600">
 
 ### Variables
 
