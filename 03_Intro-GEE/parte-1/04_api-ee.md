@@ -4,6 +4,8 @@ title: API Earth Engine
 parent: Introducción a Google Earth Engine - Parte 1
 nav_order: 4
 ---
+## Script
+El script completo que se usará en esta sección esta disponible [aquí](https://code.earthengine.google.com/5c0c1eaa9d927e9e20ce2d66119d4b84).
 
 # API de Earth Engine (Server Side)
 
