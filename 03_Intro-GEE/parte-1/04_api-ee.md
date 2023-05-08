@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Objetos de Earth Engine
+title: API Earth Engine
 parent: Introducción a Google Earth Engine - Parte 1
 nav_order: 4
 ---
 
-# Conceptos básicos de la API de Earth Engine (Server Side)
+# API de Earth Engine (Server Side)
 
 La API de Earth Engine es amplia y proporciona objetos y métodos para hacer de todo, desde operaciones matemáticas sencillas hasta algoritmos avanzados para el procesamiento de imágenes. En el Editor de código, puede cambiar a la pestaña `Docs` para ver las funciones de la API agrupadas por tipos de objetos (o en la [documentación de Earth Engine](https://developers.google.com/earth-engine/apidocs)). Las funciones de la API tienen el prefijo `ee` (por Earth Engine).
 
