@@ -26,6 +26,10 @@ El Editor de código también proporciona un acceso directo (Ctrl + / en Windows
 
 <img align="center" src="../../images/intro-gee/03_fig1_.png" vspace="10" width="600">
 
+Adicionalmente puede crear comentarios en bloque usando `/*` para abrir bloque y `*/` para cerrar bloque:
+
+<img align="center" src="../../images/intro-gee/03_fig2.png" vspace="10" width="600">
+
 ### Variables
 
 En un lenguaje de programación, las variables se utilizan para almacenar valores de datos. En JavaScript, una variable se define usando la palabra clave `var` seguida del nombre de la variable. El siguiente código asigna el texto "Valle del Cauca" a la variable denominada `departamento`. Tenga en cuenta que la cadena de texto en el código debe estar entre comillas. Puede usar ' (comillas simples) o " (comillas dobles), y deben coincidir al principio y al final de cada cadena. En sus programas, es recomendable ser coherente: use comillas simples o comillas dobles en todo una secuencia de comandos determinada. Cada declaración de su secuencia de comandos debe terminar normalmente con un punto y coma, aunque el editor de código de Earth Engine no lo requiere.
@@ -40,6 +44,7 @@ Si imprime la variable `departamento`, obtendrá el valor almacenado en la varia
 ```javascript
 print(departamento);
 ```
+<img align="center" src="../../images/intro-gee/03_fig3.png" vspace="10" width="600">
 
 Cuando asigna un valor de texto, a la variable se le asigna automáticamente el tipo *string*. También puede asignar números a variables y crear variables de tipo *número*. El siguiente código crea una nueva variable llamada `poblacion` y le asigna un número como su valor.
 
@@ -61,9 +66,11 @@ print(ciudades);
 
 Si observa la salida en la Consola, verá "`List`" con una flecha de expansión (▹) al lado. Al hacer clic en la flecha, se expandirá la lista y se le mostrará su contenido. Notará que junto con los cuatro elementos de la lista, hay un número al lado de cada valor. Este es el índice de cada artículo. Le permite hacer referencia a cada elemento de la lista mediante un valor numérico que indica su posición en la lista.
 
+<img align="center" src="../../images/intro-gee/03_fig4.png" vspace="10" width="600">
+
 ### Objetos JavaScript
 
-Las listas le permiten almacenar múltiples valores en una sola variable de contenedor. Si bien es útil, no es apropiado para almacenar datos estructurados. Es útil poder hacer referencia a cada elemento con su nombre en lugar de su posición. Los objetos en JavaScript le permiten almacenar pares clave-valor, donde se puede hacer referencia a cada valor por su clave. Puede crear un `diccionario` usando las llaves {}. El siguiente código crea un objeto llamado `datosCiudad` con información sobre Santo Domingo.
+Las listas le permiten almacenar múltiples valores en una sola variable de contenedor. Si bien es útil, no es apropiado para almacenar datos estructurados. Es útil poder hacer referencia a cada elemento con su nombre en lugar de su posición. Los objetos en JavaScript le permiten almacenar pares clave-valor, donde se puede hacer referencia a cada valor por su clave. Puede crear un `diccionario` usando las llaves {}. El siguiente código crea un objeto llamado `datosCiudad` con información sobre Cali.
 
 Tenga en cuenta algunas cosas importantes sobre la sintaxis de JavaScript aquí. Primero, podemos usar varias líneas para definir el objeto. Solo cuando ponemos el punto y coma (;) el comando se considera completo. Esto ayuda a formatear el código para que sea más legible. También tenga en cuenta la elección del nombre de variable `datosCiudad`. La variable contiene dos palabras. La primera palabra está en minúsculas y la primera letra de la segunda palabra en mayúsculas. Este tipo de esquema de nomenclatura de unir varias palabras en un solo nombre de variable se denomina "camel case" (case camello). Si bien no es obligatorio nombrar sus variables usando este esquema, se considera una buena práctica a seguir. Las funciones y los parámetros en la API de Earth Engine siguen esta convención, por lo que su código será mucho más legible si también la sigue.
 
@@ -78,27 +85,36 @@ print(datosCiudad);
 
 El objeto se imprimirá en el `Console`. Puede ver que en lugar de un índice numérico, cada elemento tiene una etiqueta. Esto se conoce como la clave ('key') y se puede utilizar para recuperar el valor de un objeto.
 
-<img align="center" src="../../images/intro-gee/fig21.png" vspace="10" width="300">
+<img align="center" src="../../images/intro-gee/03_fig5.png" vspace="10" width="600">
+
+Una forma programática de saber exactamente que tipo de variable se esta usando es usar la función `ee.Algorithms.ObjectType()`:
+```javascript
+// Las siguientes funciones son utiles para saber el tipo de variables que hay:
+print('Tipo de variale:', ee.Algorithms.ObjectType(departamento));
+print('Tipo de variale:', ee.Algorithms.ObjectType(poblacion));
+```
+<img align="center" src="../../images/intro-gee/03_fig7.png" vspace="10" width="600">
 
 ### Funciones
 
 Mientras usa Earth Engine, deberá definir sus propias funciones. Las funciones toman las entradas del usuario, las usan para realizar algunos cálculos y envían una salida. Las funciones le permiten agrupar un conjunto de operaciones y repetir las mismas operaciones con diferentes parámetros sin tener que volver a escribirlas cada vez. Las funciones se definen utilizando la palabra clave `function`. El siguiente código define una función llamada `saludo` que toma una entrada llamada `nombre` y devuelve un saludo con el prefijo `Hola`. Tenga en cuenta que podemos llamar a la función con diferentes entradas y genera diferentes salidas con el mismo código.
 
 ```javascript
-var saludo = function(nombre) {
-    return 'Hola ' + nombre;
+// Funciones
+var saludo = function(x) {
+    return 'Hola ' + x;
 };
 print(saludo('Mundo'));
-print(saludo('Participantes'));
+
+// Otra forma de escribir una función:
+function saludo2(x){
+      return 'Buenas tardes ' + x;
+}
+print(saludo2('Participantes'));
 ```
 
-<img align="center" src="../../images/intro-gee/fig22.png" vspace="10" width="200">
+<img align="center" src="../../images/intro-gee/03_fig6.png" vspace="10" width="600">
 
-
-### Código completo
-
-Script "`2 Introducción al JS`" del repositorio y la carpeta `T2` o link directo:
-[https://code.earthengine.google.com/7727b208111aa9c62d8f5c8392d8d29c](https://code.earthengine.google.com/7727b208111aa9c62d8f5c8392d8d29c)
 
 ## Conceptos básicos de la API de Earth Engine
 
@@ -129,14 +145,32 @@ Lista de Propiedades
 
     <img align="center" src="../../images/intro-gee/fig12.png" vspace="10" width="150">
 
-- Redutores (`ee.Reducer`): Objeto utilizado para agregaciones y cálculos numéricos (para bandas, séries temporales, features...)
+- Reductores (`ee.Reducer`): Objeto utilizado para agregaciones y cálculos numéricos (para bandas, séries temporales, features...)
 
     <img align="center" src="../../images/intro-gee/fig13.png" vspace="10" width="150">
     <img align="center" src="../../images/intro-gee/fig14.png" vspace="10" width="150">
 
 Para más informaciones acceder al [sitio EE de objetos y métodos](https://developers.google.com/earth-engine/guides/objects_methods_overview).
 
-Aprendamos a usar la API. Suponga que desea sumar dos números, representados por las variables a y b , como se muestra a continuación. Cree un nuevo script e ingrese lo siguiente:
+Típicamente se pueden manipular variables sencillas de manera similar a otro lenguaje de programación. Por ejemplo estas son algunas acciones sencillas que se pueden ejecutar sin usar lenguaje Earth Engine (Server Side) en exceso:
+
+```javascript
+// El contenido de las variables puede ser manipulado:
+var nuevoTexto    = departamento + ', Colombia' // Añadir contenido a texto
+print(nuevoTexto);
+var cortarTexto   = departamento.slice(0,5)     // Cortar porciones de texto
+print(cortarTexto);
+var nuevoNumero   = poblacion / 22140           // Operaciones matemáticas (de lado del cliente)
+print(nuevoNumero);
+var selectLista   = ciudades[2]                 // Seleccionar un elemento de una lista
+print(selectLista);
+var selectDicc    = datosCiudad['coordenadas']  // Seleccionar un elemento de un diccionario
+print(selectDicc);
+```
+
+<img align="center" src="../../images/intro-gee/03_fig8.png" vspace="10" width="600">
+
+Sin embargo es muy recomendable aprender a usar la API. Suponga que desea sumar dos números, representados por las variables a y b , como se muestra a continuación. Cree un nuevo script e ingrese lo siguiente:
 
 ```javascript
 var a = 1;
