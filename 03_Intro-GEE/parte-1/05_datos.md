@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Datos Vectoriales y Ráster
+title: Datos y Visualización
 parent: Introducción a Google Earth Engine - Parte 1
 nav_order: 5
 ---
