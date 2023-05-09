@@ -5,6 +5,9 @@ parent: Introducción a Google Earth Engine - Parte 1
 nav_order: 5
 ---
 
+## Script
+El script completo que se usará en esta sección esta disponible [aquí](https://code.earthengine.google.com/bd206c4b6bf2c437a592bf8462fb1f3e).
+
 # Colecciones en Google Earth Engine
 
 El archivo de datos públicos de Earth Engine incluye más de cuarenta años de imágenes históricas y conjuntos de datos científicos, actualizados y ampliados diariamente.
@@ -76,17 +79,17 @@ print('PNN IDs: ', pnn.aggregate_array('Nombre'));
 
 ## Visualización
 
-
-
-## Imágenes satelitales
-
 Las imágenes satelitales están en el corazón del poder de Google Earth Engine. Esta sección le enseña cómo inspeccionar y visualizar datos almacenados en bandas de imágenes. Primero visualizamos bandas individuales como capas de mapa separadas y luego exploramos un método para visualizar tres bandas diferentes en una sola capa compuesta. Comparamos diferentes tipos de compuestos para bandas satelitales que miden la radiación electromagnética en el espectro visible y no visible.
 
-Primero vamos visualizar una imagen de Landsat 9 de 26 de Julio de 2022 de la parte oeste de la República Dominicana. Puede explorar la imagen de varias maneras. Para comenzar, puede recuperar metadatos (datos descriptivos sobre la imagen) imprimiendo la imagen.
+Vamos a cargar una imágen de Sentinel-2 y la vamos a visualizar en el mapa con la función `Map.addLayer`. Esta es una función con la que familiarizará rápidamente, ya que es la que siempre vamos a usar para visualizar objetos en el mapa. El primer argumento es un objeto geoespacial (obligatorio), luego vienen dos argumentos opcionales my importantes que son los parámetros de visualización (bandas, rango de valores, colores) y el nombre de la capa. Al cargar la imágen hemos seleccionado todas las bandas multiespectrales. Para Sentinel-2 en especifico estas bandas empiezan con B, y van de B1 a B12, por lo tanto una opción de seleccionar todas sin necesidad de especificar una por una es usar `.select('B.*')`. Más ejemplos de la función `select()` están [aquí](https://developers.google.com/earth-engine/apidocs/ee-image-select). Posteriormente, visualizamos la banda B3 que corresponde a la región verde del espectro, configuramos un valor mínimo y máximo, y la llamamos 'Bandas B3'.
 
 ```javascript
-var primeraImagen = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_009058_20230226');
-print(primeraImagen);
+// Cargar imagen S2
+var img = ee.Image("COPERNICUS/S2_SR_HARMONIZED/20220824T153619_20220824T153619_T18NUJ")
+          .select('B.*');
+
+// Ver banda B3 (verde)
+Map.addLayer(img,{bands:['B3'],min:0,max:2000},'Banda B3');
 ```
 
 En el `Console`, debe hacer clic en las flechas de expansión para mostrar la información. Vemos que esta imagen consta de 19 bandas diferentes. Para cada banda, los metadatos enumeran cuatro propiedades, pero por ahora simplemente notemos que la primera propiedad es un nombre o etiqueta para la banda entre comillas. Por ejemplo, el nombre de la primera banda es “SR_B1”.
