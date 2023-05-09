@@ -21,13 +21,19 @@ Por ejemplo el ID de una de las colecciones de Sentinel-2 se puede visualizar en
 
 <img align="center" src="../../images/intro-gee/05_fig2.png" vspace="10" width="600"> 
 
+De igual forma, una colección, imágen, o incluso datos vectoriales pueden ser importados desde nuestros Assets. Por ejemplo, el siguiente es un ee.FeatureCollection que contiene multiples polígonos de los Parques Nacionales Naturales de Colombia, el cual fue descargado, comprimido como ZIP y subido a GEE como SHP. Como se puede observar esta colección tiene metadatos asociados a cada Feature (o polígono). Este archivo se puede descargar [aquí](https://github.com/SERVIR-Amazonia/colombia-training/blob/961ad7ee73ac7a529d8279b2bcb4ade8c7990ff3/files/PNN_Colombia_2023.zip).
+
+<img align="center" src="../../images/intro-gee/05_fig3.png" vspace="10" width="600"> 
+
 ```javascript
 // Una colección puede ser importada desde el catálogo de GEE o nuestros Assets:
 var sentinel2 = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED"); // Catálogo EE
 print('Sentinel-2:',sentinel2.limit(10));
+
 var pnn = ee.FeatureCollection('users/lsandoval-sig/PNN_Colombia_2023');
 print('PNN Colombia:',pnn);
 ```
+Como se puede observar los archivos en nuestros Assets pueden ser privados, compartidos con usuarios o apps específicos, o pueden ser totalmente públicos. En este caso, la colección de PNN de Colombia está configurada como pública, por lo tanto cualquier usuario puede importarla usando la dirección adecuada `'users/lsandoval-sig/PNN_Colombia_2023'`.
 
 
 ## Imágenes satelitales
