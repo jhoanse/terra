@@ -166,9 +166,20 @@ print('Promedio:',promedio);
 <img align="center" src="../../images/intro-gee/04_fig8_.png" vspace="10" width="400"> 
 
 
+## Objetos Geospaciales: Véctor & Ráster
 
+Los objetos rásters en Earth Engine están agrupados en imágenes satelitales, modelos de elevación, etc. Es considerado ráster todo elemento georreferenciado que contenga información númerica en pixeles. El formato típico de estos elementos en GEE es GeoTIFF. En Google Earth Engine se puede usar la herramienta `Inspector` para obtener información de cada pixel al hacer click en cualquier parte de la imagen. La función `Map.addLayer()` es la usada para visualizar los objetos geospaciales en el mapa de GEE.
 
+```javascript
+var image = ee.Image("COPERNICUS/S2_SR_HARMONIZED/20230117T155519_20230117T155804_T17PMP");
+Map.addLayer(image,{bands:['B4','B3','B2'],min:0,max:2000},'Raster');
+```
 
+<img align="center" src="../../images/intro-gee/04_fig9_.png" vspace="10" width="400"> 
+
+Por otro lado los objetos vectoriales en Earth Engine son todos aquellos que tienen una geomtería de puntos, líneas, o polígonos, y además estan georreferenciados. Estos elementos tambien pueden contener información de forma tabular y pueden ser importados/exportados en formato SHP o CSV. Además estos objetos pueden ser creados manualmente en la pataforma de GEE con las herramientas de la barra superior izquierda en el mapa. Al crear una geometría nueva, se creará automaticamente una variable llamada `geometry` almacenada en la parte superior del `code editor`. Esta variable puede ser renombrada al dar click sobre su nombre.
+
+<img align="center" src="../../images/intro-gee/04_fig10_.png" vspace="10" width="400"> 
 
 
 ### Desafío 1
