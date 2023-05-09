@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Datos y Visualización
+title: Colecciones y Visualización
 parent: Introducción a Google Earth Engine - Parte 1
 nav_order: 5
 ---
 
-# Imágenes y datos en Google Earth Engine
+# Colecciones en Google Earth Engine
 
 El archivo de datos públicos de Earth Engine incluye más de cuarenta años de imágenes históricas y conjuntos de datos científicos, actualizados y ampliados diariamente.
 
