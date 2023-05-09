@@ -181,9 +181,6 @@ Por otro lado los objetos vectoriales en Earth Engine son todos aquellos que tie
 
 <img align="center" src="../../images/intro-gee/04_fig10_.png" vspace="10" width="600"> 
 
-Las colecciones ráster y vectoriales que ofrece GEE pueden ser exploradas desde su catálogo [aquí](https://developers.google.com/earth-engine/datasets/), o buscadas por palabra clave en la barra de búsqueda superior del`code editor`.
-
-<img align="center" src="../../images/intro-gee/04_fig11_.png" vspace="10" width="700"> 
 
 ## Ejercicios
 
