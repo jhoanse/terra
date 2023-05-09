@@ -21,7 +21,7 @@ Por ejemplo el ID de una de las colecciones de Sentinel-2 se puede visualizar en
 
 <img align="center" src="../../images/intro-gee/05_fig2.png" vspace="10" width="600"> 
 
-De igual forma, una colección, imágen, o incluso datos vectoriales pueden ser importados desde nuestros Assets. Por ejemplo, el siguiente es un ee.FeatureCollection que contiene multiples polígonos de los Parques Nacionales Naturales de Colombia, el cual fue descargado, comprimido como ZIP y subido a GEE como SHP. Como se puede observar esta colección tiene metadatos asociados a cada Feature (o polígono). Este archivo se puede descargar [aquí](https://github.com/SERVIR-Amazonia/colombia-training/blob/961ad7ee73ac7a529d8279b2bcb4ade8c7990ff3/files/PNN_Colombia_2023.zip).
+De igual forma, una colección, imágen, o incluso datos vectoriales pueden ser importados desde nuestros Assets. Por ejemplo, el siguiente es un ee.FeatureCollection que contiene multiples polígonos de los Parques Nacionales Naturales de Colombia, el cual fue descargado, comprimido como ZIP y subido a GEE como SHP. Como se puede observar esta colección tiene metadatos asociados a cada Feature (o polígono). Este archivo se puede descargar desde el repositorio github [aquí](https://github.com/SERVIR-Amazonia/colombia-training/tree/ce5c227b1e0b05423c2ad7f2fe4a9b87cd14fb6d/files).
 
 <img align="center" src="../../images/intro-gee/05_fig3.png" vspace="10" width="600"> 
 
@@ -34,6 +34,48 @@ var pnn = ee.FeatureCollection('users/lsandoval-sig/PNN_Colombia_2023');
 print('PNN Colombia:',pnn);
 ```
 Como se puede observar los archivos en nuestros Assets pueden ser privados, compartidos con usuarios o apps específicos, o pueden ser totalmente públicos. En este caso, la colección de PNN de Colombia está configurada como pública, por lo tanto cualquier usuario puede importarla usando la dirección adecuada `'users/lsandoval-sig/PNN_Colombia_2023'`.
+
+## Uso de propiedades o metadatos
+
+Los objetos ráster y vectoriales contienen propiedades o metadatos que son de utilidad para identificar, filtrar, localizar, e incluso hacer procesos más complejos de los elementos en una colección.
+
+En este ejemplo hemos seleccionado el primer elemento de cada colección para conocer cuales son sus propiedades. Estas propiedades deben ser consistentes a la largo de todos los elementos de una colección.
+
+```javascript
+// Propiedades de cada elemento en la colección:
+print('Propiedades Sentinel-2:',sentinel2.first().propertyNames()); // ImageCollection
+print('Propiedades PNN:',pnn.first().propertyNames());              // FeatureCollection
+```
+
+<img align="center" src="../../images/intro-gee/05_fig4.png" vspace="10" width="400"> 
+
+Adicionalmente, en objetos ráster podemos saber el nombre de las bandas disponibles:
+
+```javascript
+// Nombres de bandas:
+print('Nombres de Bandas S2:',sentinel2.first().bandNames());
+```
+
+El tamaño de una colección puede conocerse también. En este ejemplo limitamos la colección de Sentinel-2 a 10 elementos, dado que si la imprimimos completa en la consola nos regresaría un error de tiempo `time out error` debido a que es una cantidad muy grande de imágenes de todo el mundo durante varios años.
+
+```javascript
+// Tamaño de Colección:
+// Al usar en colecciones muy grandes puede causar un error de tiempo de carga.
+// Para este ejemplo se limita una coleccion a 10 elementos
+print('Numero de Imagenes S2:',sentinel2.limit(10).size());
+print('Numero de PNN:',pnn.size());
+```
+
+Otra función muy útil para sacarle provecho a los metadatos es la extracción de IDs, con esto podemos identificar el nombre de cada elemento dentro de una colección, e incluso filtrar por nombres.
+
+```javascript
+// Obtener ID de cada elemento en la colección:
+print('Sentinel-2 IDs: ', sentinel2.limit(10).aggregate_array('system:index'));
+print('PNN IDs: ', pnn.aggregate_array('Nombre'));
+```
+
+## Visualización
+
 
 
 ## Imágenes satelitales
