@@ -8,7 +8,7 @@ nav_order: 1
 ## Configuración previa
 
 
-1. Crear una cuenta de [Google Earth Engine](https://code.earthengine.google.com/register). Necesitas una [cuenta Google](https://accounts.google.com/signup). Crear una cuenta GEE para fines no comerciales.
+1. Crear una cuenta de [Google Earth Engine](https://code.earthengine.google.com/register) para fines no comerciales. Necesitas una [cuenta Google](https://accounts.google.com/signup).
 
 
 <p align="center">
