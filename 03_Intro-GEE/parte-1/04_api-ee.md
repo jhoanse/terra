@@ -13,39 +13,17 @@ La API de Earth Engine es amplia y proporciona objetos y métodos para hacer de 
 
 <img align="center" src="../../images/intro-gee/fig15.png" vspace="10" width="300"> 
 
-Los conceptos fundamentales de Earth Engine con respecto a la teledetección incluyen:
+Las diferentes tipos de variables también pueden ser definidas usando el lenguaje del API (Server Side):
 
-- Imagen (`ee.Image`): El tipo de dato raster fundamental en Earth Engine. Imagen con una pila de bandas georreferenciadas. Cada banda tiene la suya Máscara, Proyección, Resolución, y una lista de propiedades que inclyen fecha, cuadro delimitador, etc.
+```javascript
+var eeNumber      = ee.Number(58);
+var eeString      = ee.String('EE STRING');
+var eeList        = ee.List([4,5,8,7,9]);
+var eeDictionary  = ee.Dictionary({"a": 1, "b": 5, "c": 10});
+var eeArray       = ee.Array([[0,1,0], [1,5,2], [5,7,9]]);
+```
 
-    <img align="center" src="../../images/intro-gee/fig8.png" vspace="10" width="150">
-
-- Colección de Imágenes (`ee.ImageCollection`): Una colección de imágenes
-
-    <img align="center" src="../../images/intro-gee/fig9.png" vspace="10" width="150">
-
-- Geometría (`ee.Geometry`): El tipo de dato vectorial fundamental en Earth Engine. Línea / Punto / Polígono / etc.
-
-    <img align="center" src="../../images/intro-gee/fig10.png" vspace="10" width="150">
-
-- Feature (`ee.Feture`): Una geometria con propriedades. Línea / Punto / Polígono / etc,
-Lista de Propiedades
-
-    <img align="center" src="../../images/intro-gee/fig11.png" vspace="10" width="150">
-
-- Colección de Features (`ee.FeatureCollection`): Una colección de Features (geometrias con propriedades)
-
-    <img align="center" src="../../images/intro-gee/fig12.png" vspace="10" width="150">
-
-- Reductores (`ee.Reducer`): Objeto utilizado para agregaciones y cálculos numéricos (para bandas, séries temporales, features...)
-
-    <img align="center" src="../../images/intro-gee/fig13.png" vspace="10" width="150">
-    <img align="center" src="../../images/intro-gee/fig14.png" vspace="10" width="150">
-
-Para más informaciones acceder al [sitio EE de objetos y métodos](https://developers.google.com/earth-engine/guides/objects_methods_overview).
-
-
-
-Sin embargo es muy recomendable aprender a usar la API. Suponga que desea sumar dos números, representados por las variables a y b , como se muestra a continuación. Cree un nuevo script e ingrese lo siguiente:
+Es muy recomendable aprender a usar la API. Suponga que desea sumar dos números, representados por las variables a y b , como se muestra a continuación. Cree un nuevo script e ingrese lo siguiente:
 
 ```javascript
 var a = 1;
@@ -74,13 +52,59 @@ Aquí hay otro ejemplo para llevar este punto a casa. Supongamos que está traba
 La función `ee.List.sequence` puede generar una secuencia de números desde un valor inicial dado hasta el valor final. También tiene un paso de parámetro opcional para indicar el incremento entre cada número. Podemos crear una `ee.List` de números que representen los años desde 1980 hasta 2020, contando de 5 en 5, llamando a esta función predefinida con los siguientes valores: `start` = 1980, `end` = 2020 y `step` = 5.
 
 ```javascript
-var listaAnos = ee.List.sequence(1980, 2020, 5);
-print(listaAnos);
+var secuencia = ee.List.sequence(1980, 2020, 5);
+print(secuencia);
 ```
 
-El resultado impreso en el `Console` mostrará que la variable yearList contiene la lista de años con el intervalo correcto.
+El resultado impreso en el `Console` mostrará que la variable `secuencia` contiene la lista de años con el intervalo correcto.
 
 <img align="center" src="../../images/intro-gee/fig26.png" vspace="10" width="500"> 
+
+## Objetos más comunes en Earth Engine
+
+Los conceptos fundamentales de Earth Engine con respecto a la teledetección incluyen:
+
+- Geometría (`ee.Geometry`): El tipo de dato vectorial fundamental en Earth Engine. Línea / Punto / Polígono / etc.
+
+    <img align="center" src="../../images/intro-gee/fig10.png" vspace="10" width="150">
+
+```javascript
+// ee.Geometry:
+var polygon = 
+    ee.Geometry.Polygon(
+        [[[-77.03, 4.99],
+          [-77.03, 2.05],
+          [-74.20, 2.05],
+          [-74.20, 4.99]]], null, false);
+print('Geometry:',polygon); // La consola mostrará el tipo de objeto que es al imprimir una variable de estas. 
+```
+<img align="center" src="../../images/intro-gee/04_fig1_.png" vspace="10" width="400"> 
+
+- Imagen (`ee.Image`): El tipo de dato raster fundamental en Earth Engine. Imagen con un grupo de bandas georreferenciadas. Cada banda tiene la su máscara, proyección, resolución, y una lista de propiedades que incluyen fecha, cuadro delimitador, etc.
+
+    <img align="center" src="../../images/intro-gee/fig8.png" vspace="10" width="150">
+
+- Colección de Imágenes (`ee.ImageCollection`): Una colección de imágenes
+
+    <img align="center" src="../../images/intro-gee/fig9.png" vspace="10" width="150">
+
+- Feature (`ee.Feture`): Una geometria con propriedades. Línea / Punto / Polígono / etc,
+Lista de Propiedades
+
+    <img align="center" src="../../images/intro-gee/fig11.png" vspace="10" width="150">
+
+- Colección de Features (`ee.FeatureCollection`): Una colección de Features (geometrias con propriedades)
+
+    <img align="center" src="../../images/intro-gee/fig12.png" vspace="10" width="150">
+
+- Reductores (`ee.Reducer`): Objeto utilizado para agregaciones y cálculos numéricos (para bandas, séries temporales, features...)
+
+    <img align="center" src="../../images/intro-gee/fig13.png" vspace="10" width="150">
+    <img align="center" src="../../images/intro-gee/fig14.png" vspace="10" width="150">
+
+Para más informaciones acceder al [sitio EE de objetos y métodos](https://developers.google.com/earth-engine/guides/objects_methods_overview).
+
+
 
 Ahora vamos mirar un ejemplo de redución (`ee.Reducer`). Como vimos, `ee.Reducer` es el objeto utilizado para agregaciones y cálculos. Creamos una lista con números de 1 a 5 y queremos calcular la média destos números. Para eso, utilizamos la función `reduce()` para listas y elegimos el `ee.Reducer` (mire en el `Docs` el redutor `ee.Reducer.mean()`). Tenga en cuenta que podemos utilizar la misma función `ee.List.sequence` para crear la lista pero sin la necesidad de definir el `step` ya que `step` tiene el valor 1 como padrón.
 
