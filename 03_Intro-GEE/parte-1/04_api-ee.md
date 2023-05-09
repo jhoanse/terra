@@ -84,38 +84,92 @@ print('Geometry:',polygon); // La consola mostrará el tipo de objeto que es al 
 
     <img align="center" src="../../images/intro-gee/fig8.png" vspace="10" width="150">
 
+```javascript
+// ee.Image:
+var image = ee.Image("COPERNICUS/S2_SR/20200129T160509_20200129T160512_T17RLK");
+print('Image:',image);
+```
+<img align="center" src="../../images/intro-gee/04_fig2_.png" vspace="10" width="400"> 
+
 - Colección de Imágenes (`ee.ImageCollection`): Una colección de imágenes
 
     <img align="center" src="../../images/intro-gee/fig9.png" vspace="10" width="150">
+
+```javascript
+// ee.ImageCollection:
+var imageCollection = ee.ImageCollection("LANDSAT/LC09/C02/T1_L2").limit(5); //Limitar coleccion a 5 elemntos
+print('ImageCollection:',imageCollection);
+```
+
+<img align="center" src="../../images/intro-gee/04_fig3_.png" vspace="10" width="400"> 
 
 - Feature (`ee.Feture`): Una geometria con propriedades. Línea / Punto / Polígono / etc,
 Lista de Propiedades
 
     <img align="center" src="../../images/intro-gee/fig11.png" vspace="10" width="150">
 
+```javascript
+// ee.Feature:
+var feature = ee.Feature(polygon); // Podemos usar la geometría anterior para convertirla en ee.Feature
+print('Feature:',feature);
+```
+
+<img align="center" src="../../images/intro-gee/04_fig4_.png" vspace="10" width="400"> 
+
 - Colección de Features (`ee.FeatureCollection`): Una colección de Features (geometrias con propriedades)
 
     <img align="center" src="../../images/intro-gee/fig12.png" vspace="10" width="150">
+
+```javascript
+// ee.FeatureCollection:
+var featureCollection = ee.FeatureCollection("USDOS/LSIB/2017").limit(50); //Limitar coleccion a 50 elemntos
+print('FeatureCollection:',featureCollection);
+```
+
+<img align="center" src="../../images/intro-gee/04_fig5_.png" vspace="10" width="400"> 
 
 - Reductores (`ee.Reducer`): Objeto utilizado para agregaciones y cálculos numéricos (para bandas, séries temporales, features...)
 
     <img align="center" src="../../images/intro-gee/fig13.png" vspace="10" width="150">
     <img align="center" src="../../images/intro-gee/fig14.png" vspace="10" width="150">
 
-Para más informaciones acceder al [sitio EE de objetos y métodos](https://developers.google.com/earth-engine/guides/objects_methods_overview).
-
-
-
-Ahora vamos mirar un ejemplo de redución (`ee.Reducer`). Como vimos, `ee.Reducer` es el objeto utilizado para agregaciones y cálculos. Creamos una lista con números de 1 a 5 y queremos calcular la média destos números. Para eso, utilizamos la función `reduce()` para listas y elegimos el `ee.Reducer` (mire en el `Docs` el redutor `ee.Reducer.mean()`). Tenga en cuenta que podemos utilizar la misma función `ee.List.sequence` para crear la lista pero sin la necesidad de definir el `step` ya que `step` tiene el valor 1 como padrón.
-
 ```javascript
-var listaNumeros = ee.List.sequence(1, 5);
-
-var media = listaNumeros.reduce(ee.Reducer.mean());
-print(media);
+// ee.Reducer:
+var reducer = ee.Reducer.mean();
+print('Reducer:',reducer);
 ```
 
-Acaba de realizar una tarea de programación moderadamente compleja con la ayuda de Earth Engine API.
+<img align="center" src="../../images/intro-gee/04_fig7_.png" vspace="10" width="400"> 
+
+- Filtros (`ee.Filter`): Objeto para filtrar colecciones de imágenes o features de acuerdo a sus propiedades.
+
+```javascript
+// ee.Filter:
+var filter = ee.Filter.date('2022-01-01','2022-12-31');
+print('Filter:',filter); // Las fechas se muestran en formato de milisegundos.
+```
+
+<img align="center" src="../../images/intro-gee/04_fig6_.png" vspace="10" width="400"> 
+
+Para más informaciones acceder al [sitio EE de objetos y métodos](https://developers.google.com/earth-engine/guides/objects_methods_overview).
+
+Ya que los reductores y filtros son objetos que deben ser usados sobre otros objetos para poder producir un valor o información adecuada, veremos estos ejemplos sobre cómo aplicarlos correctamente:
+
+```javascript
+// Aplicamos un filtro a la variable "imageCollection" y un reductor a una lista "eeList", creados anteriormente:
+var filtrado = imageCollection.filter(filter); // Aplicando filtro a un ee.ImageCollection
+print('Filtrado:',filtrado);
+var promedio = eeList.reduce(reducer);         // Aplicando Reducer a un ee.List
+print('Promedio:',promedio);
+```
+
+<img align="center" src="../../images/intro-gee/04_fig8_.png" vspace="10" width="400"> 
+
+
+
+
+
+
 
 ### Desafío 1
 
@@ -174,8 +228,3 @@ function triplicar(numero) {
 ### Desafío 7
 
 Calcula la suma de todos los Números en `nuevaLista`. Guardar y imprimir ese valor como `suma`.
-
-### Código completo
-
-Script "`3 API Earth Engine`" del repositorio y la carpeta `T2` o link directo:
-[https://code.earthengine.google.com/f68358987ee1233c62f459e6ca9d0244](https://code.earthengine.google.com/f68358987ee1233c62f459e6ca9d0244).
