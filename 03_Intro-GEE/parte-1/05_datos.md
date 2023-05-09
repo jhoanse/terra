@@ -92,7 +92,7 @@ var img = ee.Image("COPERNICUS/S2_SR_HARMONIZED/20220824T153619_20220824T153619_
 Map.addLayer(img,{bands:['B3'],min:0,max:2000},'Banda B3');
 ```
 
-<img align="center" src="../../images/intro-gee/05_fig5.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/05_fig5.png" vspace="10" width="600"> 
 
 Ahora podemos también visualizar combinaciones de bandas. Por ejemplo, para visualizar una imágen satelital en color real o RGB se usan las bandas en el rojo, verde y azul, en este orden específico.
 
@@ -101,7 +101,7 @@ Ahora podemos también visualizar combinaciones de bandas. Por ejemplo, para vis
 Map.addLayer(img,{bands:['B4','B3','B2'],min:0,max:2000},'RGB');
 ```
 
-<img align="center" src="../../images/intro-gee/05_fig6.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/05_fig6.png" vspace="10" width="600"> 
 
 Otras combinanciones de bandas que pueden explorar son las siguientes. Estas combinanciones pueden almacenarse en una variable separada y ser usadas dentro de `Map.addLayer`. Qué diferencias pueden observar?
 
@@ -126,7 +126,7 @@ var paleta = ['#0a0097','#1100ff','#00c3ff','#00ff21','#eeff00','#ff8300','#ff00
 Map.addLayer(dem,{min:0,max:4000,palette:paleta},'Elevacion');
 ```
 
-<img align="center" src="../../images/intro-gee/05_fig7.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/05_fig7.png" vspace="10" width="600"> 
 
 Las paletas de colores se pueden crear manualmente con tantos colores usted crea mejor. Sin embargo, existe un [repositorio](https://github.com/gee-community/ee-palettes) que ha creado diversas paletas predefinidas y pueden ser importadas a nuestro código. Primero debemos importar el paquete usando la función `require()`, cargamos una paleta de nuestro gusto, y visualizamos el resultado.
 
@@ -136,9 +136,9 @@ var paleta2 = repo.crameri.vik[10];
 Map.addLayer(dem,{min:0,max:4000,palette:paleta2},'Elevacion2');
 ```
 
-<img align="center" src="../../images/intro-gee/05_fig8.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/05_fig8.png" vspace="10" width="600"> 
 
 Finalmente, también podemos visualizar Features, e incluso darles un poco de color. Sin embargo, GEE no es una herramienta tan especializada como otros softwares geoespaciales que permiten seleccionar los elementos en tiempo real, mostrar etiquetas o información.
 
-<img align="center" src="../../images/intro-gee/05_fig9.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/05_fig9.png" vspace="10" width="600"> 
 
