@@ -177,10 +177,12 @@ Map.addLayer(image,{bands:['B4','B3','B2'],min:0,max:2000},'Raster');
 
 <img align="center" src="../../images/intro-gee/04_fig9_.png" vspace="10" width="400"> 
 
-Por otro lado los objetos vectoriales en Earth Engine son todos aquellos que tienen una geomtería de puntos, líneas, o polígonos, y además estan georreferenciados. Estos elementos tambien pueden contener información de forma tabular y pueden ser importados/exportados en formato SHP o CSV. Además estos objetos pueden ser creados manualmente en la pataforma de GEE con las herramientas de la barra superior izquierda en el mapa. Al crear una geometría nueva, se creará automaticamente una variable llamada `geometry` almacenada en la parte superior del `code editor`. Esta variable puede ser renombrada al dar click sobre su nombre.
+Por otro lado los objetos vectoriales en Earth Engine son todos aquellos que tienen una geometría de puntos, líneas, o polígonos, y además estan georreferenciados. Estos elementos tambien pueden contener información de forma tabular y pueden ser importados/exportados en formato SHP o CSV. Además estos objetos pueden ser creados manualmente en la pataforma de GEE con las herramientas de la barra superior izquierda en el mapa. Al crear una geometría nueva, se creará automaticamente una variable llamada `geometry` almacenada en la parte superior del `code editor`. Esta variable puede ser renombrada al dar click sobre su nombre.
 
-<img align="center" src="../../images/intro-gee/04_fig10_.png" vspace="10" width="400"> 
+<img align="center" src="../../images/intro-gee/04_fig10_.png" vspace="10" width="600"> 
 
+
+## Ejercicios
 
 ### Desafío 1
 
