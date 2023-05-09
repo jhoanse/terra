@@ -11,7 +11,24 @@ El archivo de datos públicos de Earth Engine incluye más de cuarenta años de 
 
 Las colecciones ráster y vectoriales que ofrece GEE pueden ser exploradas desde su catálogo [aquí](https://developers.google.com/earth-engine/datasets/), o buscadas por palabra clave en la barra de búsqueda superior del`code editor`.
 
-<img align="center" src="../../images/intro-gee/04_fig11_.png" vspace="10" width="700"> 
+<img align="center" src="../../images/intro-gee/05_fig1.png" vspace="10" width="700"> 
+
+## Importar colecciones
+
+Las colecciones pueden ser importadas llamandolas a través de la función que corresponde si son datos ráster (`ee.ImageCollection()`) o vectoriales (`ee.FeatureCollection`), seguido por el ID específico para la colección de interés.
+
+Por ejemplo el ID de una de las colecciones de Sentinel-2 se puede visualizar en la parte inferior izquierda de la ventana de información de esa colección:
+
+<img align="center" src="../../images/intro-gee/05_fig2.png" vspace="10" width="600"> 
+
+```javascript
+// Una colección puede ser importada desde el catálogo de GEE o nuestros Assets:
+var sentinel2 = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED"); // Catálogo EE
+print('Sentinel-2:',sentinel2.limit(10));
+var pnn = ee.FeatureCollection('users/lsandoval-sig/PNN_Colombia_2023');
+print('PNN Colombia:',pnn);
+```
+
 
 ## Imágenes satelitales
 
