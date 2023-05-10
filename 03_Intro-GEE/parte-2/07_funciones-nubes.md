@@ -63,7 +63,7 @@ La imagen fue escalada, y ahora el rango para visualizar la imágen RGB es 0 a 0
 
 <img align="center" src="../../images/intro-gee/07_fig2.png" vspace="10" width="600"> 
 
-La función para enmascarar nubes usará la banda QA. Este es uno de los procesos de enmascaramiento de nubes más accesible y sencillo, ya que usamos la banda QA, la cual significa que el producto ya ha sido procesado y se ha hecho una exploración indicando la presencia de nubes a nivel de pixel en cada imágen. Las bandas QA Bitmask son comúnes en productos L2 y superior. Estas bandas pueden tener varios nombres: QA: Quality assesment, QC: Quality control, QF: Quality flags y proveen información binaria sobre nubes, nieve, datos inválidos, etc, para cada pixel. Más información sobre las máscaras de bits en este [foro] (https://stackoverflow.com/questions/31575691/what-is-a-bitmask-and-a-mask).
+La función para enmascarar nubes usará la banda QA. Este es uno de los procesos de enmascaramiento de nubes más accesible y sencillo, ya que usamos la banda QA, la cual significa que el producto ya ha sido procesado y se ha hecho una exploración indicando la presencia de nubes a nivel de pixel en cada imágen. Las bandas QA Bitmask son comúnes en productos L2 y superior. Estas bandas pueden tener varios nombres: QA: Quality assesment, QC: Quality control, QF: Quality flags y proveen información binaria sobre nubes, nieve, datos inválidos, etc, para cada pixel. Más información sobre las máscaras de bits en este [foro](https://stackoverflow.com/questions/31575691/what-is-a-bitmask-and-a-mask).
 
 La siguiente es la función para enmascarar nubes en imágenes de Sentinel-2 específicamente. 
 
