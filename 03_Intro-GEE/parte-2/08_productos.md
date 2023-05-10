@@ -8,4 +8,4 @@ nav_order: 3
 ## Script
 El script completo que se usará en esta sección esta disponible [aquí]().
 
-# Productos ambientales y climáticas
+# Productos ambientales y climáticos
