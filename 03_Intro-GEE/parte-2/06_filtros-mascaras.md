@@ -27,7 +27,7 @@ var filtro1 = sentinel2.filterBounds(medellin).filterDate('2021-01-01','2021-12-
 print('Colección filtrada 1:',filtro1);
 ```
 
-<img align="center" src="../../images/intro-gee/06_fig2.png" vspace="10" width="300">
+<img align="center" src="../../images/intro-gee/06_fig2.png" vspace="10" width="400">
 
 Esto nos arroja 301 imágenes para esa localidad y fecha específicas. Sin embargo, no todas las imágenes se pueden usar debido a que las nubes son un obstáculo para visulizar nuestra área de interés. Por lo tanto vamos a seguir filtrando aún más nuestra colección, esta vez por cantidad de nubes. Sentinel-2 tiene una propiedad llamada `CLOUDY_PIXEL_PERCENTAGE`, la cual indica el porcentaje de nubes presentes en una escena, y podemos usar esto para filtrar. Vamos a filtrar las imágenes con menos de 30% de cobertura de nubes por escena, usando el filtro `ee.Filter.lt` que básicamente significa "less than" o "menor que". Para usar los filtros `ee.Filter` es necesario usar la función `filter` antes.
 
@@ -40,7 +40,7 @@ var filtro2 = filtro1.filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE',30));
 print('Colección filtrada 2:',filtro2);
 ```
 
-<img align="center" src="../../images/intro-gee/06_fig3.png" vspace="10" width="300">
+<img align="center" src="../../images/intro-gee/06_fig3.png" vspace="10" width="400">
 
 
 ## Reto 1
@@ -72,7 +72,7 @@ var params = {min:0,max:2000, bands:['B4','B3','B2']};
 Map.addLayer(image,params,'Imagen S2');
 ```
 
-<img align="center" src="../../images/intro-gee/06_fig4.png" vspace="10" width="300">
+<img align="center" src="../../images/intro-gee/06_fig4.png" vspace="10" width="500">
 
 # Conceptos de máscara
 El propósito de una máscara es ocultar regiones o píxeles dentro de una imágen ráster. El proceso inverso (o máscara inversa) es llamado "clip", 
@@ -86,7 +86,7 @@ var img_clip = image.clip(medellin);
 Map.addLayer(img_clip,{bands:['B4','B3','B2'],min:0,max:2000},'Recorte');
 ```
 
-<img align="center" src="../../images/intro-gee/06_fig5.png" vspace="10" width="300">
+<img align="center" src="../../images/intro-gee/06_fig5.png" vspace="10" width="500">
 
 Podemos convertir un recorte en una máscara. La máscara contiene pixeles con valores de 0 o 1, siendo los pixeles con valor de 1 los que conservarán información, si se aplica la máscara a una imágen. Vamos a crear un polígono llamado 'lago' sobre el cuerpo de agua al sureste de Medellín, luego vamos a crear la máscara, y la vamos a visualizar en un rango de 0 a 1.
 
@@ -96,4 +96,37 @@ var lago_mask = lago_clip.mask();
 Map.addLayer(lago_mask,{min:0,max:1},'Mask Lago');
 ```
 
-<img align="center" src="../../images/intro-gee/06_fig6.png" vspace="10" width="400">
+<img align="center" src="../../images/intro-gee/06_fig6.png" vspace="10" width="600">
+
+Si aplicamos esta máscara a la imágen vamos a tener únicamente píxeles en el área del lago. Para aplicar la máscara usamos la función `updateMask` sobre la imágene de interés. 
+
+```javascript
+var new_img = img_clip.updateMask(lago_mask);
+Map.addLayer(new_img,{bands:['B4','B3','B2'],min:0,max:2000},'Mask Aplicada');
+```
+
+<img align="center" src="../../images/intro-gee/06_fig7.png" vspace="10" width="600">
+
+Sin embargo, en este ejemplo el resultado es lo mismo que usar `clip`. Como nuestro objetivo es enmascarar o remover el lago de la imágen, aplicamos la función `not` sobre nuestra máscara. Esta función lo que va a hacer es invertir nuestra máscara, para obtener el resultado deseado.
+
+```javascript
+var new_img = img_clip.updateMask(lago_mask.not());
+Map.addLayer(new_img,{bands:['B4','B3','B2'],min:0,max:2000},'Mask invertida');
+```
+
+<img align="center" src="../../images/intro-gee/06_fig8.png" vspace="10" width="600">
+
+Ya sabemos aplicar una máscara usando geometrías. Ahora, vamos a aplicar una máscara de acuerdo a valores o rangos de píxel. Para este ejemplo vamos a usar la colección de elevación de Copernicus `COPERNICUS/DEM/GLO30`. Esta colección es global y viene segmentada por escenas, por lo tanto vamos a usar la función `mosaic` para unificarla y convertirla a una sola imágen o `ee.Image`. Luego vamos a recortarla con nuestra área de interés y vamos a visualizarla en el mapa.
+
+```javascript
+// Cargar coleccion DEM de Copernicus 30m/pixel, seleccionar banda 'DEM', y convertir a ee.Image:
+var dem = ee.ImageCollection("COPERNICUS/DEM/GLO30").select('DEM').mosaic();
+
+// Recortar DEM usando área de interés y visualizar en mapa:
+var clip_dem = dem.clip(medellin);
+var dem_palette = ['#002bff','#00f3ff','#00ff37','#fbff00','#ff0000'];
+Map.addLayer(clip_dem,{palette:dem_palette,min:500,max:2900},'DEM');
+```
+
+<img align="center" src="../../images/intro-gee/06_fig9.png" vspace="10" width="600">
+
