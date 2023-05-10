@@ -136,7 +136,7 @@ var img_final = new_img.updateMask(new_dem_mask);
 Map.addLayer(img_final,{bands:['B4','B3','B2'],min:0,max:2000},'Imagen Final');
 ```
 
-<img align="center" src="../../images/intro-gee/06_fig10.png" vspace="11" width="600">
+<img align="center" src="../../images/intro-gee/06_fig11.png" vspace="11" width="600">
 
 ## Reto 1
 ```javascript
