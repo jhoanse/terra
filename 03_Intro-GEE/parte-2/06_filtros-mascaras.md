@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 ## Script
-El script completo que se usará en esta sección esta disponible [aquí]().
+El script completo que se usará en esta sección esta disponible [aquí](https://code.earthengine.google.com/21596b499ebdc6cc3a43fa21bbd1485b).
 
 # Filtrado de colecciones
 
