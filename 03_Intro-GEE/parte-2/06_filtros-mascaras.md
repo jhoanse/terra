@@ -26,3 +26,74 @@ var filtro1 = sentinel2.filterBounds(medellin).filterDate('2021-01-01','2021-12-
 // Verificar cantidad de imágenes disponibles en esa localidad y fecha específicas:
 print('Colección filtrada 1:',filtro1);
 ```
+
+<img align="center" src="../../images/intro-gee/06_fig2.png" vspace="10" width="300">
+
+Esto nos arroja 301 imágenes para esa localidad y fecha específicas. Sin embargo, no todas las imágenes se pueden usar debido a que las nubes son un obstáculo para visulizar nuestra área de interés. Por lo tanto vamos a seguir filtrando aún más nuestra colección, esta vez por cantidad de nubes. Sentinel-2 tiene una propiedad llamada `CLOUDY_PIXEL_PERCENTAGE`, la cual indica el porcentaje de nubes presentes en una escena, y podemos usar esto para filtrar. Vamos a filtrar las imágenes con menos de 30% de cobertura de nubes por escena, usando el filtro `ee.Filter.lt` que básicamente significa "less than" o "menor que". Para usar los filtros `ee.Filter` es necesario usar la función `filter` antes.
+
+```javascript
+// Filtrar sub-colección usando sus propiedades.
+// En este caso estamos interesados en imágenes con menos de 30% de cobertura de nubes por imágen.
+var filtro2 = filtro1.filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE',30));
+
+// Verificar cantidad de imagénes:
+print('Colección filtrada 2:',filtro2);
+```
+
+<img align="center" src="../../images/intro-gee/06_fig3.png" vspace="10" width="300">
+
+
+## Reto 1
+```javascript
+/*
+Cómo aplicar filtros a un FeatureCollection?
+
+1. Usar colección "LSIB 2017: Large Scale International Boundary Polygons, Simplified": 
+   ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017"). Esta colección incluye poligonos de
+   paises.
+2. Seleccionar (filtrar) únicamente el polígono de Colombia.
+3. Visualizar en mapa.
+*/
+```
+
+Ahora podriamos extraer una lista de nombres de las imágenes filtradas usando `aggregate_array('system:index')`:
+
+```javascript
+// Extraer lista de IDs:
+print('Lista de IDS:', filtro2.aggregate_array('system:index'));
+```
+
+Luego podremos visualizar esa imágen si deseamos:
+
+```javascript
+// Visualizar imagen seleccionada
+var image = ee.Image("COPERNICUS/S2_SR/20210118T152639_20210118T153102_T18NVM");
+var params = {min:0,max:2000, bands:['B4','B3','B2']};
+Map.addLayer(image,params,'Imagen S2');
+```
+
+<img align="center" src="../../images/intro-gee/06_fig4.png" vspace="10" width="300">
+
+# Conceptos de máscara
+El propósito de una máscara es ocultar regiones o píxeles dentro de una imágen ráster. El proceso inverso (o máscara inversa) es llamado "clip", 
+lo cual es un recorte del área que nos interesa. Una máscara puede ser creada manualmente a través de objetos geométricos (polígonos) y también con rango o umbrales de valor de pixel.
+
+Ahora procedemos a recortar nuestra área de interés, la cual esta representada con un polígono sobre la ciudad de Medellín:
+
+```javascript
+// Recortar y visualizar área de interés:
+var img_clip = image.clip(medellin);
+Map.addLayer(img_clip,{bands:['B4','B3','B2'],min:0,max:2000},'Recorte');
+```
+
+<img align="center" src="../../images/intro-gee/06_fig5.png" vspace="10" width="300">
+
+Podemos convertir un recorte en una máscara. La máscara contiene pixeles con valores de 0 o 1, siendo los pixeles con valor de 1 los que conservarán información, si se aplica la máscara a una imágen. Vamos a crear un polígono llamado 'lago' sobre el cuerpo de agua al sureste de Medellín, luego vamos a crear la máscara, y la vamos a visualizar en un rango de 0 a 1.
+
+```javascript
+var lago_clip = image.clip(lago);
+var lago_mask = lago_clip.mask();
+Map.addLayer(lago_mask,{min:0,max:1},'Mask Lago');
+```
+
+<img align="center" src="../../images/intro-gee/06_fig6.png" vspace="10" width="400">
