@@ -21,4 +21,4 @@ nav_order: 4
 | 11:00 – 11:15 | Receso                                                                              |
 | 11:15 – 12:00 | Funciones - Enmascaramiento de nubes - Mosaicos                                     |
 | 12:00 – 13:00 | Almuerzo                                                                            |
-| 13:00 – 15:00 | Modelos digitales de elevación - Datos climáticos - Exportar e Importar             |
+| 13:00 – 15:00 | Productos ambientales y climáticos - Exportar                                       |
