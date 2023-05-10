@@ -130,3 +130,34 @@ Map.addLayer(clip_dem,{palette:dem_palette,min:500,max:2900},'DEM');
 
 <img align="center" src="../../images/intro-gee/06_fig9.png" vspace="10" width="600">
 
+Ahora supongamos que se quiere hacer un estudio en alturas mayores a 2500 m, y queremos enmascarar la altitud usando rangos de valores. Para esto podemos usar la función `gte` directamente sobre la imágen DEM, la cual significa 'greater than and equal to'. Al usar este tipo de funciones se va a crear una imágen tipo máscara, por lo tanto no es necesario convertirla a máscara para poder aplicarla. Por último, procedemos a aplicar la máscara y a visualizar el resultado.
+
+```javascript
+// Enmascarar rangos de valores.
+var mask_dem = clip_dem.gte(2500);
+var new_dem = clip_dem.updateMask(mask_dem);
+Map.addLayer(new_dem,{palette:dem_palette,min:500,max:2900},'Rango DEM');
+```
+
+<img align="center" src="../../images/intro-gee/06_fig10.png" vspace="10" width="600">
+
+Luego de esto, podriamos seguir usando aún más máscaras. La imágen de elevación procesada puede ser convertida a máscara y ser aplicada a nuestra imágen satelital de interés para hacer un recorte.
+
+```javascript
+// Convertir el DEM a máscara, y luego aplicar esa máscara a la imágen.
+var new_dem_mask = new_dem.mask();
+var img_final = new_img.updateMask(new_dem_mask);
+Map.addLayer(img_final,{bands:['B4','B3','B2'],min:0,max:2000},'Imagen Final');
+```
+
+<img align="center" src="../../images/intro-gee/06_fig10.png" vspace="11" width="600">
+
+## Reto 2
+```javascript
+/*
+Quiero estudiar las áreas entre 1500 y 2500 m de altitud en una imagén satélital.
+
+1. Usando la imágen del ejemplo dictado, cómo obtener un "img_final" donde se 
+   enmascaren todas las alturas por debajo de 1500 m y por encima de 2500 m? 
+*/
+```
