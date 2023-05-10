@@ -90,7 +90,7 @@ function maskS2clouds(image) {
 
 Como podemos observar, hemos usado la banda QA60, la cual provee información sobre nubes en los bits 10 y 11. 
 
-<img align="center" src="../../images/intro-gee/07_fig3.png" vspace="10" width="500"> 
+<img align="center" src="../../images/intro-gee/07_fig3.png" vspace="10" width="400"> 
 
 Estos bits son iguales a 1 + 10 ceros y 1 + 11 ceros, en números binarios respectivamente. Estos números binarios son iguales a los números 1024 y 2048. La máscara de la banda QA debe ser procesada usando el operador `bitWiseAnd` el cual debe tomar como argumento los números binarios que hemos creado en las variables `cloudBitMask` y `cirrusBitMask`. Esta operación va a identificar los píxeles marcados como 1 y 0, en los bits 1<<10 y 1<<11. Es decir que al final vamos a estar intereados en los valores de píxel igual a cero, ya que estos no estarán marcados como nubes o cirros, por esta razón usamos el operador `.eq(0)`, y finalmente aplicamos la máscara. Pueden encontrar un poco más de información sobre los operadores `Bitwise` [aquí](https://en.wikipedia.org/wiki/Bitwise_operation).
 
@@ -124,7 +124,7 @@ var recorte_funcion = function(geometry) {
 };
 ```
 
-Ahora podremos aplicar cada función para procesar nuestro conjunto de imágenes en la colección que llamamos `filtro` previamente y contiene 48 elementos. Para ela función de recortar requerimos una geometría válida, la cual puede ser un rectángulo sobre la ciudad de Medellín.
+Ahora podremos aplicar cada función para procesar nuestro conjunto de imágenes en la colección que llamamos `filtro` previamente y contiene 48 elementos. Para usar la función de recortar requerimos una geometría válida, la cual puede ser un rectángulo sobre la ciudad de Medellín.
 
 ```javascript
 // 1. Escalar imágenes:
@@ -154,8 +154,8 @@ El mosaico final quedó bastante limpio de nubes, pero algunas quedan aún. Esto
 ## Reto 1
 Cómo podriamos hacer este mismo proceso con la colección de Landsat 8 L2?
 
-1- Usar esta [colección](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2).
-2- Filtrar colección por localidad, fecha, y cobertura de nubes (identificar nombre de propiedad).
-2- Aplicar factores de escala específicos para esta colección. Modificar función de escalar de acuerdo a esto.
-3- Identificar la banda QA y los bits adecuados para enmascarar nubes. Modificar la función de máscara de nubes de acuerdo a esto.
-4- Correr funciones, hacer mosaico, y visualizar.
+1. Usar esta [colección](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2).
+2. Filtrar colección por localidad, fecha, y cobertura de nubes (identificar nombre de propiedad).
+3. Aplicar factores de escala específicos para esta colección. Modificar función de escalar de acuerdo a esto.
+4. Identificar la banda QA y los bits adecuados para enmascarar nubes. Modificar la función de máscara de nubes de acuerdo a esto.
+5. Correr funciones, hacer mosaico, y visualizar.
