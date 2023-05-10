@@ -42,20 +42,6 @@ print('Colección filtrada 2:',filtro2);
 
 <img align="center" src="../../images/intro-gee/06_fig3.png" vspace="10" width="400">
 
-
-## Reto 1
-```javascript
-/*
-Cómo aplicar filtros a un FeatureCollection?
-
-1. Usar colección "LSIB 2017: Large Scale International Boundary Polygons, Simplified": 
-   ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017"). Esta colección incluye poligonos de
-   paises.
-2. Seleccionar (filtrar) únicamente el polígono de Colombia.
-3. Visualizar en mapa.
-*/
-```
-
 Ahora podriamos extraer una lista de nombres de las imágenes filtradas usando `aggregate_array('system:index')`:
 
 ```javascript
@@ -151,6 +137,19 @@ Map.addLayer(img_final,{bands:['B4','B3','B2'],min:0,max:2000},'Imagen Final');
 ```
 
 <img align="center" src="../../images/intro-gee/06_fig10.png" vspace="11" width="600">
+
+## Reto 1
+```javascript
+/*
+Cómo aplicar filtros a un FeatureCollection?
+
+1. Usar colección "LSIB 2017: Large Scale International Boundary Polygons, Simplified": 
+   ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017"). Esta colección incluye poligonos de
+   paises.
+2. Seleccionar (filtrar) únicamente el polígono de Colombia.
+3. Visualizar en mapa.
+*/
+```
 
 ## Reto 2
 ```javascript
