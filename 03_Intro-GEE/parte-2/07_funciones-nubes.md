@@ -6,7 +6,7 @@ nav_order: 2
 ---
 
 ## Script
-El script completo que se usará en esta sección esta disponible [aquí]().
+El script completo que se usará en esta sección esta disponible [aquí](https://code.earthengine.google.com/de439e6931e183d11e8cd9c6b84b39a3).
 
 # Enmascaramiento de nubes y funciones avanzadas
 
