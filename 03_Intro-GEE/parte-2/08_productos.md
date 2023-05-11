@@ -77,11 +77,13 @@ var tempPaleta = repo.misc.jet[7];
 Map.addLayer(tempEscala,{min:10, max:40, palette:tempPaleta},'Temperatura');
 ```
 
+Podemos observer en azul los pixeles con temperaturas más bajas (10 °C) y en rojo los pixeles más calientes (40 °C), correspondiente al mes de Marzo de 2023. Algunos vacíos de información se pueden observar, probablemente debido a la cantidad de nubes en esas regiones de Colombia.
+
 <img align="center" src="../../images/intro-gee/08_fig2.png" vspace="10" width="500">
 
 ## Vegetación
 
-Nuevamente cargaremos un producto de MODIS Terra, esta vez el producto ["MODIS/061/MOD13Q1"](https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD13Q1) que entrega indices de vegetación (NDVI y EVI) cada 16 días a 250m / pixel.
+Nuevamente cargaremos un producto de MODIS Terra, esta vez el producto ["MODIS/061/MOD13Q1"](https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD13Q1) que entrega indices de vegetación (NDVI y EVI) cada 16 días a 250m / pixel. Usaremos la banda NDVI o Normalized Difference Vengetation Index.
 
 ```javascript
 // Cargar producto de vegetación MOD13Q1 de Modis y seleccionamos banda NDVI:
@@ -103,6 +105,10 @@ var ndviPaleta = repo.colorbrewer.Greens[7];
 Map.addLayer(ndviEscala,{min:0, max:1, palette:ndviPaleta},'NDVI');
 ```
 
+El índice tiene un rango de valores de 0 a 1. Los valores más cercanos a 1 indican una mayor densidad de vegetación, visualizados en color verde más oscuro.
+
 <img align="center" src="../../images/intro-gee/08_fig3.png" vspace="10" width="500">
 
+## Incendios
 
+Para detección de incendios existe el producto 
