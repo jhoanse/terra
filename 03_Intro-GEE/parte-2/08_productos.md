@@ -55,6 +55,54 @@ En solo unas líneas de código podemos visualizar nuestra imágen. En color má
 
 ## Temperatura
 
-Vamos a usar la colección ["MODIS/061/MOD11A1"](https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD11A1), producto de MODIS Terra
+Vamos a usar la colección ["MODIS/061/MOD11A1"](https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD11A1), producto de MODIS Terra que entrega datos diarios a 1km / pixel de tempereratura terrestre.
+
+```javascript
+// Cargar producto de Modis Terra MOD11A1.061 y seleccionar banda de temperatura
+var mod11a1 = ee.ImageCollection("MODIS/061/MOD11A1").select('LST_Day_1km');
+
+// Filtrar colección, sumar precipitaciones del mes, y recortar:
+var temp = mod11a1
+            .filterDate(fechaIni,fechaFin)
+            .filterBounds(colombia);
+
+// Aplicar factor de escala, convertir a Celsius, obtener promedio, y recortar figura:
+var tempEscala = temp
+                  .map(function(x){return x.multiply(0.02).subtract(273.15)})
+                  .mean()
+                  .clip(colombia);
+
+// Cargar paleta de color y visualizar capa:
+var tempPaleta = repo.misc.jet[7];
+Map.addLayer(tempEscala,{min:10, max:40, palette:tempPaleta},'Temperatura');
+```
+
+<img align="center" src="../../images/intro-gee/08_fig2.png" vspace="10" width="500">
+
+## Vegetación
+
+Nuevamente cargaremos un producto de MODIS Terra, esta vez el producto ["MODIS/061/MOD13Q1"](https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD13Q1) que entrega indices de vegetación (NDVI y EVI) cada 16 días a 250m / pixel.
+
+```javascript
+// Cargar producto de vegetación MOD13Q1 de Modis y seleccionamos banda NDVI:
+var mod13q1 = ee.ImageCollection('MODIS/061/MOD13Q1').select('NDVI');
+
+// Filtrar colección, sumar precipitaciones del mes, y recortar:
+var ndvi = mod13q1
+           .filterDate(fechaIni,fechaFin)
+           .filterBounds(colombia);
+
+// Escalar datos, estimadar promedio, y recortar figura
+var ndviEscala = ndvi
+                .map(function(x){return x.multiply(0.0001)})
+                .mean()
+                .clip(colombia);
+
+// Cargar paleta de color y visualizar capa:
+var ndviPaleta = repo.colorbrewer.Greens[7];
+Map.addLayer(ndviEscala,{min:0, max:1, palette:ndviPaleta},'NDVI');
+```
+
+<img align="center" src="../../images/intro-gee/08_fig3.png" vspace="10" width="500">
 
 
