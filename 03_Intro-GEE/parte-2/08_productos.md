@@ -201,7 +201,7 @@ Posteriormente vamos a extraer los `keys()`, es decir los nombres de bandas. Est
 
 <img align="center" src="../../images/intro-gee/08_fig9.png" vspace="10" width="500">
 
-Luego, necesitamos extraer los valores y crear una tabla con dos columnas, una para el nombre de parámetro y otra para alojar los valores respectivos. Este tipo de tablas se rean como `ee.Feature`. Primero vamos usar una función que correra por cada elemento alojado en la variable `keys` que contiene los nombres, y vamos a obtener programáticamente los valores alojados en el diccionario. Finalmente, vamos a regresar un `ee.Feature` con las dos columnas y sus respectivos valores. Y por último, la función va a regresar un `ee.FeatureCollection`, que el formato que necesitamos para exportar la tabla.
+Luego, necesitamos extraer los valores y crear una tabla con dos columnas, una para el nombre de parámetro y otra para alojar los valores respectivos. Este tipo de tablas se crean en formato `ee.Feature`. Primero vamos usar una función que correrá por cada elemento alojado en la variable `keys` que contiene los nombres, y vamos a obtener programáticamente los valores alojados en el diccionario. Finalmente, se va a regresar un `ee.Feature` con las dos columnas y sus respectivos valores. Y por último, la función va a regresar un `ee.FeatureCollection`, que es el formato que necesitamos para exportar la tabla.
 
 ```javascript
 function extraerDatos(img,geom,red){
@@ -250,3 +250,39 @@ print('Medias Tuparro',meanTuparro);
 
 Como podemos observar, el resultado es un `ee.FeatureCollection` con tres propiedades o columnas (la columna system:index siempre se creará por defecto), y cinco features o elementos. Cada feature aloja el nombre de parámetro y valor promedio calculado.
 
+# Exportar
+
+Ya estamos listos para exportar datos. Para este ejemplo podemos exportar las imágenes que hemos procesado y también los datos que hemos extraído. Hay tres destinos para exportar: nuestros Assets, a GDrive, y GCloud. En este caso exportaremos a GDrive. Para exportar a GDrive hay que verificar que tengamos espacio disponible para guardar los datos, de otra manera habrá un error.
+
+```javascript
+// Exportar imagen:
+Export.image.toDrive({
+  image: prec,
+  description: 'Imagen_Precipitacion',
+  region: colombia,
+  crs: 'EPSG:4326',
+  fileFormat: 'GeoTIFF'
+});
+
+// Exportar tabla:
+Export.table.toDrive({
+  collection: meanMacarena,
+  description: 'Promedios_Macarena',
+  fileFormat: 'CSV'
+});
+```
+
+<img align="center" src="../../images/intro-gee/08_fig11.png" vspace="10" width="500">
+
+Despues de correr nuestro script tendremos que ir a la pestaña `Tasks`. Unas vez enviadas las tareas podemos terminar de trabajar o apagar nuestro computador, ya que estar tareas quedarán corriendo en el servidor de GEE.
+
+<img align="center" src="../../images/intro-gee/08_fig12.png" vspace="10" width="500">
+
+Siempre podremos regresar a observar si la tarea ha finalizado o no:
+
+<img align="center" src="../../images/intro-gee/08_fig12.png" vspace="10" width="500">
+
+# Retos
+* Hemos solo extraído promedios de cada parámetro, pero la precipitación se mide diferente. Cual reductor se debería usar?
+* La suma o promedio del parámetro de incendios no es la mejor forma de usar estos datos como indicadores o comparar dos áreas. Por ejemplo, es posible que los promedios o sumas sean similares si un área tiene muchos incendios de baja intensidad y la otra tiene pocos incendios de alta intensidad. Entonces cuál reductor podríamos usar para estimar además el número de incendios en los dos PNN?
+* Sería interesante completar la caracterización añadiendo los valores promedio, min y max de elvacion en cada PNN. Cómo harías esto?
