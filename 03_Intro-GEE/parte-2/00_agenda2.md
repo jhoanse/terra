@@ -22,3 +22,7 @@ nav_order: 4
 | 11:15 – 12:00 | Funciones - Enmascaramiento de nubes - Mosaicos                                     |
 | 12:00 – 13:00 | Almuerzo                                                                            |
 | 13:00 – 15:00 | Productos ambientales y climáticos - Extraer datos - Exportar                       |
+
+## Comentarios o preguntas?
+
+Deja tus comentarios, preguntas o sugerencias [aquí](https://forms.gle/g76DSnqTj6R9LLLh8).
