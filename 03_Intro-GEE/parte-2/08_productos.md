@@ -284,5 +284,5 @@ Siempre podremos regresar a observar si la tarea ha finalizado o no:
 
 # Retos
 * Hemos solo extraído promedios de cada parámetro, pero la precipitación se mide diferente. Cual reductor se debería usar?
-* La suma o promedio del parámetro de incendios no es la mejor forma de usar estos datos como indicadores o comparar dos áreas. Por ejemplo, es posible que los promedios o sumas sean similares si un área tiene muchos incendios de baja intensidad y la otra tiene pocos incendios de alta intensidad. Entonces cuál reductor podríamos usar para estimar además el número de incendios en los dos PNN?
-* Sería interesante completar la caracterización añadiendo los valores promedio, min y max de elvacion en cada PNN. Cómo harías esto?
+* La suma o promedio del parámetro de incendios no es la mejor forma de usar estos datos como indicadores o comparar dos áreas. Por ejemplo, es posible que los promedios o sumas sean similares si un área tiene muchos incendios de baja intensidad y la otra tiene pocos incendios de alta intensidad. Entonces, sería importar estimar el número de incendios o área incendiada de cada PNN. Cuál reductor podríamos usar para esto?
+* Sería interesante completar la caracterización añadiendo los valores promedio, min y max de elevacion en cada PNN. Cómo harías esto?
