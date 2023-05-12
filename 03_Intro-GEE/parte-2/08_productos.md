@@ -280,7 +280,7 @@ Despues de correr nuestro script tendremos que ir a la pestaña `Tasks`. Unas ve
 
 Siempre podremos regresar a observar si la tarea ha finalizado o no:
 
-<img align="center" src="../../images/intro-gee/08_fig12.png" vspace="10" width="500">
+<img align="center" src="../../images/intro-gee/08_fig13.png" vspace="10" width="500">
 
 # Retos
 * Hemos solo extraído promedios de cada parámetro, pero la precipitación se mide diferente. Cual reductor se debería usar?
