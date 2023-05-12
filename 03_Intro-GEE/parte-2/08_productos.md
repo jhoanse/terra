@@ -111,4 +111,142 @@ El índice tiene un rango de valores de 0 a 1. Los valores más cercanos a 1 ind
 
 ## Incendios
 
-Para detección de incendios existe el producto 
+Para detección de incendios existe el producto ["MODIS/061/MOD14A1"](https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD14A1) de MODIS. Este producto es diario con 1 km / pixel de resolución. Posee una máscara de bits llamada 'FireMask' indicando por valor de pixel que tipo de categoría es. Los pixeles de interés serían los del 7 al 9, que indican alguna probabilidad de fuego. Otra banda llamada 'MaxRFP' es complementaria, posee los mismos píxeles identifcados como fuego en la máscara de bits, pero estos poseen unidades de MW, es decir que mide el máximo poder radiativo del fuego. Esta ayudaría a detectar la intensidad del fuego. En este ejemplo vamos a cargar ambas bandas.
+
+```javascript
+// Cargar colección de incendios MOD14A1 de Modis:
+var mod14a1 = ee.ImageCollection('MODIS/061/MOD14A1');
+
+// Seleccionar la banda de Max Fire Radiative Power
+var firePower = mod14a1.select('MaxFRP')
+                .filter(ee.Filter.date(fechaIni, fechaFin))
+                .map(function(x){return x.multiply(0.1)})
+                .mean()
+                .clip(colombia);
+
+// Seleccionar la banda de Fire Mask
+var fireMask = mod14a1.select('FireMask')
+                .filter(ee.Filter.date(fechaIni, fechaFin))
+                .max()
+                .clip(colombia);
+
+// Cargar paleta de color y visualizar capa:
+var firePaleta = repo.colorbrewer.YlOrRd[7];
+Map.addLayer(fireMask, {min:6, max:9, palette: ['#000000','#faff00','#ffa600','#ff0000']}, 'Fire Mask');
+Map.addLayer(firePower, {min:3,max:180, palette:firePaleta}, 'Fire Power');
+```
+
+Podemos observar los píxeles con probabilidad de ser un incendio, del menos intenso (amarillo) al más intenso (rojo).
+
+<img align="center" src="../../images/intro-gee/08_fig4.png" vspace="10" width="500">
+
+## Monitoreo atmósferico de Copernicus
+
+Para este ejemplo vamos a usar la colección ["ECMWF/CAMS/NRT"](https://developers.google.com/earth-engine/datasets/catalog/ECMWF_CAMS_NRT?hl=en), que ofrece diversos datos atmosféricos en casi tiempo real a nivel global. Este producto entrega datos casi cada hora a una resolución de 44.5 km / píxel. En este ejemplo vamos a cargar la banda de dióxido de sulfuro total, el cual es un indicador de actividad volcánica.
+
+```javascript
+// Cargar colección
+var cams = ee.ImageCollection('ECMWF/CAMS/NRT');
+                  
+// Seleccionar banda, filrar, cambiar unidades, promediar, y recortar figura.
+var so2 = cams.select('total_column_sulphur_dioxide_surface')
+          .filter(ee.Filter.date('2023-01-01', '2023-01-03'))
+          .map(function(x){return x.multiply(1000000)}) // kg to mg
+          .mean()
+          .clip(colombia);
+
+// Cargar paleta de color y visualizar capa:
+var atmPaleta = repo.misc.tol_rainbow[7];
+Map.addLayer(so2, {min:0.1,max:65,palette:atmPaleta}, 'Total Sulfur Dioxide');
+```
+
+Notamos que la mayor concentración de SO2 en la columna de aire se localiza cerca al Nevado del Ruíz y un poco menos cerca al Nevado del Huila.
+
+<img align="center" src="../../images/intro-gee/08_fig5.png" vspace="10" width="500">
+
+# Extraer datos
+
+Tener acceso a millones de datos en GEE y visulizarlos no es la única ventaja que ofrece esta plataforma. Vamos usar un ejemplo para extraer datos de área de las colecciones que acabamos de cargar. Para esto supongamos que queremos hacer una caracterización de dos PNN: Sierra de la Macarena y El Tuparro.
+
+```javascript
+// Vamos a filtrar el PNN Sierra de la Macarena y el PNN El Tuparro
+var pnn = ee.FeatureCollection('users/lsandoval-sig/PNN_Colombia_2023');
+var macarena = pnn.filter(ee.Filter.eq('Nombre','SIERRA DE LA MACARENA'));
+var tuparro = pnn.filter(ee.Filter.eq('Nombre','EL TUPARRO'));
+Map.addLayer(macarena.merge(tuparro),{},'PNN'); // Unimos los dos features en uno usando 'merge'.
+```
+
+<img align="center" src="../../images/intro-gee/08_fig6.png" vspace="10" width="500">
+
+Para evitar repetir el proceso de extracción imagen por imagen, vamos a unir todas las imágenes en una sola pero como diferentes bandas y vamos a renombrar cada banda respectiva.
+
+```javascript
+// Vamos a unir todas las imágenes en una sola pero en bandas diferentes,
+// y además vamos a renombrar cada banda respectiva.
+var imgDatos = prec.rename('PREC')
+              .addBands(tempEscala.rename('TEMP'))
+              .addBands(ndviEscala.rename('NDVI'))
+              .addBands(firePower.rename('MFRP'))
+              .addBands(so2.rename('TSO2'));
+print(imgDatos);
+```
+
+<img align="center" src="../../images/intro-gee/08_fig7.png" vspace="10" width="500">
+
+Ahora vamos a crear una función con la que vamos a extraer datos de todos los parámetros en una región específica. Esta función tiene tres argumentos: una imagen en formato `ee.Image`, una geometría `ee.Feature`, y un reductor `ee.Reducer`. Inicialmente se aplicará el reductor específico sobre la geometría dada. Esto nos regresará un diccionario con los resultados por cada banda.
+
+<img align="center" src="../../images/intro-gee/08_fig8.png" vspace="10" width="500">
+
+Posteriormente vamos a extraer los `keys()`, es decir los nombres de bandas. Esto será entregado como una lista:
+
+<img align="center" src="../../images/intro-gee/08_fig9.png" vspace="10" width="500">
+
+Luego, necesitamos extraer los valores y crear una tabla con dos columnas, una para el nombre de parámetro y otra para alojar los valores respectivos. Este tipo de tablas se rean como `ee.Feature`. Primero vamos usar una función que correra por cada elemento alojado en la variable `keys` que contiene los nombres, y vamos a obtener programáticamente los valores alojados en el diccionario. Finalmente, vamos a regresar un `ee.Feature` con las dos columnas y sus respectivos valores. Y por último, la función va a regresar un `ee.FeatureCollection`, que el formato que necesitamos para exportar la tabla.
+
+```javascript
+function extraerDatos(img,geom,red){
+  var imagen = ee.Image(img);
+  
+  // Aplicar reducer
+  var reduce = imagen.reduceRegion({
+    reducer: red,
+    geometry: geom
+  });
+  
+  // Extraer nombre de bandas (parametros)
+  var keys = reduce.keys();
+
+  // Crear features con respectivos parametros y valores
+  var valores = keys.map(function(x){
+    var valor = reduce.get(x);
+    return ee.Feature(null,{'valor':valor,'parametro':x});
+  });
+  
+  return ee.FeatureCollection(valores);
+}
+```
+
+Ahora vamos a crear un conjunto de reductores que son de interés para caracterizar las zonas:
+
+```javascript
+// Crear varios reductores de interés
+var mean = ee.Reducer.mean();
+var minMax = ee.Reducer.minMax();
+var suma = ee.Reducer.sum();
+var contar = ee.Reducer.count();
+```
+
+Aplicamos la función para obtener valores promedios de cada parámeto dentro del área del PNN La Macarena y luego para el PNN El Tuparro.
+
+```javascript
+// Obtener valores promedios de los parametros ambientales dentro de cada PNN:
+var meanMacarena = extraerDatos(imgDatos,macarena,mean);
+var meanTuparro = extraerDatos(imgDatos,tuparro,mean);
+print('Medias Macarena',meanMacarena);
+print('Medias Tuparro',meanTuparro);
+```
+
+<img align="center" src="../../images/intro-gee/08_fig10.png" vspace="10" width="500">
+
+Como podemos observar, el resultado es un `ee.FeatureCollection` con tres propiedades o columnas (la columna system:index siempre se creará por defecto), y cinco features o elementos. Cada feature aloja el nombre de parámetro y valor promedio calculado.
+
