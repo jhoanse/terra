@@ -22,3 +22,7 @@ nav_order: 3
 | 14:00 – 15:00 | Objetos GEE - Datos vectoriales y ráster                                            |
 | 15:00 – 15:15 | Receso                                                                              |
 | 15:15 – 16:30 | Explorar e importar colecciones - Visualización en el mapa - Acceso a metadatos     |
+
+## Comentarios o preguntas?
+
+Deja tus comentarios, preguntas o sugerencias [aquí](https://forms.gle/g76DSnqTj6R9LLLh8).
