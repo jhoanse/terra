@@ -25,4 +25,4 @@ nav_order: 4
 
 ## Comentarios o preguntas?
 
-Deja tus comentarios, preguntas o sugerencias [aquí](https://forms.gle/g76DSnqTj6R9LLLh8).
+Deja tus comentarios, preguntas o sugerencias [aquí](https://forms.gle/KhZKWRrz7o3NfVKR6).
