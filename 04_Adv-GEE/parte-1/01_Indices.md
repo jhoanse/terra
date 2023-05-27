@@ -46,6 +46,8 @@ El índice de diferencia de vegetación normalizada (NDVI) tiene un rango de val
 
 Para calcular el NDVI usamos la siguiente fórmula:
 
+$$\frac{(NIR-Rojo)}{(NIR+Rojo)}$$
+
 
 ```javascript
 
