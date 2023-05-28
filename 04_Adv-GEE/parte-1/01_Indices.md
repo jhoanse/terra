@@ -97,17 +97,31 @@ Map.addLayer(ndvi, {'palette': palette}, "NDVI");
 
 Otra alternativa para calcular indices normalizados es usar la función `normalizedDifference`. Para este ejemplo, nuestro NDVI podría ser calculado como `var ndvi = composite.normalizedDifference(['SR_B4', 'SR_B3'])`.
 
-<img align="center" src="../../images/adv-gee/01_fig1.png" vspace="10" width="500">
+<img align="center" src="../../images/adv-gee/01_fig3.png" vspace="10" width="500">
 
 ## EVI - Enhanced Vegetation Index:
 
-El índice de vegetación aumentada es similar al NDVI, pero es usado para cuantificar la "verdura" de la vegetación. Este ínidce puede corregir algunas condiciones atmosféricas, ruido de fondo, y es más sensible en áreas de vegetación densa. tiene un rango de valores entre -1 a +1. Típicamente, cuando hay valores negativos existe alta probabilidad que se trate de un cuerpo de agua. Por otro lado, si los valores son cercanos a +1 es probable que se trate de vegetación muy densa. Cuando el NDVI es cercano a cero es probable que se trate de un área urbana.
+El índice de vegetación aumentada es similar al NDVI, pero es usado para cuantificar la "verdura" de la vegetación. Este índice puede corregir algunas condiciones atmosféricas, ruido de fondo, y es más sensible en áreas de vegetación densa. 
 
-Para calcular el NDVI usamos la siguiente fórmula:
+Para calcular el EVI usamos la siguiente fórmula:
 
 $$2.5 * \frac{NIR-Rojo}{NIR + 6 * Rojo - 7.5 * Azul + 1}$$
 
-La relación entre las bandas NIR (infrarrojo cercano o Near-Infrared) y Rojo van a proporcionar un índice de vegetación.
+Esta formula es un poco distinta a los típicas diferencias normalizadas, y puede ser aplicada en GEE usando la función `expression` que permite crear expresiones matemáticas y aplicarlas sobre una imágen.
 
-<img align="center" src="../../images/adv-gee/01_fig2.jpg" vspace="10" width="500">
+```javascript
+// Calcular EVI usando expresiones:
+// EVI = 2.5 * [(NIR-RED) / (NIR + 6*RED - 7.5*BLUE)+1]
+var evi = compuesto.expression(
+    '2.5 * ((NIR - RED) / (NIR + 6 * RED - 7.5 * BLUE + 1))', {
+      'NIR': compuesto.select('SR_B5'),
+      'RED': compuesto.select('SR_B4'),
+      'BLUE': compuesto.select('SR_B2')
+});
+
+// Visualizar EVI:
+Map.addLayer(evi, {'min': -1, 'max': 1, 'palette': ['FF0000', '00FF00']}, 'EVI');
+```
+
+<img align="center" src="../../images/adv-gee/01_fig4.jpg" vspace="10" width="500">
 
