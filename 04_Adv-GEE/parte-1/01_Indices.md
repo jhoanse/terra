@@ -38,7 +38,6 @@ function applyScaleFactors(image) {
 }
 ```
 
-
 Adicionalmente, vamos a preparar una colección de imágenes, filtrando, aplicando factores de escala y limpiando nubes:
 
 ```javascript
@@ -62,7 +61,7 @@ Map.addLayer(compuesto,{bands:['SR_B4','SR_B3','SR_B2'],min:0,max:0.2},'Compuest
 
 Vamos a obtener un mosaico como el siguiente, con algunos vacios de información en la zona Andina de Colombia, pero con buena calidad en sur, este y norte.
 
-<img align="center" src="../../images/adv-gee/01_fig1.png" vspace="10" width="500">
+<img align="center" src="../../images/gee-avanzado/01_fig1.png" vspace="10" width="500">
 
 ## NDVI - Normalized Difference Vegetation Index:
 
@@ -74,7 +73,7 @@ $$\frac{(NIR-Rojo)}{(NIR+Rojo)}$$
 
 La relación entre las bandas NIR (infrarrojo cercano o Near-Infrared) y Rojo van a proporcionar un índice de vegetación.
 
-<img align="center" src="../../images/adv-gee/01_fig2.jpg" vspace="10" width="500">
+<img align="center" src="../../images/gee-avanzado/01_fig2.jpg" vspace="10" width="500">
 
 ```javascript
 // Calcular NDVI:
@@ -95,7 +94,7 @@ Map.addLayer(ndvi, {'palette': palette}, "NDVI");
 
 Otra alternativa para calcular indices normalizados es usar la función `normalizedDifference`. Para este ejemplo, nuestro NDVI podría ser calculado como `var ndvi = composite.normalizedDifference(['SR_B4', 'SR_B3'])`.
 
-<img align="center" src="../../images/adv-gee/01_fig3.png" vspace="10" width="500">
+<img align="center" src="../../images/gee-avanzado/01_fig3.png" vspace="10" width="500">
 
 ## EVI - Enhanced Vegetation Index:
 
@@ -121,7 +120,7 @@ var evi = compuesto.expression(
 Map.addLayer(evi, {'min': -1, 'max': 1, 'palette': ['FF0000', '00FF00']}, 'EVI');
 ```
 
-<img align="center" src="../../images/adv-gee/01_fig4.png" vspace="10" width="500">
+<img align="center" src="../../images/gee-avanzado/01_fig4.png" vspace="10" width="500">
 
 ## NDWI - Normalized Difference Water Index:
 
@@ -151,4 +150,4 @@ Map.addLayer(ndwi,{palette:'#0439ff'},'Agua');
 }
 ```
 
-<img align="center" src="../../images/adv-gee/01_fig5.png" vspace="10" width="500">
+<img align="center" src="../../images/gee-avanzado/01_fig5.png" vspace="10" width="500">
