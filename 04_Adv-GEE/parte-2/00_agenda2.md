@@ -20,7 +20,7 @@ nav_order: 5
 | 00:00 – 00:00 | Receso                                                                              |
 | 00:00 – 00:00 | Ejercicio?                                                                          |
 | 12:00 – 13:30 | Almuerzo                                                                            |
-| 00:00 – 00:00 | Intro a elementos UI - Animaciones Gifs - Detección de Cambios                      |
+| 00:00 – 00:00 | Objetos UI - Animaciones Gifs - Detección de Cambios                                |
 
 ## Comentarios o preguntas?
 
