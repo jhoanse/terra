@@ -19,7 +19,7 @@ nav_order: 4
 | 00:00 – 00:00 | índices y Operaciones Matemáticas                                                   |
 | 00:00 – 00:00 | Receso                                                                              |
 | 00:00 – 00:00 | Ejercicio?                                                                          |
-| 12:30 – 13:00 | Almuerzo                                                                            |
+| 12:00 – 13:30 | Almuerzo                                                                            |
 | 00:00 – 00:00 | Clasificaciones temáticas (Land cover mapping)                                      |
 | 00:00 – 00:00 | Ejercicio?                                                                          |
 
