@@ -164,6 +164,9 @@ var vector = ndwi.reduceToVectors({
   crs: 'EPSG:4326',
   scale:30
 });
+
+// Visualizar
+Map.addLayer(vector, {}, 'Cienaga')
 ```
 
 <img align="center" src="../../images/gee-avanzado/01_fig6.png" vspace="10" width="500">
