@@ -3,7 +3,7 @@ layout: page
 title: "Google Earth Engine Avanzado - Parte 2"
 permalink: /04_Adv-GEE/parte-2
 has_children: True
-nav_order: 5
+nav_order: 6
 ---
 
 # Google Earth Engine Avanzado - Parte 2
