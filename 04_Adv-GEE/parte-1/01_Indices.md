@@ -22,10 +22,8 @@ Para los siguientes ejemplos usaremos la colección de [Landsat-8 L2](https://de
 function maskL8clouds(image) {
   var qa = image.select('QA_PIXEL'); //Select the QA band
 
-  // Bits 5 is clouds.
+  // Bit 3 es nubes.
   var cloudBitMask = 1 << 3;  
-
-  // Both flags should be set to zero, indicating clear conditions.
   var mask = qa.bitwiseAnd(cloudBitMask).eq(0);
 
   return image.updateMask(mask);
