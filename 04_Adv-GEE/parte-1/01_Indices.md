@@ -138,7 +138,7 @@ function calcularNdwi(Image){
   var getNdwi = Image.normalizedDifference(['SR_B3', 'SR_B5']);
   getNdwi = getNdwi.select(['nd'],['ndwi']);
   var ndwiUmbral = getNdwi.gt(0.1);
-  var ndwiMask = ndwi_thr.updateMask(ndwiUmbral);
+  var ndwiMask = ndwiUmbral.updateMask(ndwiUmbral);
   return ndwiMask;
 }
 
@@ -151,3 +151,19 @@ Map.addLayer(ndwi,{palette:'#0439ff'},'Agua');
 ```
 
 <img align="center" src="../../images/gee-avanzado/01_fig5.png" vspace="10" width="500">
+
+## BONUS: Convertir raster a vector
+Vamos a extraer una porción de nuestra capa de cuerpos de agua y la convertiremos en polígono usando la función `reduceToVectors`. Este es un proceso que puede ser computacionalmente intenso y no se recomienda hacerlo en tiempo real sobre cuerpos de agua extensos o que puedan terminar en geometrías con muchos vértices, ya que podriamos obtener un error. Por lo tanto, lo aplicaremos sobre una ciénaga la cual llamaremos `aoi2`.
+
+```javascript
+// Extraer cuerpo de agua y convertirlo a vector (polígono):
+var vector = ndwi.reduceToVectors({
+  reducer: ee.Reducer.countEvery(),
+  geometry: aoi2,
+  geometryType: 'polygon',
+  crs: 'EPSG:4326',
+  scale:30
+});
+```
+
+<img align="center" src="../../images/gee-avanzado/01_fig6.png" vspace="10" width="500">
