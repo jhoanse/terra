@@ -121,5 +121,34 @@ var evi = compuesto.expression(
 Map.addLayer(evi, {'min': -1, 'max': 1, 'palette': ['FF0000', '00FF00']}, 'EVI');
 ```
 
-<img align="center" src="../../images/adv-gee/01_fig4.jpg" vspace="10" width="500">
+<img align="center" src="../../images/adv-gee/01_fig4.png" vspace="10" width="500">
 
+## NDWI - Normalized Difference Water Index:
+
+Este índice permite detectar cuerpos de agua usando las bandas Verde y NIR. Las propiedades opticas del agua permiten mayor penetración de la longitud de onda verde, en comparación con el infrarrojo, el cual es absorbido inmediatamente en superficie. Sin embargo, los cuerpos de agua pueden contener diversos elementos disueltos que pueden alterar la eficacia de detección por el índice, por ejemplo alto contenido de algas, material suspendido, o materia orgánica disuelta. El umbral para detección de agua está alrededor de 0.3, donde valores más altos que este indican presencia de agua. 
+
+La fórmula para calcular el NDWI es:
+
+$$\frac{(Verde-NIR)}{(Verde+NIR)}$$
+
+En GEE vamos a crear una función donde se incluya el cálculo del NDWI y otras variables para limpiar la máscara y visualizar solo píxeles de agua usando un umbral definido, pero que puede ser modificado. Adicionalmente, aplicaremos el NDWI sobre un área de interés más pequeña, que en este ejemplo será en el noroccidente de Colombia.
+
+```javascript
+// NDWI Función
+function calcularNdwi(Image){
+  var getNdwi = Image.normalizedDifference(['SR_B3', 'SR_B5']);
+  getNdwi = getNdwi.select(['nd'],['ndwi']);
+  var ndwiUmbral = getNdwi.gt(0.1);
+  var ndwiMask = ndwi_thr.updateMask(ndwiUmbral);
+  return ndwiMask;
+}
+
+// Aplicar NDWI y crear mosaico:
+var ndwi = coleccion.map(calcularNdwi).mosaic().clip(aoi);
+
+// Visualizar:
+Map.addLayer(ndwi,{palette:'#0439ff'},'Agua');
+}
+```
+
+<img align="center" src="../../images/adv-gee/01_fig5.png" vspace="10" width="500">
