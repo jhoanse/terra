@@ -19,7 +19,7 @@ nav_order: 5
 | 00:00 – 00:00 | Series de Tiempo - Introducción a gráficos                                          |
 | 00:00 – 00:00 | Receso                                                                              |
 | 00:00 – 00:00 | Ejercicio?                                                                          |
-| 12:30 – 13:00 | Almuerzo                                                                            |
+| 12:00 – 13:30 | Almuerzo                                                                            |
 | 00:00 – 00:00 | Intro a elementos UI - Animaciones Gifs - Detección de Cambios                      |
 
 ## Comentarios o preguntas?
