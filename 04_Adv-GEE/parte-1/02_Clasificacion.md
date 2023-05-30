@@ -169,7 +169,7 @@ print('User Accuracy: ',userAccuracy);
 
 Como obtuvimos una precisión general del 100%, las precisiones por clase también seran de 100%.
 
-## Bonus: Calcular área
+## Bonus 1: Calcular área
 
 Podemos calcular las áreas de cada clase en nuestro mapa. Para esto hacemos una máscara por valor de pixel (clase), que multiplicamos por el area de pixel usando `ee.Image.pixelArea()`, esto nos dara como resultado pixeles con valores de área por pixel en metros cuadrados.
 
@@ -191,3 +191,49 @@ var reducerArea = Area.reduceRegion({
 var areaSqKm = ee.Number(reducerArea.get('classification')).divide(1e6);
 print('Area (km^2):',areaSqKm);
 ```
+
+## Bonus 2: Suavizar
+
+En algunas ocasiones se pueden suavizar las imagenes para lograr clasificaciones menos ruidosos y más agradables a la vista. Aunque no es recomendable abusar de los suavizados, ya que altera un poco las propiedades espectrales de cada pixel, perderemos detalles, y obtendremos precisiones sesgadas al momento de validar. El kernel se aplica sobre la imagen espectral, antes de muestrear los datos en cada punto. En GEE podemos suavizar imagenes usanddo Kernels `ee.Kernel`. En este ejemplo usaremos un Kernel Gaussiano en una ventana de 3x3 pixeles.
+
+```javascript
+// Suavizar imagenes
+//Crear kernel
+var kernel = ee.Kernel.gaussian({
+  radius:3,
+  units:'pixels',
+  normalize:false
+});
+
+// Aplicar kernel
+var imgKernel = imagen.convolve(kernel);
+
+// Muestrear cada punto
+var muestras = imgKernel.select(bandas).sampleRegions({
+  collection: puntos,
+  properties: [propiedad],
+  scale: 10
+});
+
+// Añadir columna con valores aleatorios en cada observación.
+// Esto servirá para dividir los datos de entrenamiento y validación
+var random = muestras.randomColumn('random');
+
+// Dividir datos entre entrenamiento y validacion.
+// Aproximadamente 80% para entrenamiento y 20% para validación.
+var fraccion = 0.8;  
+var entrenamiento = random.filter(ee.Filter.lt('random', fraccion));
+var validacion = random.filter(ee.Filter.gte('random', fraccion));
+// Entrenar clasificador Random Forest
+var clasificador = ee.Classifier.smileRandomForest(10).train({
+   features: entrenamiento,
+   classProperty: propiedad,
+   inputProperties: bandas
+});
+
+// Clasificar imagen con modelo y Visualizar clasificación
+var mapa = imgKernel.classify(clasificador);
+Map.addLayer(mapa, {min: 0, max: 4, palette: ['#106c00','#004dff','#93a313','#fffc9d','#ff0000']},'RF-Kernel');
+```
+
+<img align="center" src="../../images/gee-avanzado/02_fig11.png" vspace="10" width="500">
