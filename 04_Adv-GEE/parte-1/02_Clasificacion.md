@@ -125,3 +125,45 @@ Map.addLayer(mapa, {min: 0, max: 4, palette: ['#106c00','#004dff','#93a313','#ff
 
 <img align="center" src="../../images/gee-avanzado/02_fig7.png" vspace="10" width="500">
 
+### 5. Precisión de la clasificación
+
+Procedemos a verificar las matrices de error tanto de los datos de entrenamiento como de validación para tener una idea general de como estuvo la clasificación y para mejor interpretación de resultados.
+
+```javascript
+//// Aplicar clasificador sobre datos de entrenamiento y validacion:
+var entrenar = entrenamiento.classify(clasificador);
+var validar = validacion.classify(clasificador);
+
+// Calcular matrices de error
+var errorMatrixTra = entrenar.errorMatrix(propiedad, 'classification');
+var errorMatrixVal = validar.errorMatrix(propiedad, 'classification');
+print('Error Matrix Entrenamiento',errorMatrixTra);
+print('Error Matrix Validacion',errorMatrixVal);
+
+// Calcular precisión total
+print('Precision Total Entrenamiento: ', errorMatrixTra.accuracy());
+print('Precision Total Validacion: ', errorMatrixVal.accuracy());
+```
+
+<img align="center" src="../../images/gee-avanzado/02_fig8.png" vspace="10" width="500">
+
+Lo que vemos en las matrices de error es que todos los datos predecidos concuerdan con los datos observados. Esto significa que el modelo fue un 100% acertado. Este valor es debido al poco numero de datos. Ahora, nos interesa calcular la precisión de la clasificación. Para esto se requiere que nos enfoquemos en la matriz de error de validación, que será con la que se compara y se mida la precisión. Existen otros dos términos importantes al hablar de estimaciones de precisión en clasificaciones supervisadas, estos son la precisión del productor y la precisión del usuario. Estas ayudan a estimar la precisión dentro de cada clase.
+
+<img align="center" src="../../images/gee-avanzado/02_fig9.png" vspace="10" width="500">
+
+En la imagen de arriba tomada de Congalton & Green (2009), se puede estimar la precisión de la clase "Deciduous" de dos formas: (1) Tomando el número total de unidades de muestreo clasificadas correctamente (65) divididas por el número total de unidades respectivas en los datos de validación (75), esto nos da como resultado una precisión de 87% (Precisión de Productor). (2) Por otro lado, si tomamos el número total de unidades de muestreo clasificadas correctamente (65) divididas por el número total de unidades clasificadas como "Deciduous" (115), tendremos una precisión de 57% (Precisión de Usuario). Por lo tanto, en este ejemplo se demuestra que cada precisión estimada tiene su interpretación y hay que ser específico de mencionar de qué tipo de precisión se habla al mencionar los reultados de una clasificación supervisada.
+
+Continuando con nuestro ejemplo de GEE, calculamos las precisiones de usuario y productor:
+
+```javascript
+// Precisión de Usuario y de Productor
+var producerAccuracy = errorMatrixTra.producersAccuracy();
+var userAccuracy = errorMatrixTra.consumersAccuracy();
+print('Producer Accuracy: ',producerAccuracy);
+print('User Accuracy: ',userAccuracy);
+```
+
+<img align="center" src="../../images/gee-avanzado/02_fig10.png" vspace="10" width="500">
+
+Como obtuvimos una precisión general del 100%, las precisiones por clase también seran de 100%.
+
