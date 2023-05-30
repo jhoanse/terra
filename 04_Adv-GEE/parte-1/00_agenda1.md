@@ -16,12 +16,13 @@ nav_order: 5
 
 |    Horario    |                                                                    Temáticas                                                                    |
 |:-------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------:|
-| 00:00 – 00:00 | índices y Operaciones Matemáticas                                                   |
-| 00:00 – 00:00 | Receso                                                                              |
-| 00:00 – 00:00 | Ejercicio?                                                                          |
-| 12:00 – 13:30 | Almuerzo                                                                            |
-| 00:00 – 00:00 | Clasificaciones temáticas (Land cover mapping)                                      |
-| 00:00 – 00:00 | Ejercicio?                                                                          |
+| 11:00 – 12:00 | índices y Operaciones Matemáticas                                                   |
+| 12:00 – 12:15 | Receso                                                                              |
+| 12:15 – 13:00 | Ejercicio?                                                                          |
+| 13:00 – 14:00 | Almuerzo                                                                            |
+| 14:00 – 15:00 | Clasificaciones temáticas (Land cover mapping)                                      |
+| 15:00 – 15:15 | Receso                                                                              |
+| 15:15 – 16:30 | Clasificaciones: Continuación                                                       |
 
 ## Comentarios o preguntas?
 
