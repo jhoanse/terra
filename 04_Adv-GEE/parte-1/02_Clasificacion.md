@@ -75,9 +75,9 @@ print('Puntos por Clase:',puntos.aggregate_histogram('clase'));
 
 Verificamos el numero de puntos por clase, que en su totalidad son 280 puntos.
 
-<img align="center" src="../../images/gee-avanzado/02_fig5.png" vspace="10" width="600">
+<img align="center" src="../../images/gee-avanzado/02_fig5.png" vspace="10" width="500">
 
-Estos puntos los vamos a usar para muestrear las firmas espectrales, es decir que de cada punto se tomarán los valores de cada banda espectral. Luego procedemos a particionar el conjunto de datos en 80% para entrenamiento y 20% para validación. Para esto aplicamos la función `randomColumn`, la cual añadirá una columna nueva asignando valores aleatorios únicos entre 0 y 1 a cada clase. Esto es paracido a una indexación. Posteriormente filtramos los valores por encima y por debajo de 0.8, para separar los datos de validación y entrenamiento, respetivamente.
+Estos puntos los vamos a usar para muestrear las firmas espectrales, es decir que de cada punto se tomarán los valores de cada banda espectral. Luego procedemos a particionar el conjunto de datos en 80% para entrenamiento y 20% para validación. Para esto aplicamos la función `randomColumn`, la cual añadirá una columna nueva asignando valores aleatorios únicos entre 0 y 1 a cada clase. Esto es parecido a una indexación. Posteriormente filtramos los valores por encima y por debajo de 0.8 en la columna `random`, para separar los datos de validación y entrenamiento, respetivamente.
 
 ```javascript
 // Muestrear valores espectrales en cada punto
@@ -97,3 +97,5 @@ var fraccion = 0.8;
 var entrenamiento = random.filter(ee.Filter.lt('random', fraccion));
 var validacion = random.filter(ee.Filter.gte('random', fraccion));
 ```
+
+<img align="center" src="../../images/gee-avanzado/02_fig6.png" vspace="10" width="500">
