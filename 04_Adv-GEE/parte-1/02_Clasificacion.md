@@ -14,6 +14,8 @@ Las imágenes satelitáles con propiedades espectrales permiten agrupar o clasif
 
 <img align="center" src="../../images/gee-avanzado/02_fig1-.png" vspace="10" width="600">
 
+### 1. Preparar imagen
+
 Para el siguiente ejercicio de clasificación supervisada vamos a cargar la colección de Sentinel-2 L2 y seleccionar una imágen que será la que vamos a clasificar.
 
 ```javascript
@@ -31,6 +33,8 @@ var imagen = coleccion.filter(ee.Filter.eq('system:index','20220107T150719_20220
 Map.addLayer(imagen,{bands:['B4','B3','B2'],min:0,max:2000},'Imagen');
 ```
 <img align="center" src="../../images/gee-avanzado/02_fig2.png" vspace="10" width="600">
+
+### 2. Preparar datos
 
 Luego de seleccionar nuestra imagen, debemos preparar los datos que vamos a usar para la clasificación. En este ejemplo, podremos colectar algunos datos visualmente punto por punto, clase por clase. Vamos a considerar las siguientes clases:
 * Vegetación
@@ -77,7 +81,9 @@ Verificamos el numero de puntos por clase, que en su totalidad son 280 puntos.
 
 <img align="center" src="../../images/gee-avanzado/02_fig5.png" vspace="10" width="500">
 
-Estos puntos los vamos a usar para muestrear las firmas espectrales, es decir que de cada punto se tomarán los valores de cada banda espectral. Luego procedemos a particionar el conjunto de datos en 80% para entrenamiento y 20% para validación. Para esto aplicamos la función `randomColumn`, la cual añadirá una columna nueva asignando valores aleatorios únicos entre 0 y 1 a cada clase. Esto es parecido a una indexación. Posteriormente filtramos los valores por encima y por debajo de 0.8 en la columna `random`, para separar los datos de validación y entrenamiento, respetivamente.
+### 3. Muestras espectrales + Partición de datos de entrenamiento y validación
+
+El conjunto de puntos los vamos a usar para muestrear las firmas espectrales, es decir que de cada punto se tomarán los valores de cada banda espectral. Luego procedemos a particionar el conjunto de datos en 80% para entrenamiento y 20% para validación. Para esto aplicamos la función `randomColumn`, la cual añadirá una columna nueva asignando valores aleatorios únicos entre 0 y 1 a cada clase. Esto es parecido a una indexación. Posteriormente filtramos los valores por encima y por debajo de 0.8 en la columna `random`, para separar los datos de validación y entrenamiento, respetivamente.
 
 ```javascript
 // Muestrear valores espectrales en cada punto
@@ -99,6 +105,8 @@ var validacion = random.filter(ee.Filter.gte('random', fraccion));
 ```
 
 <img align="center" src="../../images/gee-avanzado/02_fig6.png" vspace="10" width="500">
+
+### 4. Entrenar modelo y clasificar imagen
 
 Luego de tener nuestros datos de entrenamiento, procedemos a entrenar un clasificador que en este ejemplo será Random Forest. Luego aplicaremos ese modelo a nuestra imagen para obtener un mapa clasificado.
 
