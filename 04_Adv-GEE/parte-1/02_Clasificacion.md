@@ -99,3 +99,21 @@ var validacion = random.filter(ee.Filter.gte('random', fraccion));
 ```
 
 <img align="center" src="../../images/gee-avanzado/02_fig6.png" vspace="10" width="500">
+
+Luego de tener nuestros datos de entrenamiento, procedemos a entrenar un clasificador que en este ejemplo será Random Forest. Luego aplicaremos ese modelo a nuestra imagen para obtener un mapa clasificado.
+
+```javascript
+// Entrenar clasificador Random Forest con 10 arboles.
+var clasificador = ee.Classifier.smileRandomForest(10).train({
+   features: entrenamiento,
+   classProperty: propiedad,
+   inputProperties: bandas
+});
+
+// Clasificar imagen con modelo y Visualizar clasificación
+var mapa = imagen.classify(clasificador);
+Map.addLayer(mapa, {min: 0, max: 4, palette: ['#106c00','#004dff','#93a313','#fffc9d','#ff0000']},'RF');
+```
+
+<img align="center" src="../../images/gee-avanzado/02_fig7.png" vspace="10" width="500">
+
