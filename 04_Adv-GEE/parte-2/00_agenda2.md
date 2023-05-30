@@ -16,11 +16,11 @@ nav_order: 6
 
 |    Horario    |                                                                    Temáticas                                                                    |
 |:-------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------:|
-| 00:00 – 00:00 | Series de Tiempo - Introducción a gráficos                                          |
-| 00:00 – 00:00 | Receso                                                                              |
-| 00:00 – 00:00 | Ejercicio?                                                                          |
-| 12:00 – 13:30 | Almuerzo                                                                            |
-| 00:00 – 00:00 | Objetos UI - Animaciones Gifs - Detección de Cambios                                |
+| 09:00 – 11:00 | Series de Tiempo - Introducción a gráficos                                          |
+| 11:00 – 11:15 | Receso                                                                              |
+| 11:15 – 12:00 | Ejercicio?                                                                          |
+| 12:00 – 13:00 | Almuerzo                                                                            |
+| 13:00 – 15:00 | Objetos UI - Animaciones Gifs - Detección de Cambios                                |
 
 ## Comentarios o preguntas?
 
