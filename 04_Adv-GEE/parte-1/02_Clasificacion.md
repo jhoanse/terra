@@ -30,6 +30,8 @@ print(coleccion.aggregate_array('system:index'));
 
 // Cargar imagen y visualizar
 var imagen = coleccion.filter(ee.Filter.eq('system:index','20220107T150719_20220107T150929_T19NDF')).first();
+
+// Visualizar
 Map.addLayer(imagen,{bands:['B4','B3','B2'],min:0,max:2000},'Imagen');
 ```
 <img align="center" src="../../images/gee-avanzado/02_fig2.png" vspace="10" width="600">
@@ -169,4 +171,23 @@ Como obtuvimos una precisión general del 100%, las precisiones por clase tambi�
 
 ## Bonus: Calcular área
 
-Podemos calcular las áreas de cada clase en nuestro mapa. Para esto hacemos una máscara por valor de pixel (clase), que multiplicamos por el area de pixel, esto nos dara como resultado pixeles de cada clase con valores 100
+Podemos calcular las áreas de cada clase en nuestro mapa. Para esto hacemos una máscara por valor de pixel (clase), que multiplicamos por el area de pixel usando `ee.Image.pixelArea()`, esto nos dara como resultado pixeles con valores de área por pixel en metros cuadrados.
+
+```javascript
+// Calcular area
+// Usaremos la clase 4 que es area quemada.
+var Area = mapa.eq(4).multiply(ee.Image.pixelArea());
+
+// Aplicamos reductor para sumar el area de todos los pixeles
+var reducerArea = Area.reduceRegion({
+  reducer: ee.Reducer.sum(),
+  geometry: imagen.geometry(),
+  scale: 10,
+  crs: 'EPSG:4326',
+  maxPixels: 1e15
+  });
+
+// Convertir m^2 a km^2
+var areaSqKm = ee.Number(reducerArea.get('classification')).divide(1e6);
+print('Area (km^2):',areaSqKm);
+```
