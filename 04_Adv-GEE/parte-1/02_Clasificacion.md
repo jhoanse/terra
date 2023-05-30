@@ -151,7 +151,7 @@ Lo que vemos en las matrices de error es que todos los datos predecidos concuerd
 
 <img align="center" src="../../images/gee-avanzado/02_fig9.png" vspace="10" width="500">
 
-En la imagen de arriba tomada de Congalton & Green (2009), se puede estimar la precisión de la clase "Deciduous" de dos formas: (1) Tomando el número total de unidades de muestreo clasificadas correctamente (65) divididas por el número total de unidades respectivas en los datos de validación (75), esto nos da como resultado una precisión de 87% (Precisión de Productor). (2) Por otro lado, si tomamos el número total de unidades de muestreo clasificadas correctamente (65) divididas por el número total de unidades clasificadas como "Deciduous" (115), tendremos una precisión de 57% (Precisión de Usuario). Por lo tanto, en este ejemplo se demuestra que cada precisión estimada tiene su interpretación y hay que ser específico de mencionar de qué tipo de precisión se habla al mencionar los reultados de una clasificación supervisada.
+En la imagen de arriba tomada de Congalton & Green (2009), se puede estimar la precisión de la clase "Deciduous" de dos formas: (1) Tomando el número total de unidades de muestreo clasificadas correctamente (65) divididas por el número total de unidades respectivas en los datos de validación (75), esto nos da como resultado una precisión de 87% (Precisión de Productor). (2) Por otro lado, si tomamos el número total de unidades de muestreo clasificadas correctamente (65) divididas por el número total de unidades clasificadas como "Deciduous" (115), tendremos una precisión de 57% (Precisión de Usuario). Esto nos demuestra lo diferentes que pueden ser ambas precisiones. Por lo tanto, en este ejemplo se demuestra que cada precisión estimada tiene su interpretación y hay que ser específico al presentar los resultados de una clasificación supervisada.
 
 Continuando con nuestro ejemplo de GEE, calculamos las precisiones de usuario y productor:
 
@@ -167,3 +167,6 @@ print('User Accuracy: ',userAccuracy);
 
 Como obtuvimos una precisión general del 100%, las precisiones por clase también seran de 100%.
 
+## Bonus: Calcular área
+
+Podemos calcular las áreas de cada clase en nuestro mapa. Para esto hacemos una máscara por valor de pixel (clase), que multiplicamos por el area de pixel, esto nos dara como resultado pixeles de cada clase con valores 100
