@@ -236,4 +236,4 @@ var mapa = imgKernel.classify(clasificador);
 Map.addLayer(mapa, {min: 0, max: 4, palette: ['#106c00','#004dff','#93a313','#fffc9d','#ff0000']},'RF-Kernel');
 ```
 
-<img align="center" src="../../images/gee-avanzado/02_fig11.png" vspace="10" width="500">
+<img align="center" src="../../images/gee-avanzado/02_fig11-.png" vspace="10" width="900">
