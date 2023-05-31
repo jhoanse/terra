@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Objetos UI
+title: Mapeo de Inundaciones
 parent: Google Earth Engine Avanzado - Parte 2
-nav_order: 2
+nav_order: 1
 ---
 
 ## Script
