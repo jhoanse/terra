@@ -2,7 +2,7 @@
 layout: page
 title: Series de Tiempo
 parent: Google Earth Engine Avanzado - Parte 2
-nav_order: 1
+nav_order: 2
 ---
 
 ## Script
