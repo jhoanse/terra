@@ -191,3 +191,64 @@ Map.addLayer(riesgo,{min:1, max:2, palette:['red','blue']},'DEM Riesgo');
 <img align="center" src="../../images/gee-avanzado/03_fig10.png" vspace="10" width="500">
 
 Al cuantificar las árees en potencial riesgo de inundación obtenemos un área de 17.35 km^2, aproximadamente. Este es casi 10 km^2 más alto que el estimado por las imágenes SAR. En términos generales, es positivo sobrestimar y no subestimar áreas en riesgo para prevenir desatres. Esta área encaja con el cauce del río posterior al evento de inundación, observado en la imágen de Sentinel-2.
+
+```javascript
+// Calcular area de riesgo
+var Area = riesgo.eq(1).multiply(ee.Image.pixelArea());
+
+// Aplicamos reductor para sumar el area de todos los pixeles
+var reducerArea = Area.reduceRegion({
+  reducer: ee.Reducer.sum(),
+  geometry: aoi,
+  scale: 10,
+  crs: 'EPSG:4326',
+  maxPixels: 1e15
+  });
+
+// Convertir m^2 a km^2
+var areaSqKm = ee.Number(reducerArea.get('DEM')).divide(1e6);
+print('Area en riesgo (km^2):',areaSqKm);
+```
+
+## Bonus: Creación de un Split Panel
+
+El siguiente ejemplo es el primer acercamiento hacia los objetos UI (User Interface) de GEE. El spli panel permite obtener una vista independiente de dos mapas separados por una barra deslizante. Este tipo de objetos son muy útiles para permitir la interacción y comparación de dos mapas.
+
+Inicialmente se debe "poner" un mapa dentro dos variables. Estas dos variables representaran alojarán las imagenes de antes y después de la inundación.
+
+```javascript
+// Poner en variables un mapa "vacio" para los lados izquierdo y derecho:
+var mapIzq = ui.Map();
+var mapDer = ui.Map();
+
+// Añadir capas respectivas a cada mapa:
+mapIzq.addLayer(imgAntes, rgbVis, 'RGB_Antes');
+mapDer.addLayer(imgDespues, rgbVis, 'RGB_Despues');
+```
+Posteriormente hay que definir y configurar el split panel:
+
+```javascript
+// Crear Split Panel y definir las posiciones de los mapas
+var split = ui.SplitPanel({
+  firstPanel: mapIzq,
+  secondPanel: mapDer,
+  orientation: 'horizontal',
+  wipe: true,
+  style: {stretch: 'both'}
+});
+```
+
+Por último "reseteamos" las capas cargadas anteriormente y cargamos la variable split que contiene el panel con los dos mapas asignados. Luego hay que enlazar los mapas de ambos lados para que se sincronizen cada vez que desplacemos la vista. Con esto queda terminado nuestro panel de comparación.
+
+```javascript
+// Asegurarse de resetear todas las capas previas y solo dejar las nuevas:
+ui.root.widgets().reset([split]);
+
+// Enlazar la vista de los dos mapas con cada desplazamiento:
+var linker = ui.Map.Linker([mapIzq, mapDer]);
+
+// Centrar vista:
+mapIzq.centerObject(orobajo, 12);
+```
+
+<img align="center" src="../../images/gee-avanzado/03_fig11.gif" vspace="10" width="500">
