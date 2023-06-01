@@ -156,7 +156,7 @@ print('Area Inundada (km^2):',areaSqKm);
 
 ## Detección de Riesgo
 
-Para detectar riesgos por inundación podemos usar datos de elevación para simular o proyectar los niveles de un cuerpo de agua en determinados casos, y cuantificar las áreas en potencial riesgo por inundación. Asumiendo que la mayor parte afectada del río estaba a 280 m de altitud antes y que el nivel del río subió 120 m después de la inundación, podemos visualizar y cuantificar las potenciales áreas en riesgo.
+Para detectar riesgos por inundación podemos usar datos de elevación para simular o proyectar los niveles de un cuerpo de agua en determinados casos, y cuantificar las áreas en potencial riesgo por inundación. Esto es útil antes de que sucedan las emergencias, pero para esta demostración trabajaremos sobre el evento que ocurrió en Hidroituango. Asumiendo que la mayor parte afectada del río estaba a 280 m de altitud antes y que el nivel del río subió 120 m después de la inundación, podemos visualizar y cuantificar las potenciales áreas en riesgo.
 
 ```javascript
 // Cargar colección de elevación y recortar con área alrededor del río.
@@ -190,7 +190,7 @@ Map.addLayer(riesgo,{min:1, max:2, palette:['red','blue']},'DEM Riesgo');
 
 <img align="center" src="../../images/gee-avanzado/03_fig10.png" vspace="10" width="500">
 
-Al cuantificar las árees en potencial riesgo de inundación obtenemos un área de 17.35 km^2, aproximadamente. Este es casi 10 km^2 más alto que el estimado por las imágenes SAR. En términos generales, es positivo sobrestimar y no subestimar áreas en riesgo para prevenir desatres. Esta área encaja con el cauce del río posterior al evento de inundación, observado en la imágen de Sentinel-2.
+Al cuantificar las áreas en potencial riesgo de inundación obtenemos un área de 17.35 km^2, aproximadamente. Este es casi 10 km^2 más alto que el estimado por las imágenes SAR. En términos generales, es positivo sobrestimar y no subestimar áreas en riesgo para prevenir desatres. Esta área encaja con el cauce del río posterior al evento de inundación, observado en la imágen de Sentinel-2.
 
 ```javascript
 // Calcular area de riesgo
@@ -252,3 +252,9 @@ mapIzq.centerObject(orobajo, 12);
 ```
 
 <img align="center" src="../../images/gee-avanzado/03_fig11.gif" vspace="10" width="500">
+
+## Ejercicio
+
+El 20 de Abril de 2022 se registraron inundaciones en el Municipio de Guarandá (Sucre) y alrededores, inundando poblados enteros por varios días. En este caso, las inundaciones se presentaron por desbordamientos del río Cauca y rupturas en los jarillones que lo bordean, afectando a toda la región conocida como La Mojana. El casco urbano de Guarandá se situa en lat: 8.47, lon: -74.55. Para este ejercicio, realizar el mismo procedimiento para mapear inundaciones, detectar cambios, y detectar areas en riesgo.
+
+<img align="center" src="../../images/gee-avanzado/03_fig12.jpg" vspace="10" width="600">
