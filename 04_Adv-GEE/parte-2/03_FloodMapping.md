@@ -133,3 +133,59 @@ Map.addLayer(cambios,{palette:['blue','red'],min:1,max:2},'Area inundada Refinad
 ```
 
 <img align="center" src="../../images/gee-avanzado/03_fig8.png" vspace="10" width="500">
+
+Al calcular las áreas inundadas detectadas por imagénes SAR, obtenemos un estimado de 7.25 km^2.
+
+```javascript
+// Calcular area inundada
+var Area = cambios.eq(2).multiply(ee.Image.pixelArea());
+
+// Aplicamos reductor para sumar el area de todos los pixeles
+var reducerArea = Area.reduceRegion({
+  reducer: ee.Reducer.sum(),
+  geometry: aoi,
+  scale: 10,
+  crs: 'EPSG:4326',
+  maxPixels: 1e15
+  });
+
+// Convertir m^2 a km^2
+var areaSqKm = ee.Number(reducerArea.get('occurrence')).divide(1e6);
+print('Area Inundada (km^2):',areaSqKm);
+```
+
+## Detección de Riesgo
+
+Para detectar riesgos por inundación podemos usar datos de elevación para simular o proyectar los niveles de un cuerpo de agua en determinados casos, y cuantificar las áreas en potencial riesgo por inundación. Asumiendo que la mayor parte afectada del río estaba a 280 m de altitud antes y que el nivel del río subió 120 m después de la inundación, podemos visualizar y cuantificar las potenciales áreas en riesgo.
+
+```javascript
+// Cargar colección de elevación y recortar con área alrededor del río.
+var dem = ee.ImageCollection("COPERNICUS/DEM/GLO30")
+          .filterBounds(aoi)
+          .select('DEM')
+          .mosaic();
+
+// La altitud a la que se encontraba el nivel del rio ANTES
+// en la mayor parte del area afectada es de ~280 m.
+var altitud = 280;
+var demMask = dem.lt(altitud).selfMask().clip(aoi);
+Map.addLayer(demMask,{min:235, max:1760},'DEM');
+
+// Predecir el area afectada subiendo el nivel del rio 120 m
+var inundar = 120;
+var demRiesgo = dem.lt(altitud + inundar).selfMask().clip(aoi);
+Map.addLayer(demRiesgo,{min:235, max:1760},'DEM inundado');
+```
+
+<img align="center" src="../../images/gee-avanzado/03_fig9.png" vspace="10" width="500">
+
+Podemos refinar un poco el resultado sobreponiendo el cauce del río sobre las potenciales áreas en riesgo si el nivel sube 120 m.
+
+```javascript
+// Crear capa con zona de riesgo
+var rioDEM = demMask.unmask().add(rioClip.unmask()).eq(0).not(); // Completar el cauce del rio
+var riesgo = demRiesgo.add(rioDEM); // Sumar la capa de riesgo con el cauce anterior del rio
+Map.addLayer(riesgo,{min:1, max:2, palette:['red','blue']},'DEM Riesgo');
+```
+
+<img align="center" src="../../images/gee-avanzado/03_fig10.png" vspace="10" width="500">
