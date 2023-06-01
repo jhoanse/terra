@@ -189,3 +189,5 @@ Map.addLayer(riesgo,{min:1, max:2, palette:['red','blue']},'DEM Riesgo');
 ```
 
 <img align="center" src="../../images/gee-avanzado/03_fig10.png" vspace="10" width="500">
+
+Al cuantificar las árees en potencial riesgo de inundación obtenemos un área de 17.35 km^2, aproximadamente. Este es casi 10 km^2 más alto que el estimado por las imágenes SAR. En términos generales, es positivo sobrestimar y no subestimar áreas en riesgo para prevenir desatres. Esta área encaja con el cauce del río posterior al evento de inundación, observado en la imágen de Sentinel-2.
