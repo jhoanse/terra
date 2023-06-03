@@ -87,7 +87,7 @@ var tempEscala = temp
                   });
 ```
 
-Ahora, tenemos una colección pre-procesada con datos diarios. En este momento podemos realizar una gráfica con datos diarios. Adicionalmente, damos un poco de formato y estilo:
+Ahora, tenemos una colección pre-procesada con datos diarios. En este momento podemos realizar una gráfica con datos diarios en dos localidades usando `ui.Chart.image.seriesByRegion`. Adicionalmente, damos un poco de formato y estilo:
 
 ```javascript
 // Elaborar gráfico con datos diarios de temperatura en dos puntos.
@@ -123,6 +123,113 @@ Esta gráfica debe ser imprimida para poder visualizarla.
 
 <img align="center" src="../../images/gee-avanzado/04_fig1.png" vspace="10" width="500">
 
-La flecha en la esquina superior derecha nos permite abrir la gráfica en una ventana independiente y habilitará opciones para descargar los datos en formato CSV, SVG, y PNG.
+La flecha en la esquina superior derecha nos permite abrir la gráfica en una ventana independiente y habilitará opciones para descargar los datos en formato CSV, SVG, y PNG, disponibles en la esquina superior derecha.
 
-<img align="center" src="../../images/gee-avanzado/04_fig2.png" vspace="10" width="500">
+<img align="center" src="../../images/gee-avanzado/04_fig2.png" vspace="10" width="900">
+
+Sin embargo, estos datos diarios presentan vacíos de información y no son continuos. Un análisis más robusto sobre la temporalidad de la temperatura requiere procesar los datos para obtener promedios mensuales. Por lo tanto, aplicaremos la función para obtener estos datos:
+
+```javascript
+// Aplicar función para calcular promedios mensuales
+var mean = ee.Reducer.mean();
+var tempMes = ee.ImageCollection.fromImages(months
+              .map(function(m){
+                var operacion =  datosMes(tempEscala, m, mean);
+                return operacion;
+              }).flatten());
+```
+
+Como resultado tendremos un `ImageCollection` de doce imágenes que contienen los promedios de cada mes respectivo. Luego, usaremos esta colección para obtener una gráfica con datos mensuales.
+
+```javascript
+// Elaborar gráfico con datos mensuales de temperatura en dos puntos.
+var tempChartMes = ui.Chart.image.seriesByRegion({
+  imageCollection: tempMes,
+  regions: puntos,
+  reducer: ee.Reducer.mean(),
+  scale: 1000,
+  seriesProperty: 'sitio'
+});
+
+// Configurar gráfica
+tempChartMes.setOptions({
+  title: 'Temperatura mensual de dos sitios en 2022',
+  vAxis: {
+    title: 'Temperatura (Celsius)',
+    viewWindow: {min: 25, max: 35}
+  },
+  lineWidth: 1,
+  pointSize: 4,
+  interpolateNulls: true,
+  series: {
+    0: {color: 'red'},
+    1: {color: 'green'},
+  }
+});
+
+// Imprimir gráfico en consola
+print(tempChartMes);
+```
+
+<img align="center" src="../../images/gee-avanzado/04_fig3.png" vspace="10" width="500">
+
+Opcionalmente, existe la posibilidad de obtener estos datos en forma de tabla `FeatureCollection`, los cuales pueden ser exportados a nuestro GDrive. Esta opción es la más recomendada si se desea trabajar con más datos, y datos que requieran análisis más profundos. La opción de visualizar datos en la consola de GEE es muy exploratorio y más intereactiva para el público.
+
+```javascript
+// Obtener datos como un Feature Collection:
+// Creamos una función anidada para obtener valores de un reductor dado.
+function getStats(features,reducer){
+  function applyReducer(img){
+    var stats = ee.Image(img).reduceRegions({
+      collection: features,
+      reducer: reducer,
+      scale: 1000
+    });
+    return stats;
+  }
+  return applyReducer;
+}
+
+// Aplicar función sobre colección
+var tempTabla = tempMes.map(getStats(puntos,mean)).flatten();
+
+// Imprimir tabla
+print('Temperatura Mensual:',tempTabla);
+```
+
+<img align="center" src="../../images/gee-avanzado/04_fig4.png" vspace="10" width="500">
+
+
+## Serie de tiempo por área
+
+En el siguiente ejemplo vamos utilizar la colección de precipitación ["UCSB-CHG/CHIRPS/DAILY"](https://developers.google.com/earth-engine/datasets/catalog/UCSB-CHG_CHIRPS_DAILY) para obtener y comparar la precipitación mensual en tres Parques Naturales.
+
+```javascript
+// Cargar colección CHIRPS de precipitación diaria:
+var chirps = ee.ImageCollection("UCSB-CHG/CHIRPS/DAILY");
+
+// Filtrar colección, sumar precipitaciones del mes, y recortar:
+var prec = chirps
+            .filterDate(fechaIni,fechaFin)
+            .filterBounds(colombia);
+
+// Filtrar tres PNN
+var nombresPNN = ['EL TUPARRO','SERRANÍA DE CHIRIBIQUETE','SIERRA NEVADA DE SANTA MARTA'];
+var regiones = pnn.filter(ee.Filter.inList('Nombre',nombresPNN));
+```
+
+Luego de preparar la colección de imágenes y las regiones de interes, calcumos los datos mensuales de precipitación:
+
+```javascript
+// Aplicar función para calcular valores mensuales
+var sum = ee.Reducer.sum();
+var precMes = ee.ImageCollection.fromImages(months
+              .map(function(m){
+                var operacion =  datosMes(prec, m, sum);
+                return operacion;
+              }).flatten());
+```
+
+Ahora, obtendremos el gráfico usando `ui.Chart.image.seriesByRegion`, pero en esta ocasión lo formateamos para obtener un gráfico de columnas.
+
+<img align="center" src="../../images/gee-avanzado/04_fig5.png" vspace="10" width="500">
