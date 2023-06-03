@@ -8,7 +8,7 @@ nav_order: 2
 ## Script
 El script completo que se usará en esta sección esta disponible [aquí]().
 
-# Series de Tiempo & Ojetos UI
+# Series de Tiempo & Objetos UI
 
 Las series de tiempo se pueden obtener de colecciones de imágenes o features, sobre pixeles individuales o regiones, en modo de gráficos o tablas. En los siguientes ejemplos se mostrará como procesar y obtener datos mensuales de variables ambientales. Adicionalmente, es necesario familiarizarse con los objetos UI de GEE, en especial `ui.Chart`, que nos permitrá hacer gráficas dentro de la interfaz de GEE. Documentación adicional sobre las gráficas pueden encontrarse [aquí](https://developers.google.com/earth-engine/guides/charts_overview).
 
@@ -232,4 +232,120 @@ var precMes = ee.ImageCollection.fromImages(months
 
 Ahora, obtendremos el gráfico usando `ui.Chart.image.seriesByRegion`, pero en esta ocasión lo formateamos para obtener un gráfico de columnas.
 
+```javascript
+// Calcular precipitación mensual (promedio de areas)
+var precChartMes = ui.Chart.image.seriesByRegion({
+  imageCollection: precMes,
+  regions: regiones,
+  reducer: ee.Reducer.mean(),
+  scale: 100,
+  seriesProperty: 'Nombre'
+});
+
+// Definir tipo de gráfico
+precChartMes.setChartType('ColumnChart');
+
+// Configurar gráfica
+precChartMes.setOptions({
+  title: 'Precipitación mensual de tres PNN en 2022',
+  vAxis: {
+    title: 'Precipitación (mm)',
+  }
+});
+
+// Imprimir gráfico
+print(precChartMes);
+```
+
 <img align="center" src="../../images/gee-avanzado/04_fig5.png" vspace="10" width="500">
+
+
+## Correlación (Scatter plot)
+
+En este ejemplo realizaremos un gráfico de puntos entre dos variables: Temperatura vs NDVI en el PNN El Tuparro durante 2022, y obsersevaremos si existe alguna tendencia. Los coeficientes de correlación pueden ser calculados en GEE, pero puede ser más complejo hacerlo con las colecciones que generaremos, por lo tanto solo nos enfocaremos en la parte gráfica.
+
+```javascript
+// Cargar producto de vegetación MOD13Q1 de Modis y seleccionamos banda NDVI:
+var mod13q1 = ee.ImageCollection('MODIS/061/MOD13Q1').select('NDVI');
+
+// Filtrar colección, sumar precipitaciones del mes, y recortar:
+var ndvi = mod13q1
+           .filterDate(fechaIni,fechaFin)
+           .filterBounds(colombia);
+
+// Escalar colección
+var ndviEscala = ndvi
+                  .map(function(x){return x.clip(colombia)})
+                  .map(function(x){return x.multiply(0.0001)
+                    .copyProperties(x,['system:time_start','system:time_end']);
+                  });
+
+// Obtener promedios mensuales
+var ndviMes = ee.ImageCollection.fromImages(months
+              .map(function(m){
+                var operacion =  datosMes(ndviEscala, m, mean);
+                return operacion;
+              }).flatten());
+```
+
+Despues de haber preparado la colección de NDVI, vamos a calcular promedios mensuales dentro del PNN El Tuparro. Posteriormente, renombramos las bandas a conveniencia y alojamos los datos en una lista (Array):
+
+```javascript
+// Creamos una función anidada para obtener valores de un reductor dado.
+function getStats2(feature,reducer){
+  function applyReducer(img){
+    var stats = ee.Image(img).reduceRegion({
+      reducer: reducer,
+      geometry: feature.geometry(),
+      scale: 1000
+    });
+    return ee.Feature(null,stats);
+  }
+  return applyReducer;
+}
+
+// Aplicar función sobre colección y renombrar bandas
+var tempTabla = tempMes.select(['LST_Day_1km_mean'],['Temperatura'])
+                .map(getStats2(regiones.first(),mean));
+var ndviTabla = ndviMes.select(['NDVI_mean'],['NDVI'])
+                .map(getStats2(regiones.first(),mean));
+
+// Obtener lista de valores (array)
+var tempArray = tempTabla.aggregate_array('Temperatura');
+var ndviArray = ndviTabla.aggregate_array('NDVI');
+```
+
+Con los datos listos podemos realizar la gráfica usando `ui.Chart.array.values`:
+
+```javascript
+// Realizar gráfica
+var corrChart = ui.Chart.array.values({
+  array: ndviArray,
+  axis: 0,
+  xLabels: tempArray})
+  .setChartType('ScatterChart')
+  .setOptions({
+    legend: {position: 'none'},
+    title: 'Temp vs NDVI en PNN El Tuparro durante 2022',
+    hAxis: {'title': 'Temperatura (C)', viewWindow: {min: 28, max: 40}},
+    vAxis: {'title': 'NDVI'},
+    trendlines: {
+    0: {  // Añadir linea de tendencia
+      type: 'linear',  // or 'polynomial', 'exponential'
+      color: 'red',
+      lineWidth: 3,
+      opacity: 0.5,
+      visibleInLegend: true,
+      }
+    },
+    series: {
+      0: {
+        pointSize: 3,
+      },
+    }
+  });
+  
+print(corrChart);
+```
+
+<img align="center" src="../../images/gee-avanzado/04_fig6.png" vspace="10" width="500">
