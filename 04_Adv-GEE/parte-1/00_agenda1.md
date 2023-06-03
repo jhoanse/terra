@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "Google Earth Engine Avanzado - Parte 1"
+title: "Google Earth Engine Intermedio - Parte 1"
 permalink: /04_Adv-GEE/parte-1
 has_children: True
 nav_order: 5
 ---
 
-# Google Earth Engine Avanzado - Parte 1
+# Google Earth Engine Intermedio - Parte 1
 
 ## Agenda de la lección
 
