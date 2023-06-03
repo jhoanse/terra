@@ -378,7 +378,7 @@ var icono = ui.Thumbnail({
 Map.add(icono);
 ```
 
-<img align="center" src="../../images/gee-avanzado/04_fig7.gif" vspace="10" width="500">
+<img align="center" src="../../images/gee-avanzado/04_fig7.gif" vspace="10" width="300">
 
 Otras funciones interactivas que nos ofrece GEE son los botones. Estos botones sirven para ejecutar acciones específicas. En este caso crearemos un botón y le asignaremos la función de generar un link para visualizar nuestro GIF en una ventana independiente y poder descargarlo si deseamos.
 
