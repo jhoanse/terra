@@ -349,3 +349,49 @@ print(corrChart);
 ```
 
 <img align="center" src="../../images/gee-avanzado/04_fig6.png" vspace="10" width="500">
+
+
+## BONUS: GIF animado y botón
+
+Los GIF permiten visualizar las imágenes dentro de una colección en forma de animación a una velocidad constante. Puede ser útil para mostrar de manera visual cambios temporales en una región. Para crear un GIF usaremos la función `ui.Thumbnail`, y agregaremos parametros de visualización.
+```javascript
+// Parametros de visualización:
+var args = {
+  crs: 'EPSG:3857',  // Maps Mercator
+  dimensions: '300',
+  region: geometry,
+  min: -0.8,
+  max: 0.8,
+  palette: ['#edf8e9','#c7e9c0','#a1d99b','#74c476','#41ab5d','#238b45','#005a32'],
+  framesPerSecond: 12,
+};
+
+// Crear icono animado y añadirlo al mapa
+var icono = ui.Thumbnail({
+  image: ndviMes,
+  params: args,
+  style: {
+    position: 'bottom-right',
+    width: '320px'
+  }});
+
+Map.add(icono);
+```
+
+<img align="center" src="../../images/gee-avanzado/04_fig7.gif" vspace="10" width="500">
+
+Otras funciones interactivas que nos ofrece GEE son los botones. Estos botones sirven para ejecutar acciones específicas. En este caso crearemos un botón y le asignaremos la función de generar un link para visualizar nuestro GIF en una ventana independiente y poder descargarlo si deseamos.
+
+```javascript
+// Crear botón que imprimirá enlace de descarga de GIF
+var boton = ui.Button({
+  label: 'Descargar GIF',
+  onClick: function(){
+    print(ndviMes.getVideoThumbURL(args))},
+  style: {width: '300px', padding: '0px 0px 0px 150px'}
+});
+
+print(boton);
+```
+
+<img align="center" src="../../images/gee-avanzado/04_fig8.png" vspace="10" width="500">
