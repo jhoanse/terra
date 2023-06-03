@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Indices
-parent: Google Earth Engine Avanzado - Parte 1
+parent: Google Earth Engine Intermedio - Parte 1
 nav_order: 1
 ---
 
