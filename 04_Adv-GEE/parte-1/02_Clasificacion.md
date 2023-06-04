@@ -6,7 +6,7 @@ nav_order: 2
 ---
 
 ## Script
-El script completo que se usará en esta sección esta disponible [aquí]().
+El script completo que se usará en esta sección esta disponible [aquí](https://code.earthengine.google.com/04de5d0e723f35db4a9da65e623968ff).
 
 # Clasificación Supervisada
 
