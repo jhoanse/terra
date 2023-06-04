@@ -6,7 +6,7 @@ nav_order: 2
 ---
 
 ## Script
-El script completo que se usará en esta sección esta disponible [aquí]().
+El script completo que se usará en esta sección esta disponible [aquí](https://code.earthengine.google.com/2e5d2b7fdbe442d217e3a535f45bb74e).
 
 # Series de Tiempo & Objetos UI
 
