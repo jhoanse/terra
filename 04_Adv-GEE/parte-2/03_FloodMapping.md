@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 ## Script
-El script completo que se usará en esta sección esta disponible [aquí]().
+El script completo que se usará en esta sección esta disponible [aquí](https://code.earthengine.google.com/0d85ea8534468b4c04980a8d88455ae5).
 
 # Mapeo de Inundaciones
 
