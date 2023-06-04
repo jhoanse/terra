@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 ## Script
-El script completo que se usará en esta sección esta disponible [aquí]().
+El script completo que se usará en esta sección esta disponible [aquí](https://code.earthengine.google.com/a4779b6b5c99ee19153033f4663a41ac).
 
 # Índices y operaciones matématicas
 
