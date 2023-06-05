@@ -306,3 +306,22 @@ donde:
 El resultado deberá verse similar a este, usando `var vis = {min:0,max:1.5,palette:['#0043ff','#00ff72','#fbff00','#ff0000']}`
 
 <img align="center" src="../../images/gee-avanzado/01_fig10.png" vspace="10" width="500">
+
+## SOLUCION
+```javascript
+var red = image.select('sur_refl_b01')
+var green = image.select('sur_refl_b04')
+var blue = image.select('sur_refl_b03')
+
+
+// OC3M algorithm
+var a1 = ee.Image.constant(-2.64669).multiply(blue.divide(green).log10())
+var a2 = ee.Image.constant(1.28364).multiply(blue.divide(green).log10()).pow(2)
+var a3 = ee.Image.constant(1.08209).multiply(blue.divide(green).log10()).pow(3)
+var a4 = ee.Image.constant(-1.76828).multiply(blue.divide(green).log10()).pow(4)
+
+var ocx = ee.Image.constant(0.26294).add(a1.add(a2.add(a3.add(a4))))
+
+Map.addLayer(ocx,{min:0,max:1.5,palette:['#0043ff','#00ff72','#fbff00','#ff0000']},'OC3M')
+```
+
