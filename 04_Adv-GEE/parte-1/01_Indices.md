@@ -301,8 +301,8 @@ donde:
 * a1 = -2.64669
 * a2 = 1.28364
 * a3 = 1.08209
-* a5 = -1.76828
+* a4 = -1.76828
 
-El resultado deberá verse similar a este:
+El resultado deberá verse similar a este, usando `var vis = {min:0,max:1.5,palette:['#0043ff','#00ff72','#fbff00','#ff0000']}`
 
 <img align="center" src="../../images/gee-avanzado/01_fig10.png" vspace="10" width="500">
