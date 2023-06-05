@@ -241,3 +241,26 @@ Map.addLayer(mapa, {min: 0, max: 4, palette: ['#106c00','#004dff','#93a313','#ff
 
 ## BONUS 3: Clasificación no supervisada
 
+La clasificacion no supervisada es un metodo que agrupa en un numero de clases definidas los datos que más tengan parecido entre sí espectralmente. Al ser no supervisado no hay forma de medir precisión, estrictamente hablando.
+
+Realizamos un entrenamiento. Se puede realizar un entrenamiento totalmente no supervisado, el cual tomaría puntos aleatoriamente dentro de un área de interés. Pero también podriamos usar los puntos ya colectados. Luego se crea un cluster usando la función `ee.Clusterer.wekaKMeans` y se aplican los datos entrenados. Finalmente se aplica el cluster a la imagen.
+
+```javascript
+//var training = imagen.sample({region: %definir%, scale: 10, numPixels: 5000}) // Totalmente no supervisada
+var training = imagen.sampleRegions({
+  collection: puntos,      // Con ayuda de puntos
+  properties: [propiedad],
+  scale: 10
+  });
+  
+// Creamos un cluster con cinco clases
+var clusterer = ee.Clusterer.wekaKMeans(5).train(training);
+
+// Aplicar a imagen
+var result = imagen.cluster(clusterer);
+
+// Visualizar
+Map.addLayer(result, vis, 'Cluster');
+```
+
+<img align="center" src="../../images/gee-avanzado/02_fig12.png" vspace="10" width="500">
