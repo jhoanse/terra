@@ -16,9 +16,9 @@ nav_order: 6
 
 |    Horario    |                                                                    Temáticas                                                                    |
 |:-------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------:|
-| 08:00 – 11:00 | Mapeo de Inundaciones & Detección de Cambios                                        |
-| 11:00 – 11:15 | Receso                                                                              |
-| 11:15 – 12:00 | Ejercicio: Mapeo de Inundaciones                                                    |
+| 08:00 – 10:00 | Mapeo de Inundaciones & Detección de Cambios                                        |
+| 10:00 – 10:15 | Receso                                                                              |
+| 10:15 – 12:00 | Ejercicio: Mapeo de Inundaciones                                                    |
 | 12:00 – 13:00 | Almuerzo                                                                            |
 | 13:00 – 15:00 | Series de Tiempo & Introducción Objetos UI                                          |
 
