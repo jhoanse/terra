@@ -1,9 +1,9 @@
 ---
 layout: page
 title: "Collect Earth Online - Evaluación de mapas"
-permalink: /ceo
+permalink: /05_CEO
 has_children: True
-nav_order: 8
+nav_order: 7
 ---
 
 # Collect Earth Online - Evaluación de mapas
@@ -12,9 +12,9 @@ Navegue a través de las diferentes secciones de la lección utilizando el menú
 
 ## Agenda de la lección
 
-**Fecha**: Abril 20, 2023
+**Fecha**: Junio 26-27, 2023
 
-**Instructora:** Andréa Puzzi Nicolau ([apnicolau@sig-gis.com](apnicolau@sig-gis.com))
+**Instructor:** ?
 
 | Time          |                                                                                                                                                 Topics                                                                                                                                                 |
 |---------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
