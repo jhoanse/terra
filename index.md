@@ -50,7 +50,7 @@ Los participantes deberán tener:
 |            3           |  Introducción a Radar con QGIS (radar para detección de inundación) | Abril 25     |   Virtual             |
 |           4-5          |  Introducción a Google Earth Engine                              | Mayo 15-16   |   Virtual             |
 |           6-7          |  Google Earth Engine Intermedio - Aplicado a casos (por ejemplo, Mapeo de inundación, estrés hídrico)   | Junio 5-6    |   Virtual             |
-|           8-9          |  Uso de Collect Earth Online para la evaluación de la precisión y la estimación de área no sesgada de los mapas.   | Junio 26-27  |   Virtual             |
-|          10-11         |  Procesamiento de imágenes de Drones                             | Julio 24-25  |   Presencial          |
-|           12           |  Sesión de Capstone y apoyo                                      | Julio 31     |   Virtual             |
+|           8            |  Uso de Collect Earth Online para la evaluación de la precisión y la estimación de área no sesgada de los mapas.   | Junio 27     |   Virtual             |
+|          9-10          |  Procesamiento de imágenes de Drones                             | Julio 24-25  |   Presencial          |
+|           11           |  Sesión de Capstone y apoyo                                      | Julio 31     |   Virtual             |
 
