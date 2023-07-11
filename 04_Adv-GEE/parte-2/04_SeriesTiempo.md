@@ -63,7 +63,7 @@ var ciudad = /* color: #999900 */ee.FeatureCollection(
             {
               "sitio": "bosque",
               "system:index": "0"
-            })]),
+            })])
 ```
 
 Luego, es necesario tener las dos localidades en un solo `ee.FeatureCollection`, y se pre-procesará la colección de temperatura:
