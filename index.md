@@ -54,3 +54,6 @@ Los participantes deberán tener:
 |          9-10          |  Procesamiento de imágenes de Drones                             | Julio 24-25  |   Presencial          |
 |           11           |  Sesión de Capstone y apoyo                                      | Julio 31     |   Virtual             |
 
+## Licencia
+
+Los materiales adjuntos se proporcionan bajo los términos de la Licencia Pública Eclipse v2.0. Cualquier uso, reproducción o distribución del programa constituye la aceptación de este acuerdo por parte del destinatario. Para más informaciones acceder a [https://github.com/SERVIR-Amazonia/colombia-training/blob/main/LICENSE](https://github.com/SERVIR-Amazonia/colombia-training/blob/main/LICENSE).
