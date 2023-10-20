@@ -12,7 +12,9 @@ nav_order: 6
 
 **Fecha**: Junio 6, 2023
 
-**Instructor:** Luis Lizcano-Sandoval ([lsandoval@sig-gis.com](lsandoval@sig-gis.com))
+**Instructor:** Luis Lizcano-Sandoval 
+
+**Contact information**: [em-trainings@sig-gis.com](em-trainings@sig-gis.com)
 
 |    Horario    |                                                                    Temáticas                                                                    |
 |:-------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------:|
