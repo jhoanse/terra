@@ -1,1 +1,1 @@
-Repository for the Colombia training sessions -- in progress.
+Repository for the Honduras training sessions -- in progress.
