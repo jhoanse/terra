@@ -23,21 +23,22 @@ nav_order: 1
 
 1. En la página de inicio ([https://app.collect.earth/home](https://app.collect.earth/home)) aparece una lista de todas las instituciones.
 2. Si ha iniciado sesión, esta lista se divide en dos: `Your Affiliations` y `Other Institutions`. `Your Affiliations` son las instituciones a las que usted pertenece.
-3. Busque la institución creada para este taller `Taller Republica Dominicana 2023` en la herramienta de búsqueda.
+3. Busque el proyecto creado para este taller `CRS - Centroamérica` en la herramienta de búsqueda.
 
-    <img align="center" src="../images/ceo/1.png" hspace="15" vspace="10" width="350">
+    <img align="center" src="../images/ceo/crs_img1.png" hspace="15" vspace="10" width="350">
 
-4. Para que aparezca la institución, utilice la herramienta de filtrado y marque la casilla "Show Empty Institutions". Verás la institución "Taller Republica Dominicana 2023" (en `Other Institutions` si está con su sesión iniciada). Haga clic en `VISIT` junto al nombre de la institución. Al hacer clic en él se abrirá la página de la institución.
+4. Para que aparezca la institución, utilice la herramienta de filtrado y marque la casilla "Filter by project". Verás el proyecto "CRS - Centroamérica" (en `Other Institutions` si está con su sesión iniciada). Haga clic en `VISIT` junto al nombre de la institución. Al hacer clic en él se abrirá la página de la institución.
 
-    <img align="center" src="../images/ceo/2.png" hspace="15" vspace="10" width="400">
+    <img align="center" src="../images/ceo/crs_img2.png" hspace="15" vspace="10" width="400">
 
-5. Haga clic en el botón del usuario (solamente si está con su sesión iniciada).
+5. Ejemplo si no es miembro de la institución: Haga clic en el botón del usuario (solamente si está con su sesión iniciada).
 
     <img align="center" src="../images/ceo/3.png" hspace="15" vspace="10" width="600">
 
 6. Haga clic en el botón `Request Membership` si aún no se ha afiliado a la institución.
 
     <img align="center" src="../images/ceo/4.png" hspace="15" vspace="10" width="600">
+
 
 ## Objetivos
 
