@@ -13,7 +13,7 @@ Si alguna vez necesita ayuda con su trabajo en CEO, un buen lugar para empezar s
 
 ## Creando una institución
 
-Si su institución aún no está registrada en CEO, puede crear una nueva institución a la que puedan unirse todos los miembros de su equipo. (Ya se ha creado una institución para este taller: **"Taller Republica Dominicana 2023"**)
+Si su institución aún no está registrada en CEO, puede crear una nueva institución a la que puedan unirse todos los miembros de su equipo. (Ya se ha creado una institución para este taller: **"CIAT"**)
 
 1. Inicie sesión en CEO.
 2. Navegue hasta la página de inicio y haga clic en `+ Create New Institution` en el panel izquierdo.
@@ -28,7 +28,7 @@ Un usuario administrador puede entonces convertir a todos los nuevos usuarios de
 El estado `Admin` permite crear/editar proyectos y revisar puntos en modo QA/QC
 Después de cambiar el usuario a `Admin` debe pulsar el botón `Update`.
 
-<img align="center" src="../images/ceo/2C_updateInstitutionMembership.png" vspace="10" width="800">
+<img align="center" src="../images/ceo/crs_img11.png" vspace="10" width="800">
 
 Puede editar los otros elementos de su institución más adelante. Si alguna vez decide eliminar la institución, se perderán todos los proyectos que contenga.
 
@@ -41,11 +41,11 @@ La página de inicio de Proyectos de su institución contendrá una lista de los
 - **Institution - Miembros del grupo**: Los miembros de su institución pueden ver y contribuir a su proyecto. Los administradores de otras instituciones no pueden utilizar su proyecto como plantilla.
 - **Private - Administradores del grupo**: Sólo los administradores de su institución pueden ver y contribuir a su proyecto. Los Admins de otras instituciones no pueden usar su proyecto como plantilla.
 
-<img align="center" src="../images/ceo/3A_InstitutionHomePageNonAdmin.png" vspace="10" width="700">
+<img align="center" src="../images/ceo/crs_img12.png" vspace="10" width="700">
 
 Si es administrador de su institución, también verá más botones a la derecha de cada proyecto. El botón con el icono del lápiz le permite editar un proyecto. Puede editar todo sobre un proyecto antes de que se publique, pero sólo algunas cosas una vez que se publique y esté abierto para la recogida oficial de datos. El botón de la basura borra un proyecto, lo que no se puede deshacer. Los botones `P` y `S` sirven para descargar los datos recogidos de un proyecto. Hay dos opciones de descarga de datos: Descargar datos de parcela, que descarga los datos resumidos por parcela, y Descargar datos de muestra, que descarga los datos sin procesar, con información para cada punto dentro de cada parcela como su propia fila. Ambas opciones se descargan en formato `.csv`, que puede abrirse en programas como Microsoft Excel o importarse en software de análisis de datos. Los datos descargados de CEO estarán en formato WGS84 EPSG:4326.
 
-<img align="center" src="../images/ceo/3B_InstitutionHomePage.png" vspace="10" width="700"> 
+<img align="center" src="../images/ceo/crs_img13.png" vspace="10" width="700"> 
 
 Si hace clic en el botón `Imagery` situado cerca de la parte superior de la página de la institución, verá una lista de las imágenes incorporadas a CEO, incluidos los datos de MapBox y Planet NICFI, así como cualquier otra imagen que se haya añadido a su institución. CEO ofrece dos formas sencillas de añadir sus propias imágenes a sus proyectos. La primera es conectando tus propias imágenes a través de Web Map Service (WMS) o Web Map Tile Service (WMTS), y la segunda es conectando tus imágenes alojadas en Google Earth Engine (GEE). Encontrará más información sobre cómo añadir sus propias imágenes en este [CEO Blog sobre GEE](https://blog.collect.earth/index.php/2022/04/21/connecting-gee-raster-data/), este [CEO Blog sobre WMS/WMTS](https://www.collect.earth/utilice-sus-propios-datos-en-ceo-conexion-con-wms-wmts-espanol/) y en el [Project Creation Manual](https://www.collect.earth/wp-content/uploads/2022/11/CEO_Manual_DataCollector_SP_20210720.pdf).
 
@@ -63,4 +63,4 @@ Puede empezar a recopilar datos en cualquier proyecto publicado haciendo clic en
 
 Este es un ejemplo de lo que un recolector de datos verá en cada interpretación de muestra.
 
-<img align="center" src="../images/ceo/3D_interpreters.png" vspace="10" width="600">
+<img align="center" src="../images/ceo/crs_img15.png" vspace="10" width="600">
