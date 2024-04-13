@@ -26,9 +26,13 @@ El muestreo aleatorio estratificado tiene dos ventajas fundamentales:
 * Actualiza las áreas basadas en el mapa para aumentar la precisión (reduce la incertidumbre)
 * Ayuda a aumentar la probabilidad de tener parcelas en clases poco frecuentes
 
+
+
+**Ejemplo de muestreo Aleatorio estratificado**:
+
 Utilizaremos el muestreo aleatorio estratificado para realizar un análisis de validación de mapas. Puede utilizar diferentes herramientas, como Google Earth Engine, para generar las ubicaciones de los puntos de muestreo.
 
-Utilizaremos el mapa que desarrollamos en la última sección (T5) para ilustrar este proceso. Recuerde que se trata de una imagen de diferencias MNDWI de dos fechas con umbrales de clasificación, en la que se destacan las regiones de ganancia de agua en azul y pérdida de agua en rosa. Este producto fue generado con una diferencia de imágenes de 2015-2016 y 2022-2023.
+Utilizaremos el mapa que desarrollamos en una sesion impartida (T5) para ilustrar este proceso. Recuerde que se trata de una imagen de diferencias MNDWI de dos fechas con umbrales de clasificación, en la que se destacan las regiones de ganancia de agua en azul y pérdida de agua en rosa. Este producto fue generado con una diferencia de imágenes de 2015-2016 y 2022-2023.
 
 <img align="center" src="../images/ceo/4G_ChangeMapForSampling.png" vspace="10" width="600"> 
 
