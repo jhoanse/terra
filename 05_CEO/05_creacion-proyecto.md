@@ -30,6 +30,22 @@ Si no está familiarizado con GEE, a continuación encontrará instrucciones par
 >*Material de bonificación para después del taller* - Añadir un activo de colección de imágenes GEE
 
 >* Los `Assets` de Google Earth Engine (GEE) incluyen activos subidos por el usuario junto con assets proporcionados por otros usuarios y GEE. Puedes encontrar información sobre los Assets [aquí](https://developers.google.com/earth-engine/guides/asset_manager). Más abajo encontrarás más detalles sobre cómo subir tus propios activos. Tenga en cuenta que `Image Asset` se refiere a una sola imagen (por ejemplo, una capa GeoTIFF), mientras que `ImageCollection Asset` se refiere a una pila de imágenes (por ejemplo, capas GeoTiff de la misma ubicación en diferentes fechas).
+
+>* **Creación de la colección de imágenes desde GEE**: Crear una carpeta en el Asset con el nombre del proyecto "`CRS_CentroAmerica`"
+
+><img align="center" src="../images/ceo/crs_img16.png" vspace="10" width="600"> 
+
+>* Despues crear la ImageCollection con el nombre `UAV_2024` dentro de la carpeta `CRS_CentroAmerica`
+
+><img align="center" src="../images/ceo/crs_img17.png" vspace="10" width="600"> 
+
+>* Subir las imágenes a la ImageCollection `UAV_2024`
+
+><img align="center" src="../images/ceo/crs_img18.png" vspace="10" width="600"> 
+
+><img align="center" src="../images/ceo/crs_img19.png" vspace="10" width="600"> 
+
+
 >* **Title**: Este será el nombre que se mostrará de la imagen.
 >* **Asset ID**: El ID de activo para su activo de imagen. Tendrá un formato similar a LANDSAT/LC08/C01/T1_SR
 >* **Start Date**: La fecha de inicio predeterminada de las imágenes que se mostrarán.
@@ -38,6 +54,10 @@ Si no está familiarizado con GEE, a continuación encontrará instrucciones par
 >* Si desea añadir esta fuente de imágenes a todos los proyectos de su institución, marque la casilla `Add Imagery to All Projects When Saving`.
 >* Cuando haya rellenado todos los campos, haga clic en `Add New Imagery`.
 >* Tenga en cuenta que para mostrar la GEEImageCollection, CEO utiliza el reductor `mean` en Earth Engine. Este toma la media de cualquier imagen de la colección de imágenes durante el periodo de tiempo especificado.
+
+><img align="center" src="../images/ceo/crs_img20.png" vspace="10" width="600"> 
+
+><img align="center" src="../images/ceo/crs_img21.png" vspace="10" width="600"> 
 
 ## Tutorial para crear un proyecto CEO sin plantilla
 
