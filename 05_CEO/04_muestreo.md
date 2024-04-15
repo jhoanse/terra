@@ -28,7 +28,7 @@ El muestreo aleatorio estratificado tiene dos ventajas fundamentales:
 
 
 
-**Ejemplo de muestreo Aleatorio estratificado**:
+**Ejemplo 1 de muestreo Aleatorio estratificado:**
 
 Utilizaremos el muestreo aleatorio estratificado para realizar un análisis de validación de mapas. Puede utilizar diferentes herramientas, como Google Earth Engine, para generar las ubicaciones de los puntos de muestreo.
 
@@ -54,3 +54,29 @@ Definimos precisiones de usuário deseadas como 80% para cada clase y un error e
 
 Las 400 muestras incluidas se distribuyen dentro de los estratos cartográficos asignados.
 <img align="center" src="../images/ceo/4H_samplesonmap.png" vspace="10" width="600">
+
+
+
+ **Ejemplo 2 de muestreo Aleatorio estratificado (CRS):**
+
+* Subir la información de pérdida de vegetación Terra-i al Asset de GEE
+
+<img align="center" src="../images/ceo/crs_img25.png" vspace="10" width="600">
+
+* Abrir link de AREA2: https://code.earthengine.google.com/3400a6f1f9197ad92a273c194b71e4f7
+* Ejectuar script de AREA2: Presionar "RUN"
+* Cambiar ruta de la imagen del área de estudio (Ruta del raster de périda de vegetación de Terra-i)
+* Cargar imagen: 'Load image'
+
+<img align="center" src="../images/ceo/crs_img26.png" vspace="10" width="600">
+
+* Seleccionar el método de muestreo: "Target SE of overall accuracy"
+* Especificar la exactitud de usuario por clase: 0.84 para todas
+* Especificar el error estándar de la exactitud global: 0.05
+* Calcular tamaño de muestra: "Calculate sample size"
+* Introducir el tamaño de muestra sugerido: 11, 6, 4, 24 (Obeservar el que aparece en GEE)
+* Crear muestreo >> Adicionar al mapa >> exportar muestras
+
+<img align="center" src="../images/ceo/crs_img27.png" vspace="10" width="600">
+
+<img align="center" src="../images/ceo/crs_img28.png" vspace="10" width="600">
