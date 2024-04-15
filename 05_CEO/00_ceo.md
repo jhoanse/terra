@@ -14,7 +14,7 @@ Navegue a través de las diferentes secciones de la lección utilizando el menú
 
 **Fecha**: Abril 25, 2024
 
-**Equipo e Instructores : Jorge Perez**, John Tello, Paula Paz, Louis Reymondin
+**Equipo e Instructores :** Jorge Perez, John Tello, Paula Paz, Louis Reymondin
 
 | Time          |                                                                                                                                                 Topics                                                                                                                                                 |
 |---------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
