@@ -51,7 +51,7 @@ Además, la propia elaboración de la clave fomenta el debate y el pensamiento c
 
 ## Planificación de la GC/CC en CEO
 
-Recuerde estas herramientas integradas en el CEO para el control de calidad. ¿Utilizará una o una combinación de estas herramientas?
+Recuerde estas herramientas integradas en el CEO para el control de calidad. ¿Utilizará una o varias combinaciones de estas herramientas?
 
 <img src="../images/ceo/1C_AssignPlots.png" vspace="10" width="400" />
 
