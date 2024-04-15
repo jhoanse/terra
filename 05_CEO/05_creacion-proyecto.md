@@ -228,7 +228,7 @@ La creación de un proyecto CEO a partir de una plantilla es igual que en la sec
 
     <img align="center" src="../images/ceo/6B_loadedtemplate.png" vspace="10" width="500"> 
 7. Si selecciona la opción `Copy Template Plots and Samples` (Copiar plantillas de puntos y muestras), las ubicaciones de los puntos y las muestras se cargarán previamente. Desmarque esta opción si desea cargar sus propias ubicaciones de parcelas nuevas.
-    - Para este taller, desmarque esta opción para que pueda intentar cargar el archivo CSV pre-preparado del script de muestreo aleatorio estratificado GEE.
+    - Para este taller, desmarque esta opción para que pueda intentar cargar el archivo CSV pre-preparado del script de muestreo aleatorio simple ó estratificado GEE.
 8. Si selecciona `Copy Template Widgets` (Copiar widgets de plantilla), se copiarán los widgets de Geo-Dash. Desmarque esta opción si desea un Geo-Dash en blanco.
     - También puede cargar una plantilla de Geo-Dash de otro proyecto cuando llegue a `Configure Geo-Dash` en la página de revisión final del proyecto, o incluso después de publicarlo.
 9. Asegúrese de actualizar el nombre y la descripción del proyecto para poder distinguirlo del que está copiando.
