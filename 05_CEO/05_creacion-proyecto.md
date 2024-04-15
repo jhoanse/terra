@@ -29,8 +29,6 @@ Si no está familiarizado con GEE, a continuación encontrará instrucciones par
 
 >*Material de bonificación para después del taller* - Añadir un activo de colección de imágenes GEE
 
->* Los `Assets` de Google Earth Engine (GEE) incluyen activos subidos por el usuario junto con assets proporcionados por otros usuarios y GEE. Puedes encontrar información sobre los Assets [aquí](https://developers.google.com/earth-engine/guides/asset_manager). Más abajo encontrarás más detalles sobre cómo subir tus propios activos. Tenga en cuenta que `Image Asset` se refiere a una sola imagen (por ejemplo, una capa GeoTIFF), mientras que `ImageCollection Asset` se refiere a una pila de imágenes (por ejemplo, capas GeoTiff de la misma ubicación en diferentes fechas).
-
 >* **Creación de la colección de imágenes desde GEE**: Crear una carpeta en el Asset con el nombre del proyecto "`CRS_CentroAmerica`"
 
 ><img align="center" src="../images/ceo/crs_img16.png" vspace="10" width="600"> 
