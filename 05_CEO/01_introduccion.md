@@ -31,13 +31,15 @@ nav_order: 1
 
     <img align="center" src="../images/ceo/crs_img2.png" hspace="15" vspace="10" width="400">
 
-5. Ejemplo si no es miembro de la institución: Haga clic en el botón del usuario (solamente si está con su sesión iniciada).
+5. **Ejemplo si no es miembro de la institución:** Haga clic en el botón del usuario (solamente si está con su sesión iniciada).
 
     <img align="center" src="../images/ceo/3.png" hspace="15" vspace="10" width="600">
 
 6. Haga clic en el botón `Request Membership` si aún no se ha afiliado a la institución.
 
     <img align="center" src="../images/ceo/4.png" hspace="15" vspace="10" width="600">
+
+7. **Otra manera de acceder:** Solicitar al administrador que agregue su usuario a la institución.
 
 
 ## Objetivos
@@ -90,7 +92,7 @@ Collect Earth Online (CEO) está disponible en https://collect.earth/.
 
     <img align="middle" src="../images/ceo/1B_ProjectCreationOverviewPage.png" vspace="10" width="600"> 
 
-2. **Colaborar**: Trabaje con colegas de su organización o con científicos de la comunidad de todo el mundo: la nube facilita la colaboración. También puede utilizar CEo para organizar la carga de trabajo de su equipo, asignando proporciones de las muestras a los miembros del equipo y especificando cuántas muestras deben ser revisadas por más de una persona.
+2. **Colaborar**: Trabaje con colegas de su organización o con científicos de la comunidad de todo el mundo: la nube facilita la colaboración. También puede utilizar CEO para organizar la carga de trabajo de su equipo, asignando proporciones de las muestras a los miembros del equipo y especificando cuántas muestras deben ser revisadas por más de una persona.
 
     <p align="middle">
     <img src="../images/ceo/1C_AssignPlots.png" vspace="10" width="500"> 
