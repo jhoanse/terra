@@ -38,11 +38,12 @@ Utilizaremos el mapa que desarrollamos en una sesion impartida (T5) para ilustra
 
 Hemos calculado previamente los recuentos aproximados de píxeles de las clases de mapas utilizando Google Earth Engine.
 
-| Valor mapa | Clase     | Área (m2)   | % Area total |
-|------------|-----------|-------------|--------------|
-| 0          | No cambio | 20595572899 | 99.91        |
-| 1          | Ganancia  | 17196112.61 | 0.08         |
-| 2          | Perdida   | 2133022.105 | 0.01         |
+| Valor mapa | Clase     | Conteo de píxeles | 
+|------------|-----------|-------------|
+| 2020       | 2020 | 20595572899 |
+| 2021       | 2021  | 17196112.61 |
+| 2022       | 2022   | 2133022.105 | 
+| 2023       | 2023   | 2133022.105 | 
 
 Si hubiéramos utilizado un muestreo sistemático o aleatorio, sólo obtendríamos un punto de ganáncia o pérdida de agua en menos de 1 de cada 100 puntos recogidos. Eso es súper ineficiente para analizar las clases de interés. Con el muestreo aleatorio estratificado puedo poner un valor mínimo al número de puntos de cada clase cartográfica, o estrato.
 
@@ -57,7 +58,32 @@ Las 400 muestras incluidas se distribuyen dentro de los estratos cartográficos 
 
 
 
- **Ejemplo 2 de muestreo Aleatorio estratificado (CRS):**
+ **Muestreo Aleatorio estratificado de alertas Terra-i para el periodo 2020-2023:**
+ 
+Utilizaremos el muestreo aleatorio estratificado para realizar un análisis de validación de alertas de pérdida de cobertura Terra-i. Puede utilizar diferentes herramientas, como Google Earth Engine, para generar las ubicaciones de los puntos de muestreo.
+
+Se emplea las alertas Terra-i para los años 2020-2021-2022-2023.
+
+Se ha calculado previamente los recuentos  de píxeles de las clases/año.
+
+| Valor mapa | Clase     | Conteo de píxeles | 
+|------------|-----------|-------------|
+| 2020       | 2020 | 20595572899 |
+| 2021       | 2021  | 17196112.61 |
+| 2022       | 2022   | 2133022.105 | 
+| 2023       | 2023   | 2133022.105 | 
+
+Si se hubiera empleado un muestreo sistemático o aleatorio, sólo obtendríamos un punto de ganáncia o pérdida de agua en menos de 1 de cada 100 puntos recogidos. Eso es súper ineficiente para analizar las clases de interés. Con el muestreo aleatorio estratificado puedo poner un valor mínimo al número de puntos de cada clase cartográfica, o estrato.
+
+El muestreo aleatorio estratificado se realizó en GoogleEarthEngine utilizando este script [script](https://code.earthengine.google.com/bdf75ed7bfde4024268dee12e3842225), que exporta un CSV de las ubicaciones de las muestras listo para ser importado en CEO.
+
+Definimos precisiones de usuário deseadas como 84% para cada clase y un error estimado para la precisión general de 5%. Eso generó un tamaño de muestreo de xxx puntos. Cuando las áreas de las clases de interés son muy pequeñas, la asignación proporcional resulta en cero para esas clases. Pero podemos definir una asignación mayor a 30.
+
+Descargue ese archivo CSV [aquí](https://drive.google.com/file/d/1S3gsy77cTqVqhypm4URjlNAp813DHQi1/view?usp=sharing).
+
+Las xx muestras incluidas se distribuyen dentro de los estratos cartográficos asignados.
+
+A continuación se presenta el paso a paso para realizar el muestreo estartificado aleatorio empleando Google Earth Engine:
 
 * Subir la información de pérdida de vegetación Terra-i al Asset de GEE
 
