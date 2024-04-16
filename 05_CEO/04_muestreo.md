@@ -37,12 +37,12 @@ Se ha calculado previamente los recuentos  de píxeles de las clases/año.
 
 | Valor mapa | Clase     | Conteo de píxeles | 
 |------------|-----------|-------------|
-| 2020       | 2020 | 13060 |
-| 2021       | 2021  | 9110|
-| 2022       | 2022   | 4730 | 
-| 2023       | 2023   | 30729 | 
+| 2020       | 2020 | 13 |
+| 2021       | 2021  | 9|
+| 2022       | 2022   | 2 | 
+| 2023       | 2023   | 24 | 
 
-Si se hubiera empleado un muestreo sistemático o aleatorio, sólo obtendríamos un punto dpara el año 2020, y no se realizaría de forma balanceada para todos los años. Con el muestreo aleatorio estratificado se puede poner un valor mínimo al número de puntos de cada clase cartográfica, o estrato.
+Si se hubiera empleado un muestreo sistemático o aleatorio, sólo obtendríamos puntos para el año 2023, ya que tiene la mayor cantidad de alertas, y no se realizaría de forma balanceada para todos los años. Con el muestreo aleatorio estratificado se puede poner un valor mínimo al número de puntos de cada clase cartográfica, o estrato.
 
 El muestreo aleatorio estratificado se realizó en GoogleEarthEngine utilizando este script [script](https://code.earthengine.google.com/bdf75ed7bfde4024268dee12e3842225), que exporta un CSV de las ubicaciones de las muestras listo para ser importado en CEO.
 
