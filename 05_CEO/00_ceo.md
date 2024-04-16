@@ -12,7 +12,7 @@ Navegue a través de las diferentes secciones de la lección utilizando el menú
 
 ## Agenda de la lección
 
-**Fecha**: Abril 25, 2024
+**Fecha**: Abril 22, 2024
 
 **Equipo e Instructores :** Jorge Perez, John Tello, Paula Paz, Louis Reymondin
 
