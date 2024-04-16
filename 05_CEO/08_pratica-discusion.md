@@ -14,7 +14,9 @@ En el tiempo restante del taller podemos realizar algunas prácticas de interpre
 - Ir a interpretar la primera muestra.
 <img align="center" src="../images/ceo/08_A_go_to_first_plot.png" vspace="10" width="800"> 
 
-- Examen en grupo de interpretaciones difíciles
+- Responder cuestionario.
+- Examen en grupo de interpretaciones difíciles.
+- Descarga de interpretación
 
 ## Discusión en grupo
 
