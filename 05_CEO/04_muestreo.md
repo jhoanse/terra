@@ -44,19 +44,19 @@ Se ha calculado previamente los recuentos  de píxeles de las clases/año.
 
 Si se hubiera empleado un muestreo sistemático o aleatorio, sólo obtendríamos puntos para el año 2023, ya que tiene la mayor cantidad de alertas, y no se realizaría de forma balanceada para todos los años. Con el muestreo aleatorio estratificado se puede poner un valor mínimo al número de puntos de cada clase cartográfica, o estrato.
 
-El muestreo aleatorio estratificado se realizó en GoogleEarthEngine utilizando este script [script](https://code.earthengine.google.com/bdf75ed7bfde4024268dee12e3842225), que exporta un CSV de las ubicaciones de las muestras listo para ser importado en CEO.
+El muestreo aleatorio estratificado se realizó en GoogleEarthEngine utilizando este [script](https://code.earthengine.google.com/bdf75ed7bfde4024268dee12e3842225), que exporta un CSV de las ubicaciones de las muestras listo para ser importado en CEO.
 
 Definimos precisiones de usuário deseadas como 84% para cada clase y un error estimado para la precisión general de 5%. Eso generó un tamaño de muestreo de xxx puntos. Cuando las áreas de las clases de interés son muy pequeñas, la asignación proporcional resulta en cero para esas clases. Pero podemos definir una asignación mayor a 30.
 
 A continuación se presenta el paso a paso para realizar el muestreo estartificado aleatorio empleando Google Earth Engine:
 
-* Subir la información de pérdida de vegetación Terra-i al Asset de GEE
+* Subir la información raster de alertas de pérdida de vegetación Terra-i al Asset de GEE
 
 <img align="center" src="../images/ceo/crs_img25.png" vspace="10" width="600">
 
 * Abrir link de AREA2: https://code.earthengine.google.com/3400a6f1f9197ad92a273c194b71e4f7
 * Ejectuar script de AREA2: Presionar "RUN"
-* Cambiar ruta de la imagen del área de estudio (Ruta del raster de périda de vegetación de Terra-i: users/ingperezescobar/HN/alertas_terrai)
+* Cambiar ruta de la imagen del área de estudio (Ruta del ID Asset del raster de pérdida de vegetación de Terra-i que subió a GEE, en el paso anterior: users/ingperezescobar/HN/alertas_terrai)
 * Cargar imagen: 'Load image'
 
 <img align="center" src="../images/ceo/crs_img26.png" vspace="10" width="600">
@@ -65,7 +65,7 @@ A continuación se presenta el paso a paso para realizar el muestreo estartifica
 * Especificar la exactitud de usuario por clase: 0.84 para todas
 * Especificar el error estándar de la exactitud global: 0.05
 * Calcular tamaño de muestra: "Calculate sample size"
-* Introducir el tamaño de muestra sugerido: 11, 6, 4, 24 (Obeservar el que aparece en GEE)
+* Introducir el tamaño de muestra sugerido: 13, 9, 2, 24 (Obeservar el que aparece en GEE)
 * Crear muestreo >> Adicionar al mapa >> exportar muestras
 
 <img align="center" src="../images/ceo/crs_img27.png" vspace="10" width="600">
