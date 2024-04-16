@@ -12,7 +12,8 @@ nav_order: 8
 En el tiempo restante del taller podemos realizar algunas prácticas de interpretación y debatir nuestras conclusiones en grupo. Trabajar juntos en el siguiente proyecto CEO dentro de su institución CEO.
 - Abrir proyecto CEO https://app.collect.earth/collection?projectId=41845 
 - Ir a interpretar la primera muestra.
-<img align="center" src="../images/ceo/8A_Pro_historicalicon.png" vspace="10" width="75"> 
+<img align="center" src="../images/ceo/go to first plot.png" vspace="10" width="75"> 
+
 - Examen en grupo de interpretaciones difíciles
 
 ## Discusión en grupo
