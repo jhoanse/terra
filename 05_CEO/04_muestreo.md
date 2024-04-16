@@ -65,7 +65,7 @@ Las 400 muestras incluidas se distribuyen dentro de los estratos cartográficos 
 
 * Abrir link de AREA2: https://code.earthengine.google.com/3400a6f1f9197ad92a273c194b71e4f7
 * Ejectuar script de AREA2: Presionar "RUN"
-* Cambiar ruta de la imagen del área de estudio (Ruta del raster de périda de vegetación de Terra-i)
+* Cambiar ruta de la imagen del área de estudio (Ruta del raster de périda de vegetación de Terra-i: users/ingperezescobar/HN/alertas_terrai)
 * Cargar imagen: 'Load image'
 
 <img align="center" src="../images/ceo/crs_img26.png" vspace="10" width="600">
