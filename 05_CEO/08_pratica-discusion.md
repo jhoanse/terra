@@ -9,7 +9,9 @@ nav_order: 8
 
 ## Práctica de interpretación del CEO
 
-En el tiempo restante del taller podemos realizar algunas prácticas de interpretación y debatir nuestras conclusiones en grupo. Trabajar juntos en un proyecto CEO dentro de su institución CEO.
+En el tiempo restante del taller podemos realizar algunas prácticas de interpretación y debatir nuestras conclusiones en grupo. Trabajar juntos en el siguiente proyecto CEO dentro de su institución CEO.
+- Abrir proyecto CEO https://app.collect.earth/collection?projectId=41845 
+- Ir a interpretar la primera muestra.
 
 - Examen en grupo de interpretaciones difíciles
 
