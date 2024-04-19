@@ -65,7 +65,7 @@ A continuación se presenta el paso a paso para realizar el muestreo estartifica
 * Especificar la exactitud de usuario por clase: 0.87 para todas
 * Especificar el error estándar de la exactitud global: 0.05
 * Calcular tamaño de muestra: "Calculate sample size"
-* Introducir el tamaño de muestra sugerido: 13, 9, 2, 24 (Obeservar el que aparece en GEE)
+* Introducir el tamaño de muestra sugerido: 11, 6, 4, 24 (Obeservar el que aparece en GEE)
 * Crear muestreo >> Adicionar al mapa >> exportar muestras
 
 <img align="center" src="../images/ceo/crs_img27.png" vspace="10" width="600">
