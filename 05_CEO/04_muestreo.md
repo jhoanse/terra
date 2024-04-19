@@ -46,7 +46,7 @@ Si se hubiera empleado un muestreo sistemático o aleatorio, sólo obtendríamos
 
 El muestreo aleatorio estratificado se realizó en GoogleEarthEngine utilizando este [script](https://code.earthengine.google.com/bdf75ed7bfde4024268dee12e3842225), que exporta un CSV de las ubicaciones de las muestras listo para ser importado en CEO.
 
-Definimos precisiones de usuário deseadas como 87% para cada clase y un error estimado para la precisión general de 5%. Eso generó un tamaño de muestreo de xxx puntos. Cuando las áreas de las clases de interés son muy pequeñas, la asignación proporcional resulta en cero para esas clases. Pero podemos definir una asignación mayor a 30.
+Definimos precisiones de usuário deseadas como 87% para cada clase y un error estimado para la precisión general de 5%. Eso generó un tamaño de muestreo de 45 puntos. Cuando las áreas de las clases de interés son muy pequeñas, la asignación proporcional resulta en cero para esas clases. Pero podemos definir una asignación mayor a 30.
 
 A continuación se presenta el paso a paso para realizar el muestreo estartificado aleatorio empleando Google Earth Engine:
 
