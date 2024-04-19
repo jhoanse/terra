@@ -25,9 +25,9 @@ nav_order: 1
 2. Si ha iniciado sesión, esta lista se divide en dos: `Your Affiliations` y `Other Institutions`. `Your Affiliations` son las instituciones a las que usted pertenece.
 3. Busque el proyecto creado para este taller `CRS - Centroamérica` en la herramienta de búsqueda.
 
-    <img align="center" src="../images/ceo/crs_img1.png" hspace="15" vspace="10" width="350">
+    <img align="center" src="../images/ceo/institution-ceo.png" hspace="15" vspace="10" width="350">
 
-4. Para que aparezca la institución, utilice la herramienta de filtrado y marque la casilla "Filter by project". Verás el proyecto "CRS - Centroamérica" (en `Other Institutions` si está con su sesión iniciada). Haga clic en `VISIT` junto al nombre de la institución. Al hacer clic en él se abrirá la página de la institución.
+4. Para buscar un proyecto específico, utilice la herramienta de filtrado y marque la casilla "Filter by project". Verás el proyecto "CRS - Centroamérica" (en `Other Institutions` si está con su sesión iniciada). Haga clic en `VISIT` junto al nombre de la institución. Al hacer clic en él se abrirá la página de la institución.
 
     <img align="center" src="../images/ceo/crs_img2.png" hspace="15" vspace="10" width="400">
 
