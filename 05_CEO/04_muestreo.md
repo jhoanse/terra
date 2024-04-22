@@ -73,4 +73,4 @@ A continuación se presenta el paso a paso para realizar el muestreo estartifica
 <img align="center" src="../images/ceo/crs_img28.png" vspace="10" width="600">
 
 
-Descargue el archivo con las muestras aleatorias por estratos [aquí](https://drive.google.com/file/d/1S3gsy77cTqVqhypm4URjlNAp813DHQi1/view?usp=sharing).
+Descargue el archivo con las muestras aleatorias por estratos [aquí](https://drive.google.com/file/d/1VHdvvx3_d8WOMF5EzBqaLRodUrV6ydeS/view?usp=sharing).
