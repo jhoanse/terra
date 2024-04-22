@@ -1,0 +1,9 @@
+﻿,,,,,,,
+Row Labels,Count of reference,,,,Reference,,
+0,34,,,,Cambio,No Cambio,Total
+1,85,,,Cambio,85,34,119
+(blank),,,,,,,
+Grand Total,119,,,Total,85,34,119
+,,,,,,,
+,,,,,Precisión,Precisión %,
+,,,,precision= tp/tp+fp,0.714285714,71.42857143,
